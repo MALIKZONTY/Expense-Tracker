@@ -25,8 +25,7 @@ function NavBar() {
             <Link to="/transactions" className={`nav-link ${isActive('/transactions')}`}>Transactions</Link>
             <button 
               onClick={() => { if(window.confirm("Are you sure you want to logout?")) logout(); }} 
-              className="btn" 
-              style={{ background: '#f1f5f9', padding: '0.4rem 1rem' }}
+              className="btn nav-logout"
             >
               Logout
             </button>
