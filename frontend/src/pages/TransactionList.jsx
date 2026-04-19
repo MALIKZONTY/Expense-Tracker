@@ -19,7 +19,7 @@ export default function TransactionList() {
 
   const fetchTransactions = () => {
     setLoading(true);
-    let url = 'http://localhost:5001/api/transactions';
+    let url = '/api/transactions';
     if (typeFilter) url += `?type=${typeFilter}`;
     
     fetch(url, { headers: { 'Authorization': `Bearer ${token}` } })
@@ -41,7 +41,7 @@ export default function TransactionList() {
     if (!window.confirm("Are you sure you want to delete this transaction?")) return;
     
     try {
-      const res = await fetch(`http://localhost:5001/api/transactions/${id}`, {
+      const res = await fetch(`/api/transactions/${id}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` }
       });
@@ -58,7 +58,7 @@ export default function TransactionList() {
   const handleEditSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`http://localhost:5001/api/transactions/${editingTransaction.id}`, {
+      const res = await fetch(`/api/transactions/${editingTransaction.id}`, {
         method: 'PUT',
         headers: { 
           'Content-Type': 'application/json',
