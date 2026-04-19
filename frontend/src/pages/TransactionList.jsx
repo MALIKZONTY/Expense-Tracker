@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext, useCallback } from 'react';
 import { Pencil, Trash2, X, ChevronLeft, ChevronRight, Calendar } from 'lucide-react';
 import AuthContext from '../context/AuthContext';
+import { useUI } from '../context/UIContext';
 
 const EXPENSE_CATEGORIES = ['Food', 'Groceries', 'Travel', 'Rent', 'Shopping', 'Bills', 'Entertainment', 'Unknown', 'Other'];
 const INCOME_CATEGORIES = ['Salary', 'Freelance', 'Business', 'Gift', 'Unknown', 'Other'];
@@ -66,7 +67,7 @@ export default function TransactionList() {
 
   const fetchTransactions = useCallback(() => {
     setLoading(true);
-    let url = `${import.meta.env.VITE_API_URL || ''}/api/transactions?page=${page}&limit=2`;
+    let url = `${import.meta.env.VITE_API_URL || ''}/api/transactions?page=${page}&limit=10`;
     if (typeFilter) url += `&type=${typeFilter}`;
 
     const { start, end } = getDateRange(dateFilter, customStartDate, customEndDate);
@@ -93,6 +94,8 @@ export default function TransactionList() {
     fetchTransactions();
   }, [fetchTransactions]);
 
+  const { confirm } = useUI();
+
   const handleTypeChange = (val) => {
     setTypeFilter(val);
     setPage(1);
@@ -104,7 +107,14 @@ export default function TransactionList() {
   };
 
   const handleDelete = async (id) => {
-    if (!window.confirm("Are you sure you want to delete this transaction?")) return;
+    const confirmed = await confirm({
+      title: 'Delete Transaction',
+      message: 'Are you sure you want to permanently delete this transaction? This action cannot be undone.',
+      confirmText: 'Delete',
+      type: 'danger'
+    });
+
+    if (!confirmed) return;
 
     try {
       const res = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/transactions/${id}`, {
@@ -113,8 +123,6 @@ export default function TransactionList() {
       });
       if (res.ok) {
         fetchTransactions(); // Refresh current page
-      } else {
-        alert("Failed to delete transaction.");
       }
     } catch (err) {
       console.error(err);
