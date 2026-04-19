@@ -29,7 +29,7 @@ export default function AddTransaction() {
     
     setLoading(true);
     try {
-      const res = await fetch('/api/transactions', {
+      const res = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/transactions`, {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',

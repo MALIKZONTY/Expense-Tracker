@@ -9,7 +9,10 @@ const authRoutes = require('./routes/authRoutes');
 const app = express();
 const PORT = process.env.PORT || 5001;
 
-app.use(cors());
+app.use(cors({
+    origin: process.env.FRONTEND_URL || '*',
+    credentials: true
+}));
 app.use(express.json());
 
 app.use('/api/transactions', transactionRoutes);
@@ -19,10 +22,9 @@ app.get('/api/health', (req, res) => {
     res.json({ status: 'healthy' });
 });
 
-if (process.env.NODE_ENV !== 'production') {
-    app.listen(PORT, () => {
-        console.log(`Server running on port ${PORT}`);
-    });
-}
+// Start server
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
 
 module.exports = app;

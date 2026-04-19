@@ -3,7 +3,7 @@ import { PieChart, Pie, Cell, LineChart, Line, BarChart, Bar, XAxis, YAxis, Tool
 
 import AuthContext from '../context/AuthContext';
 
-const API_URL = '/api';
+const API_URL = `${import.meta.env.VITE_API_URL || ''}/api`;
 const COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899', '#64748b'];
 
 export default function Dashboard() {

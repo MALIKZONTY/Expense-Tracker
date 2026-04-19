@@ -19,7 +19,7 @@ export default function TransactionList() {
 
   const fetchTransactions = () => {
     setLoading(true);
-    let url = '/api/transactions';
+    let url = `${import.meta.env.VITE_API_URL || ''}/api/transactions`;
     if (typeFilter) url += `?type=${typeFilter}`;
     
     fetch(url, { headers: { 'Authorization': `Bearer ${token}` } })
@@ -41,7 +41,7 @@ export default function TransactionList() {
     if (!window.confirm("Are you sure you want to delete this transaction?")) return;
     
     try {
-      const res = await fetch(`/api/transactions/${id}`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/transactions/${id}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` }
       });
@@ -58,7 +58,7 @@ export default function TransactionList() {
   const handleEditSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`/api/transactions/${editingTransaction.id}`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/transactions/${editingTransaction.id}`, {
         method: 'PUT',
         headers: { 
           'Content-Type': 'application/json',
