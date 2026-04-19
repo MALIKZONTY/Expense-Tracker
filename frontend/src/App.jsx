@@ -8,13 +8,15 @@ import TransactionList from './pages/TransactionList';
 import About from './pages/About';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-import LandingPage from './pages/LandingPage';
+import Features from './pages/Features';
 import Demo from './pages/Demo';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import Disclaimer from './pages/Disclaimer';
 import Contact from './pages/Contact';
 import AdminInquiries from './pages/AdminInquiries';
+import BlogList from './pages/BlogList';
+import BlogPost from './pages/BlogPost';
 import Footer from './components/Footer';
 
 function NavBar() {
@@ -54,16 +56,29 @@ function NavBar() {
         )}
       </div>
 
-      {user && (
-        <div className="navbar-bottom">
-          <div className="nav-links">
-            <Link to="/" className={`nav-link ${isActive('/')}`}>Dashboard</Link>
-            <Link to="/add" className={`nav-link ${isActive('/add')}`}>Add Transaction</Link>
-            <Link to="/transactions" className={`nav-link ${isActive('/transactions')}`}>Transactions</Link>
-            {isAdmin && <Link to="/admin/inquiries" className={`nav-link ${isActive('/admin/inquiries')}`}>Inquiry Dashboard</Link>}
-          </div>
+      <div className="navbar-bottom">
+        <div className="nav-links">
+          {user && (
+            <>
+              <Link to="/" className={`nav-link ${isActive('/')}`}>Dashboard</Link>
+              <Link to="/add" className={`nav-link ${isActive('/add')}`}>Add Transaction</Link>
+              <Link to="/transactions" className={`nav-link ${isActive('/transactions')}`}>Transactions</Link>
+              {isAdmin && <Link to="/admin/inquiries" className={`nav-link ${isActive('/admin/inquiries')}`}>Inquiry Dashboard</Link>}
+            </>
+          )}
+          {!user && <Link to="/" className={`nav-link ${isActive('/')}`}>Home</Link>}
+          <Link to="/blog" className={`nav-link ${isActive('/blog')}`}>Blog</Link>
+          {!user && (
+            <>
+              <Link to="/about" className={`nav-link ${isActive('/about')}`}>About</Link>
+              <Link to="/contact" className={`nav-link ${isActive('/contact')}`}>Contact</Link>
+              <Link to="/privacy" className={`nav-link ${isActive('/privacy')}`}>Privacy</Link>
+              <Link to="/terms" className={`nav-link ${isActive('/terms')}`}>Terms</Link>
+              <Link to="/disclaimer" className={`nav-link ${isActive('/disclaimer')}`}>Disclaimer</Link>
+            </>
+          )}
         </div>
-      )}
+      </div>
     </nav>
   );
 }
@@ -86,7 +101,7 @@ function App() {
               <Routes>
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Signup />} />
-                <Route path="/" element={<AuthContext.Consumer>{({ user }) => user ? <Dashboard /> : <LandingPage />}</AuthContext.Consumer>} />
+                <Route path="/" element={<AuthContext.Consumer>{({ user }) => user ? <Dashboard /> : <Features />}</AuthContext.Consumer>} />
                 <Route path="/add" element={<ProtectedRoute><AddTransaction /></ProtectedRoute>} />
                 <Route path="/transactions" element={<ProtectedRoute><TransactionList /></ProtectedRoute>} />
                 <Route path="/about" element={<About />} />
@@ -95,6 +110,8 @@ function App() {
                 <Route path="/terms" element={<TermsOfService />} />
                 <Route path="/disclaimer" element={<Disclaimer />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/blog" element={<BlogList />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
                 <Route path="/admin/inquiries" element={<ProtectedRoute adminOnly><AdminInquiries /></ProtectedRoute>} />
               </Routes>
             </div>
