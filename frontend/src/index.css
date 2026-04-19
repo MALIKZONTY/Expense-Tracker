@@ -247,6 +247,11 @@ tr:last-child td {
   color: var(--expense-color);
 }
 
+.confirm-icon-wrapper.success {
+  background: #d1fae5;
+  color: var(--income-color);
+}
+
 .confirm-text-content h3 {
   margin: 0 0 0.5rem 0;
   font-size: 1.25rem;
@@ -274,13 +279,17 @@ tr:last-child td {
   background: #e2e8f0;
 }
 
-.btn-danger {
-  background: var(--expense-color);
+.btn-danger:hover {
+  background: #dc2626;
+}
+
+.btn-success {
+  background: var(--income-color);
   color: white;
 }
 
-.btn-danger:hover {
-  background: #dc2626;
+.btn-success:hover {
+  background: #059669;
 }
 
 .modal-close-btn {

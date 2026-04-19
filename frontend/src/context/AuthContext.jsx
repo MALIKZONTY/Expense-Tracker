@@ -10,10 +10,9 @@ export const AuthProvider = ({ children }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // If we have a token, we could optionally fetch /api/auth/me to verify it
-    // For now, simple trusting of local storage token.
-    if (token) {
-      setUser({ id: 'authed' }); // Dummy user object unless we decode JWT
+    const savedUser = localStorage.getItem('user');
+    if (token && savedUser) {
+      setUser(JSON.parse(savedUser));
     } else {
       setUser(null);
     }
@@ -30,6 +29,7 @@ export const AuthProvider = ({ children }) => {
     if (res.ok) {
       const data = await res.json();
       localStorage.setItem('token', data.token);
+      localStorage.setItem('user', JSON.stringify(data.user));
       setToken(data.token);
       setUser(data.user);
       navigate('/');
@@ -50,6 +50,7 @@ export const AuthProvider = ({ children }) => {
     if (res.ok) {
       const data = await res.json();
       localStorage.setItem('token', data.token);
+      localStorage.setItem('user', JSON.stringify(data.user));
       setToken(data.token);
       setUser(data.user);
       navigate('/');
@@ -62,6 +63,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => {
     localStorage.removeItem('token');
+    localStorage.removeItem('user');
     setToken(null);
     setUser(null);
     navigate('/login');

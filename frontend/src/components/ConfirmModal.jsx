@@ -1,4 +1,4 @@
-import { X, AlertTriangle } from 'lucide-react';
+import { X, AlertTriangle, CheckCircle } from 'lucide-react';
 
 const ConfirmModal = ({ title, message, confirmText, cancelText, type, onConfirm, onCancel }) => {
   return (
@@ -10,7 +10,7 @@ const ConfirmModal = ({ title, message, confirmText, cancelText, type, onConfirm
 
         <div className="confirm-modal-content">
           <div className={`confirm-icon-wrapper ${type}`}>
-            <AlertTriangle size={24} />
+            {type === 'success' ? <CheckCircle size={24} /> : <AlertTriangle size={24} />}
           </div>
           
           <div className="confirm-text-content">
@@ -24,7 +24,11 @@ const ConfirmModal = ({ title, message, confirmText, cancelText, type, onConfirm
             {cancelText}
           </button>
           <button 
-            className={`btn ${type === 'danger' ? 'btn-danger' : 'btn-primary'}`} 
+            className={`btn ${
+              type === 'danger' ? 'btn-danger' : 
+              type === 'success' ? 'btn-success' : 
+              'btn-primary'
+            }`} 
             onClick={onConfirm}
           >
             {confirmText}

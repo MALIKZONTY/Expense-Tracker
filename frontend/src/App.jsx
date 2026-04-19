@@ -9,6 +9,13 @@ import About from './pages/About';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import LandingPage from './pages/LandingPage';
+import Demo from './pages/Demo';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
+import Disclaimer from './pages/Disclaimer';
+import Contact from './pages/Contact';
+import AdminInquiries from './pages/AdminInquiries';
+import Footer from './components/Footer';
 
 function NavBar() {
   const location = useLocation();
@@ -25,6 +32,8 @@ function NavBar() {
     });
     if (confirmed) logout();
   };
+
+  const isAdmin = user?.role === 'admin';
 
   return (
     <nav className="navbar">
@@ -51,6 +60,7 @@ function NavBar() {
             <Link to="/" className={`nav-link ${isActive('/')}`}>Dashboard</Link>
             <Link to="/add" className={`nav-link ${isActive('/add')}`}>Add Transaction</Link>
             <Link to="/transactions" className={`nav-link ${isActive('/transactions')}`}>Transactions</Link>
+            {isAdmin && <Link to="/admin/inquiries" className={`nav-link ${isActive('/admin/inquiries')}`}>Inquiry Dashboard</Link>}
           </div>
         </div>
       )}
@@ -58,9 +68,10 @@ function NavBar() {
   );
 }
 
-const ProtectedRoute = ({ children }) => {
+const ProtectedRoute = ({ children, adminOnly = false }) => {
   const { user } = useContext(AuthContext);
   if (!user) return <Navigate to="/login" />;
+  if (adminOnly && user.role !== 'admin') return <Navigate to="/" />;
   return children;
 };
 
@@ -69,16 +80,25 @@ function App() {
     <UIProvider>
       <Router>
         <AuthProvider>
-          <NavBar />
-          <div className="container">
-            <Routes>
-              <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Signup />} />
-              <Route path="/" element={<AuthContext.Consumer>{({ user }) => user ? <Dashboard /> : <LandingPage />}</AuthContext.Consumer>} />
-              <Route path="/add" element={<ProtectedRoute><AddTransaction /></ProtectedRoute>} />
-              <Route path="/transactions" element={<ProtectedRoute><TransactionList /></ProtectedRoute>} />
-              <Route path="/about" element={<About />} />
-            </Routes>
+          <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+            <NavBar />
+            <div style={{ flex: 1 }}>
+              <Routes>
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Signup />} />
+                <Route path="/" element={<AuthContext.Consumer>{({ user }) => user ? <Dashboard /> : <LandingPage />}</AuthContext.Consumer>} />
+                <Route path="/add" element={<ProtectedRoute><AddTransaction /></ProtectedRoute>} />
+                <Route path="/transactions" element={<ProtectedRoute><TransactionList /></ProtectedRoute>} />
+                <Route path="/about" element={<About />} />
+                <Route path="/demo" element={<Demo />} />
+                <Route path="/privacy" element={<PrivacyPolicy />} />
+                <Route path="/terms" element={<TermsOfService />} />
+                <Route path="/disclaimer" element={<Disclaimer />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/admin/inquiries" element={<ProtectedRoute adminOnly><AdminInquiries /></ProtectedRoute>} />
+              </Routes>
+            </div>
+            <Footer />
           </div>
         </AuthProvider>
       </Router>
