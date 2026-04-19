@@ -63,7 +63,7 @@ class TransactionModel {
 
   static async getSummary(userId) {
     const query = `
-      SELECT type, COALESCE(SUM(amount), 0) as total
+      SELECT type, COALESCE(SUM(amount), 0) as total, COUNT(*) as count
       FROM transactions
       WHERE user_id = $1 AND is_deleted = false
       GROUP BY type;

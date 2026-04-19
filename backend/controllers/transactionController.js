@@ -49,10 +49,12 @@ exports.getDashboard = async (req, res) => {
     const summaryData = await TransactionModel.getSummary(req.user.id);
     let totalIncome = 0;
     let totalExpenses = 0;
+    let totalTransactions = 0;
 
     summaryData.forEach(row => {
       if (row.type === 'income') totalIncome += Number(row.total);
       if (row.type === 'expense') totalExpenses += Number(row.total);
+      totalTransactions += Number(row.count);
     });
 
     const categoryData = await TransactionModel.getExpensesByCategory(req.user.id);
@@ -64,7 +66,8 @@ exports.getDashboard = async (req, res) => {
       summary: {
         totalIncome,
         totalExpenses,
-        remainingBalance: totalIncome - totalExpenses
+        remainingBalance: totalIncome - totalExpenses,
+        totalTransactions
       },
       charts: {
         categoryPie: categoryData.map(d => ({ name: d.name, value: Number(d.value) })),

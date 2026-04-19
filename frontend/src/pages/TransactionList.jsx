@@ -66,7 +66,7 @@ export default function TransactionList() {
 
   const fetchTransactions = useCallback(() => {
     setLoading(true);
-    let url = `${import.meta.env.VITE_API_URL || ''}/api/transactions?page=${page}&limit=10`;
+    let url = `${import.meta.env.VITE_API_URL || ''}/api/transactions?page=${page}&limit=2`;
     if (typeFilter) url += `&type=${typeFilter}`;
 
     const { start, end } = getDateRange(dateFilter, customStartDate, customEndDate);
@@ -221,8 +221,15 @@ export default function TransactionList() {
           </div>
         </div>
       )}      {/* Header and Filters */}
-      <div style={{ marginBottom: '2rem' }}>
-        <h1 style={{ marginBottom: '1.5rem' }}>All Transactions</h1>
+      <div style={{ marginBottom: '2rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '1rem' }}>
+          <h1 style={{ margin: 0 }}>All Transactions</h1>
+          {!loading && meta.total > 0 && (
+            <div style={{ fontSize: '0.95rem', color: 'var(--primary-color)', fontWeight: 600, background: 'rgba(59, 130, 246, 0.1)', padding: '0.4rem 1rem', borderRadius: '99px', border: '1px solid rgba(59, 130, 246, 0.2)' }}>
+              Total: <span style={{ fontWeight: 800 }}>{meta.total}</span> {meta.total === 1 ? 'transaction' : 'transactions'} found
+            </div>
+          )}
+        </div>
 
         <div className="filter-stack" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'flex-end', background: 'white', padding: '1.5rem', borderRadius: '16px', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05)' }}>
           <div className="form-group" style={{ flex: '1 1 150px', marginBottom: 0 }}>

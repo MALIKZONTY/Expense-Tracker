@@ -53,6 +53,10 @@ export default function Dashboard() {
           <h3 style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Remaining Balance</h3>
           <p style={{ fontSize: '1.75rem', margin: '0.25rem 0', fontWeight: 'bold' }}>₹{Number(summary.remainingBalance).toLocaleString('en-IN')}</p>
         </div>
+        <div className="card flex-col items-center justify-center" style={{ padding: '1.25rem' }}>
+          <h3 style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Total Transactions</h3>
+          <p style={{ fontSize: '1.75rem', margin: '0.25rem 0', fontWeight: 'bold', color: 'var(--primary-color)' }}>{summary.totalTransactions}</p>
+        </div>
       </div>
 
       {walletBalances && walletBalances.length > 0 && (
