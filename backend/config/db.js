@@ -1,6 +1,8 @@
 const { Pool } = require('pg');
-const path = require('path');
-require('dotenv').config({ path: path.join(__dirname, '../../.env') });
+
+if (!process.env.DB_URL) {
+  console.error("❌ ERROR: DB_URL environment variable is missing! Check Railway Settings.");
+}
 
 const pool = new Pool({
   connectionString: process.env.DB_URL,
