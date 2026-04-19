@@ -41,30 +41,31 @@ export default function Dashboard() {
       <h1>Dashboard</h1>
 
       <div className="dashboard-grid">
-        <div className="card flex-col items-center justify-center">
-          <h3 style={{ color: 'var(--text-secondary)' }}>Total Income</h3>
-          <p className="income-text" style={{ fontSize: '2rem', margin: '0.5rem 0' }}>₹{Number(summary.totalIncome).toLocaleString('en-IN')}</p>
+        <div className="card flex-col items-center justify-center" style={{ padding: '1.25rem' }}>
+          <h3 style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Total Income</h3>
+          <p className="income-text" style={{ fontSize: '1.75rem', margin: '0.25rem 0' }}>₹{Number(summary.totalIncome).toLocaleString('en-IN')}</p>
         </div>
-        <div className="card flex-col items-center justify-center">
-          <h3 style={{ color: 'var(--text-secondary)' }}>Total Expenses</h3>
-          <p className="expense-text" style={{ fontSize: '2rem', margin: '0.5rem 0' }}>₹{Number(summary.totalExpenses).toLocaleString('en-IN')}</p>
+        <div className="card flex-col items-center justify-center" style={{ padding: '1.25rem' }}>
+          <h3 style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Total Expenses</h3>
+          <p className="expense-text" style={{ fontSize: '1.75rem', margin: '0.25rem 0' }}>₹{Number(summary.totalExpenses).toLocaleString('en-IN')}</p>
         </div>
-        <div className="card flex-col items-center justify-center">
-          <h3 style={{ color: 'var(--text-secondary)' }}>Remaining Balance</h3>
-          <p style={{ fontSize: '2rem', margin: '0.5rem 0', fontWeight: 'bold' }}>₹{Number(summary.remainingBalance).toLocaleString('en-IN')}</p>
+        <div className="card flex-col items-center justify-center" style={{ padding: '1.25rem' }}>
+          <h3 style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Remaining Balance</h3>
+          <p style={{ fontSize: '1.75rem', margin: '0.25rem 0', fontWeight: 'bold' }}>₹{Number(summary.remainingBalance).toLocaleString('en-IN')}</p>
         </div>
       </div>
 
       {walletBalances && walletBalances.length > 0 && (
-        <div className="card" style={{ marginBottom: '2rem' }}>
-          <h3>Wallet Balances</h3>
-          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1rem' }}>
+        <div className="card" style={{ marginBottom: '2rem', padding: '1.25rem' }}>
+          <h3 style={{ marginBottom: '1rem' }}>Wallet Balances</h3>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '0.75rem' }}>
             {walletBalances.map((w, idx) => (
-              <div key={idx} style={{ flex: 1, minWidth: '150px', background: '#f8fafc', padding: '1rem', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
-                <span style={{ color: 'var(--text-secondary)' }}>{w.name} {w.name === 'Unknown' ? '(Manual Balancing)' : ''}</span>
-                <p style={{ fontSize: '1.5rem', fontWeight: 'bold', margin: '0.5rem 0 0 0', color: w.balance >= 0 ? 'var(--text-color)' : 'var(--expense-color)' }}>
-                  ₹{Math.abs(Number(w.balance)).toLocaleString('en-IN')} {w.balance < 0 ? ' (Deficit)' : ''}
+              <div key={idx} style={{ background: '#f8fafc', padding: '1rem', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
+                <span style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', display: 'block', marginBottom: '0.25rem' }}>{w.name} {w.name === 'Unknown' ? '(Manual)' : ''}</span>
+                <p style={{ fontSize: '1.25rem', fontWeight: 'bold', margin: 0, color: w.balance >= 0 ? 'var(--text-color)' : 'var(--expense-color)' }}>
+                  ₹{Math.abs(Number(w.balance)).toLocaleString('en-IN')}
                 </p>
+                {w.balance < 0 && <span style={{ fontSize: '0.7rem', color: 'var(--expense-color)', fontWeight: 600 }}>Deficit</span>}
               </div>
             ))}
           </div>

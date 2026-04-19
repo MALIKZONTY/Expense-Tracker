@@ -12,25 +12,53 @@ class TransactionModel {
     return result.rows[0];
   }
 
-  static async getAllTransactions(userId, type, category) {
-    let query = 'SELECT * FROM transactions WHERE user_id = $1 AND is_deleted = false';
+  static async getAllTransactions(userId, filters = {}) {
+    const { type, category, startDate, endDate, limit, offset } = filters;
+    let whereClause = 'WHERE user_id = $1 AND is_deleted = false';
     const values = [userId];
-    let count = 2;
+    let placeholderCount = 2;
 
     if (type) {
-      query += ` AND type = $${count}`;
+      whereClause += ` AND type = $${placeholderCount}`;
       values.push(type);
-      count++;
+      placeholderCount++;
     }
     if (category) {
-      query += ` AND category = $${count}`;
+      whereClause += ` AND category = $${placeholderCount}`;
       values.push(category);
-      count++;
+      placeholderCount++;
+    }
+    if (startDate) {
+      whereClause += ` AND date >= $${placeholderCount}`;
+      values.push(startDate);
+      placeholderCount++;
+    }
+    if (endDate) {
+      whereClause += ` AND date <= $${placeholderCount}`;
+      values.push(endDate);
+      placeholderCount++;
     }
 
-    query += ' ORDER BY date DESC, created_at DESC';
-    const result = await db.query(query, values);
-    return result.rows;
+    const countResult = await db.query(`SELECT COUNT(*) FROM transactions ${whereClause}`, values);
+    const total = parseInt(countResult.rows[0].count);
+
+    let dataQuery = `SELECT * FROM transactions ${whereClause} ORDER BY date DESC, created_at DESC`;
+    const dataValues = [...values];
+    let dataPlaceholderCount = placeholderCount;
+
+    if (limit !== undefined) {
+      dataQuery += ` LIMIT $${dataPlaceholderCount}`;
+      dataValues.push(limit);
+      dataPlaceholderCount++;
+    }
+    if (offset !== undefined) {
+      dataQuery += ` OFFSET $${dataPlaceholderCount}`;
+      dataValues.push(offset);
+      dataPlaceholderCount++;
+    }
+
+    const result = await db.query(dataQuery, dataValues);
+    return { transactions: result.rows, total };
   }
 
   static async getSummary(userId) {

@@ -16,9 +16,27 @@ exports.addTransaction = async (req, res) => {
 
 exports.getTransactions = async (req, res) => {
   try {
-    const { type, category } = req.query;
-    const transactions = await TransactionModel.getAllTransactions(req.user.id, type, category);
-    res.json(transactions);
+    const { type, category, startDate, endDate, page = 1, limit = 20 } = req.query;
+    const offset = (parseInt(page) - 1) * parseInt(limit);
+
+    const { transactions, total } = await TransactionModel.getAllTransactions(req.user.id, {
+      type,
+      category,
+      startDate,
+      endDate,
+      limit: parseInt(limit),
+      offset
+    });
+
+    res.json({
+      transactions,
+      meta: {
+        total,
+        page: parseInt(page),
+        limit: parseInt(limit),
+        totalPages: Math.ceil(total / parseInt(limit))
+      }
+    });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Server error' });

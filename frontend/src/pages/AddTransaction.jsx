@@ -2,7 +2,7 @@ import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AuthContext from '../context/AuthContext';
 
-const EXPENSE_CATEGORIES = ['Food', 'Travel', 'Rent', 'Shopping', 'Bills', 'Entertainment', 'Unknown', 'Other'];
+const EXPENSE_CATEGORIES = ['Food', 'Groceries', 'Travel', 'Rent', 'Shopping', 'Bills', 'Entertainment', 'Unknown', 'Other'];
 const INCOME_CATEGORIES = ['Salary', 'Freelance', 'Business', 'Gift', 'Unknown', 'Other'];
 const PAYMENT_METHODS = ['Online Payment', 'Cash', 'Credit Card', 'Bank Transfer', 'Gift Card'];
 
@@ -49,9 +49,9 @@ export default function AddTransaction() {
   const categories = type === 'expense' ? EXPENSE_CATEGORIES : INCOME_CATEGORIES;
 
   return (
-    <div className="container" style={{ display: 'flex', justifyContent: 'center', paddingTop: '2rem' }}>
-      <div className="card" style={{ width: '100%', maxWidth: '500px', padding: '2rem', borderRadius: '16px', boxShadow: '0 10px 25px rgba(0,0,0,0.05)' }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '2rem', color: 'var(--text-color)' }}>Log Transaction</h2>
+    <div className="container" style={{ display: 'flex', justifyContent: 'center', paddingTop: '1rem' }}>
+      <div className="card" style={{ width: '100%', maxWidth: '500px', padding: '1.25rem', borderRadius: '24px', boxShadow: '0 10px 25px rgba(0,0,0,0.05)', border: 'none' }}>
+        <h2 style={{ textAlign: 'center', marginBottom: '1.5rem', color: 'var(--text-color)', fontSize: '1.5rem' }}>Log Transaction</h2>
         
         {/* Modern Type Toggle */}
         <div style={{ display: 'flex', background: '#f1f5f9', borderRadius: '12px', padding: '0.4rem', marginBottom: '1.5rem' }}>
