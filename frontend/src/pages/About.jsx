@@ -1,12 +1,13 @@
-import { Shield, Rocket, Cpu, Eye, Target, TrendingUp, Lock, RefreshCw } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Shield, Rocket, Cpu, Eye, Target, TrendingUp, Lock, RefreshCw, Award, Users, Globe } from 'lucide-react';
 
 const ContentSection = ({ title, icon: Icon, children }) => (
-  <div style={{ marginBottom: '4rem' }}>
-    <h2 style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', marginBottom: '1.5rem', fontSize: 'clamp(1.6rem, 5vw, 2.2rem)', lineHeight: 1.2, fontWeight: 800 }}>
-      <Icon style={{ color: 'var(--primary-color)', flexShrink: 0, marginTop: '0.3rem' }} /> 
+  <div style={{ marginBottom: '5rem' }}>
+    <h2 style={{ display: 'flex', alignItems: 'flex-start', gap: '1.25rem', marginBottom: '1.75rem', fontSize: 'clamp(1.75rem, 5vw, 2.4rem)', lineHeight: 1.2, fontWeight: 900, color: 'var(--text-primary)' }}>
+      <Icon size={32} style={{ color: 'var(--primary-color)', flexShrink: 0, marginTop: '0.2rem' }} /> 
       <span>{title}</span>
     </h2>
-    <div style={{ color: 'var(--text-secondary)', lineHeight: '1.9', fontSize: 'clamp(1rem, 4vw, 1.15rem)' }}>
+    <div style={{ color: 'var(--text-secondary)', lineHeight: '2.0', fontSize: 'clamp(1rem, 4vw, 1.15rem)' }}>
       {children}
     </div>
   </div>
@@ -14,94 +15,90 @@ const ContentSection = ({ title, icon: Icon, children }) => (
 
 export default function About() {
   return (
-    <div className="about-page" style={{ paddingBottom: '8rem' }}>
-      {/* Hero Header */}
-      <div style={{ padding: 'clamp(4rem, 15vh, 8rem) 1rem', background: 'linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%)', textAlign: 'center', borderBottom: '1px solid var(--border-color)' }}>
-        <h1 style={{ fontSize: 'clamp(2.5rem, 10vw, 4.5rem)', fontWeight: 900, color: 'var(--text-primary)', marginBottom: '2rem', letterSpacing: '-0.04em', lineHeight: 1.1 }}>
-          Redefining Personal <br />
-          <span style={{ background: 'linear-gradient(to right, #3b82f6, #8b5cf6)', WebkitBackgroundClip: 'text', color: 'transparent' }}>Financial Intelligence</span>
-        </h1>
-        <p style={{ maxWidth: '850px', margin: '0 auto', fontSize: 'clamp(1.1rem, 4vw, 1.4rem)', color: 'var(--text-secondary)', lineHeight: '1.8', fontWeight: 500 }}>
-          Expensico isn't just a tool; it's a movement towards radical financial transparency. 
-          We believe that once you see your money clearly, you gain the power to change your life forever.
-        </p>
+    <div className="about-page" style={{ paddingBottom: '10rem' }}>
+      {/* High-Impact Hero Section */}
+      <div style={{ padding: 'clamp(5rem, 20vh, 10rem) 1rem', background: 'radial-gradient(circle at top right, #f8fafc, #ffffff)', textAlign: 'center', borderBottom: '1px solid var(--border-color)', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', top: '-10%', right: '-5%', width: '40%', height: '40%', background: 'rgba(59, 130, 246, 0.03)', borderRadius: '50%', filter: 'blur(80px)' }}></div>
+        
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+          <h1 style={{ fontSize: 'clamp(3rem, 10vw, 5rem)', fontWeight: 900, color: 'var(--text-primary)', marginBottom: '2.5rem', letterSpacing: '-0.05em', lineHeight: 1.05 }}>
+            Pioneering the Era of <br />
+            <span style={{ background: 'linear-gradient(135deg, #3b82f6, #6366f1)', WebkitBackgroundClip: 'text', color: 'transparent' }}>Autonomous Finance</span>
+          </h1>
+          <p style={{ maxWidth: '900px', margin: '0 auto', fontSize: 'clamp(1.2rem, 4vw, 1.5rem)', color: 'var(--text-secondary)', lineHeight: '1.8', fontWeight: 500 }}>
+            Expensico is a global leader in personal financial visualization. 
+            Our mission is to democratize financial intelligence by providing 
+            enterprise-grade tracking tools to every individual, free of charge.
+          </p>
+        </div>
       </div>
 
-      <div className="container" style={{ maxWidth: '1100px', margin: '0 auto', padding: '4rem 1rem' }}>
+      <div className="container" style={{ maxWidth: '1150px', margin: '0 auto', padding: '6rem 1rem' }}>
         
-        <ContentSection title="The Genesis of Expensico" icon={Target}>
+        <ContentSection title="Our Founding Mission" icon={Award}>
           <p style={{ marginBottom: '1.5rem' }}>
-            In an era where digital transactions are seamless yet increasingly complex, Expensico emerged from a simple observation: most people don't know where their money goes. Traditionally, financial tracking has been a chore—something relegated to messy spreadsheets or convoluted banking apps that hide your data behind layers of marketing.
+            Expensico was founded in 2024 as a response to the "Data Opacity" crisis in modern consumer banking. While financial institutions have become more digital, the underlying complexity has made it harder for the average individual to truly understand their net liquidity and spending velocity.
           </p>
           <p style={{ marginBottom: '1.5rem' }}>
-            Our journey began in a small apartment with a single goal: to strip away the noise and provide a <strong>privacy-first, blazing-fast</strong> platform that makes tracking as natural as spending. We spent months researching behavioral patterns in personal finance, understanding that the barrier to financial growth isn't a lack of discipline, but a lack of visibility.
+            Our vision was to create a <strong>mathematically precise</strong> yet <strong>aesthetically minimalist</strong> interface. We believe that clarity breeds confidence. By removing the friction of manual entry and replacing it with instant visual feedback, we empower users to eliminate debt and accelerate wealth generation.
           </p>
           <p>
-            Today, Expensico serves as the digital backbone for thousands of individuals who are serious about their financial health. We have evolved from a basic ledger into a sophisticated analytics engine, all while maintaining the minimalist aesthetic that our users have come to love.
+            Today, our platform represents the gold standard in privacy-first financial tracking, built on the bedrock of user sovereignty and data integrity.
           </p>
         </ContentSection>
 
-        {/* Highlight Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2.5rem', marginBottom: '6rem' }}>
-          <div className="card" style={{ padding: '3rem', border: '1px solid rgba(59, 130, 246, 0.1)', boxShadow: '0 20px 40px rgba(0,0,0,0.03)' }}>
-            <div style={{ width: '60px', height: '60px', borderRadius: '16px', background: 'rgba(59, 130, 246, 0.1)', color: 'var(--primary-color)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '2rem' }}>
-              <TrendingUp size={32} />
-            </div>
-            <h3 style={{ marginBottom: '1.25rem', fontSize: '1.5rem', fontWeight: 700 }}>Built for Growth</h3>
-            <p style={{ color: 'var(--text-secondary)', lineHeight: '1.7', fontSize: '1.05rem' }}>
-              Expensico is designed to grow with your financial complexity. From your first paycheck to a diversified investment portfolio, our engine scales with you.
+        {/* Core Values Grid */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '3rem', marginBottom: '8rem' }}>
+          <div className="card shadow-glow" style={{ padding: '3.5rem', border: '1px solid rgba(59, 130, 246, 0.1)', background: 'white', borderRadius: '24px' }}>
+            <Users size={40} style={{ color: 'var(--primary-color)', marginBottom: '2rem' }} />
+            <h3 style={{ marginBottom: '1.25rem', fontSize: '1.6rem', fontWeight: 800 }}>User-Centric Design</h3>
+            <p style={{ color: 'var(--text-secondary)', lineHeight: '1.8' }}>
+              Every feature in Expensico is born from community feedback. We build tools that solve real-world financial challenges, not just theoretical ones.
             </p>
           </div>
 
-          <div className="card" style={{ padding: '3rem', border: '1px solid rgba(16, 185, 129, 0.1)' }}>
-            <div style={{ width: '60px', height: '60px', borderRadius: '16px', background: 'rgba(16, 185, 129, 0.1)', color: 'var(--income-color)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '2rem' }}>
-              <Lock size={32} />
-            </div>
-            <h3 style={{ marginBottom: '1.25rem', fontSize: '1.5rem', fontWeight: 700 }}>Zero-Knowledge Privacy</h3>
-            <p style={{ color: 'var(--text-secondary)', lineHeight: '1.7', fontSize: '1.05rem' }}>
-              Your data is yours alone. We implement strict server-side security measures ensuring that even our administrators cannot access your raw financial records.
+          <div className="card shadow-glow" style={{ padding: '3.5rem', border: '1px solid rgba(16, 185, 129, 0.1)', background: 'white', borderRadius: '24px' }}>
+            <Globe size={40} style={{ color: 'var(--income-color)', marginBottom: '2rem' }} />
+            <h3 style={{ marginBottom: '1.25rem', fontSize: '1.6rem', fontWeight: 800 }}>Global Transparency</h3>
+            <p style={{ color: 'var(--text-secondary)', lineHeight: '1.8' }}>
+              We operate across borders, providing financial clarity to users worldwide while adhering to the strictest international data protection standards.
             </p>
           </div>
         </div>
 
-        <ContentSection title="Engineering Excellence" icon={Cpu}>
+        <ContentSection title="Engineering for Reliability" icon={Cpu}>
           <p style={{ marginBottom: '1.5rem' }}>
-            The "Smart" in Expensico comes from our high-performance technology stack. At the core, we utilize <strong>React 18</strong> for a declarative and responsive user interface that updates instantly across all devices. We chose <strong>Vite</strong> as our build tool to ensure that developers and users alike experience a lightning-fast environment.
+            Expensico is engineered using a high-availability architecture designed for zero downtime. Our frontend utilizes a <strong>High-Performance Vite React</strong> pipeline, ensuring that every interaction—from logging a transaction to rendering a complex quarterly chart—is executed in sub-100ms speeds.
           </p>
           <p style={{ marginBottom: '1.5rem' }}>
-            On the infrastructure side, our robust <strong>Node.js and Express</strong> backend handles thousands of concurrent requests with ease, orchestrated through a scalable <strong>PostgreSQL</strong> relational database. This combination allows for complex relational queries, such as our multi-wallet balance aggregation and period-over-period growth metrics, to be calculated in milliseconds.
-          </p>
-          <p>
-            Security is baked into every line of code. We use <strong>JSON Web Tokens (JWT)</strong> for secure session management, ensuring that every request is authenticated and authorized against strict user-based ownership rules. Our soft-delete architecture ensures that while your dashboard remains clean, your historical data is protected against accidental user errors.
+            Our backend infrastructure is anchored by a high-concurrency Node.js cluster, paired with a horizontally scalable relational database. This allows for deep relational analysis of transaction data, enabling the platform to provide unique insights into "Spending Trends," "Wallet Performance," and "Category Distribution" with surgical precision.
           </p>
         </ContentSection>
 
-        <ContentSection title="Commitment to Security" icon={Shield}>
+        <ContentSection title="Privacy as a Core Product" icon={Shield}>
           <p style={{ marginBottom: '1.5rem' }}>
-            We understand that when you trust us with your financial data, you are trusting us with your future. That is a responsibility we do not take lightly. Expensico implements <strong>industry-standard AES-256 encryption</strong> for sensitive data storage and <strong>TLS/SSL protocols</strong> for all data in transit. This ensures that your information is unreadable to anyone but you, whether it's stored on our cloud servers or moving across the global web.
+            We do not view privacy as a compliance checkbox; it is our primary product. Unlike traditional financial apps that monetize your "Anonymized Data", Expensico operates under a <strong>Zero-monetization</strong> rule for user data. We implement state-of-the-art server-side isolation, ensuring your financial records are accessible only through your authenticated JWT session.
           </p>
           <p style={{ marginBottom: '1.5rem' }}>
-            Beyond encryption, we adhere to strict <strong>database isolation practices</strong>. Every user's data is partitioned at the application level, preventing data leakage and cross-user contamination. We also conduct regular automated security audits to identify and patch potential vulnerabilities before they can be exploited.
-          </p>
-          <p>
-            Our commitment extends to <strong>compliance and transparency</strong>. We provide detailed logs of account activity and allow you to export your entire data history at any time. In the rare event of a system failure, our high-availability backups ensure that your data is recoverable up to the last millisecond.
+            Our security framework follows the <strong>OWASP Top 10</strong> security guidelines, incorporating robust protections against SQL injection, XSS, and CSRF attacks. Every transaction is encrypted at rest and in transit using military-grade TLS 1.3 encryption.
           </p>
         </ContentSection>
 
-        <ContentSection title="The Vision Ahead" icon={RefreshCw}>
+        <ContentSection title="Compliance and Trust" icon={Lock}>
           <p style={{ marginBottom: '1.5rem' }}>
-            We are just getting started. The roadmap for Expensico includes the integration of <strong>AI-driven Predictive Budgeting</strong>, allowing our algorithms to forecast your future spending based on historical trends. We are also working on <strong>Multi-Currency Support</strong> and <strong>Smart Receipt Parsing</strong> to make manual entry a thing of the past.
+            As a global product, Expensico is designed to be fully compatible with the <strong>General Data Protection Regulation (GDPR)</strong>, the <strong>California Consumer Privacy Act (CCPA)</strong>, and the <strong>California Privacy Rights Act (CPRA)</strong>. 
           </p>
           <p>
-            Our vision is to become the central nervous system for your financial life—a platform that doesn't just record the past, but helps you navigate the future. Thank you for being a part of this journey to financial empowerment.
+            We empower our users with tools to exercise their data rights, including the right to data portability and the right to erasure. Our transparency reports and clear legal disclosures ensure that you are always in the driver's seat of your financial identity.
           </p>
         </ContentSection>
 
-        {/* Global Stats or Vision Banner */}
-        <div className="card shadow-glow" style={{ padding: '4rem', textAlign: 'center', background: 'linear-gradient(135deg, #f8fafc 0%, #ffffff 100%)', borderRadius: '32px', border: '1px solid var(--border-color)' }}>
-          <h2 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '1rem', color: 'var(--text-primary)' }}>100% Data Sovereignty</h2>
-          <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto', lineHeight: '1.6' }}>
-            You own your data. You control your future. Expensico is simply the lens through which you see your success.
+        {/* Final Vision Statement */}
+        <div className="card shadow-glow" style={{ padding: '5rem 2rem', textAlign: 'center', background: 'linear-gradient(135deg, #f8fafc 0%, #ffffff 100%)', borderRadius: '40px', border: '1px solid var(--border-color)', marginTop: '4rem' }}>
+          <Rocket size={48} style={{ color: 'var(--primary-color)', marginBottom: '2rem' }} />
+          <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '1.5rem', color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>Your Wealth, Refocused.</h2>
+          <p style={{ color: 'var(--text-secondary)', maxWidth: '750px', margin: '0 auto', fontSize: '1.15rem', lineHeight: '1.8' }}>
+            The future of finance isn't just about accumulation; it's about understanding. Join thousands of users who have transitioned from passive spenders to active wealth architects with Expensico.
           </p>
         </div>
 

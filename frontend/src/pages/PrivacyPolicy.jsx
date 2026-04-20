@@ -2,126 +2,174 @@ import { Link } from 'react-router-dom';
 
 export default function PrivacyPolicy() {
   return (
-    <div className="container" style={{ padding: '4rem 1rem', maxWidth: '900px' }}>
-      <div className="card" style={{ padding: 'clamp(2rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3rem)' }}>
-        <h1 style={{ marginBottom: '2.5rem', fontSize: 'clamp(2rem, 8vw, 3rem)', fontWeight: 900, color: 'var(--text-primary)', letterSpacing: '-0.03em' }}>Privacy Policy</h1>
+    <div className="container" style={{ padding: '4rem 1rem', maxWidth: '1000px' }}>
+      <div className="card" style={{ padding: 'clamp(2rem, 5vw, 5rem) clamp(1.5rem, 4vw, 4rem)', background: 'white', borderRadius: '32px', boxShadow: '0 20px 50px rgba(0,0,0,0.05)' }}>
+        <h1 style={{ marginBottom: '1.5rem', fontSize: 'clamp(2.5rem, 8vw, 4rem)', fontWeight: 900, color: 'var(--text-primary)', letterSpacing: '-0.05em' }}>Privacy Policy</h1>
+        <p style={{ marginBottom: '3rem', fontSize: '1.2rem', color: 'var(--text-secondary)', fontWeight: 500 }}>Global Data Protection & Privacy Commitment for Expensico</p>
         
         <div style={{ color: 'var(--text-secondary)', lineHeight: '1.9', fontSize: '1.05rem' }}>
-          <p style={{ marginBottom: '2rem', fontStyle: 'italic', color: 'var(--text-primary)' }}>Last Updated: {new Date().toLocaleDateString()}</p>
+          <p style={{ marginBottom: '3rem', fontStyle: 'italic', borderLeft: '5px solid var(--primary-color)', paddingLeft: '2rem', background: 'rgba(59, 130, 246, 0.04)', padding: '1.5rem', borderRadius: '0 16px 16px 0' }}>
+            <strong>Version 2.0 | Last Modified:</strong> {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+          </p>
           
-          <section style={{ marginBottom: '3rem' }}>
-            <h2 style={{ color: 'var(--text-primary)', margin: '0 0 1.5rem 0', fontSize: '1.5rem', fontWeight: 800 }}>1. Comprehensive Data Stewardship</h2>
+          <section style={{ marginBottom: '4rem' }}>
+            <h2 style={{ color: 'var(--text-primary)', margin: '0 0 1.5rem 0', fontSize: '1.75rem', fontWeight: 800 }}>1. Framework and Scope of Governance</h2>
             <p style={{ marginBottom: '1.5rem' }}>
-              At Expensico, we recognize that privacy is not merely a feature, but a fundamental human right. This Privacy Policy is our commitment to transparency, outlining the meticulous measures we take to safeguard your personal and financial information. By using our services, you entrust us with your data, and we take that responsibility with the utmost gravity.
+              Expensico ("we", "us", or "our") operates the financial intelligence platform accessible via our web application. We are committed to the highest standards of data stewardship and transparency. This Privacy Policy serves as the definitive guide to our data practices, engineered to satisfy requirements under the <strong>General Data Protection Regulation (GDPR)</strong>, <strong>California Consumer Privacy Act (CCPA/CPRA)</strong>, <strong>UK Data Protection Act 2018</strong>, and other global standards.
             </p>
-            <p>
-              We operate under the principle of <strong>Data Sovereignty</strong>, meaning you retain full ownership and control over your data at all times. Our systems are designed to minimize data collection, ensuring that we only possess the information absolutely necessary to provide you with a world-class financial tracking experience.
-            </p>
-          </section>
-
-          <section style={{ marginBottom: '3rem' }}>
-            <h2 style={{ color: 'var(--text-primary)', margin: '0 0 1.5rem 0', fontSize: '1.5rem', fontWeight: 800 }}>2. Information We Collect</h2>
             <p style={{ marginBottom: '1.5rem' }}>
-              Our data collection is transparent and strictly limited to the following categories:
+              This policy applies to all users (collectively, "Users", "you", or "your") who interact with our services. By using Expensico, you acknowledge that you have read and understood this policy in its entirety.
             </p>
-            <div style={{ paddingLeft: '1.5rem' }}>
-              <h4 style={{ color: 'var(--text-primary)', marginBottom: '0.75rem' }}>A. Personal Authentication Data</h4>
-              <p style={{ marginBottom: '1rem' }}>
-                To create and secure your account, we collect your email address. This information is used for identity verification, account recovery, and sending critical security notifications. We do not require or collect your name, physical address, or phone number unless explicitly provided for specific support requests.
-              </p>
-              
-              <h4 style={{ color: 'var(--text-primary)', marginBottom: '0.75rem' }}>B. Financial Transaction Data</h4>
-              <p style={{ marginBottom: '1rem' }}>
-                As a core service of Expensico, we store the transaction data you manually input. This includes amounts, categories, dates, payment methods, and optional notes. This data is logically isolated per user and is never aggregated for third-party marketing purposes.
-              </p>
-
-              <h4 style={{ color: 'var(--text-primary)', marginBottom: '0.75rem' }}>C. System and Usage Logs</h4>
-              <p style={{ marginBottom: '1rem' }}>
-                When you interact with our servers, we automatically collect basic system information such as IP addresses (anonymized), browser types, and timestamp data. This is used exclusively for performance monitoring, security auditing, and troubleshooting system errors.
-              </p>
+            <div style={{ padding: '1.25rem', background: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
+               <h4 style={{ color: 'var(--text-primary)', marginBottom: '0.5rem' }}>Data Controller Information</h4>
+               <p style={{ fontSize: '0.95rem' }}>Expensico acts as the <strong>Data Controller</strong> for the personal data collected through this platform. Our Data Protection Officer (DPO) oversees our privacy strategy and can be reached via the contact methods listed in Section 12.</p>
             </div>
           </section>
 
-          <section style={{ marginBottom: '3rem' }}>
-            <h2 style={{ color: 'var(--text-primary)', margin: '0 0 1.5rem 0', fontSize: '1.5rem', fontWeight: 800 }}>3. Advanced Security Protocols</h2>
-            <p style={{ marginBottom: '1.5rem' }}>
-              We implement a multi-layered security architecture to ensure your data remains impenetrable. This includes:
-            </p>
-            <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
-              <li style={{ marginBottom: '1rem' }}><strong>End-to-End Transit Encryption:</strong> All data transmitted between your device and our servers is encrypted using 2048-bit TLS/SSL protocols, preventing "man-in-the-middle" attacks.</li>
-              <li style={{ marginBottom: '1rem' }}><strong>At-Rest Hashing:</strong> Sensitive authentication data, such as passwords, are never stored in plain text. We utilize advanced cryptographic hashing algorithms (BCrypt with high salt rounds) to ensure that even a database breach would not compromise your credentials.</li>
-              <li style={{ marginBottom: '1rem' }}><strong>JWT Stateless Sessions:</strong> We utilize JSON Web Tokens for session management. These tokens are cryptographically signed and stored in secure, HttpOnly cookies to prevent Cross-Site Scripting (XSS) and Cross-Site Request Forgery (CSRF).</li>
+          <section style={{ marginBottom: '4rem' }}>
+            <h2 style={{ color: 'var(--text-primary)', margin: '0 0 1.5rem 0', fontSize: '1.75rem', fontWeight: 800 }}>2. Legal Bases for Processing (GDPR Article 6)</h2>
+            <p style={{ marginBottom: '1.5rem' }}>We only process your data when we have a valid legal ground to do so. Our processing is predicated on the following bases:</p>
+            <ul style={{ marginBottom: '1.5rem', paddingLeft: '1.5rem' }}>
+              <li style={{ marginBottom: '1rem' }}><strong>Consent:</strong> You have given clear consent for us to process your personal data for a specific purpose (e.g., creating an account).</li>
+              <li style={{ marginBottom: '1rem' }}><strong>Contractual Necessity:</strong> Processing is necessary for the performance of the service agreement between you and Expensico (e.g., providing financial balance calculations).</li>
+              <li style={{ marginBottom: '1rem' }}><strong>Legal Obligation:</strong> Processing is required for us to comply with the law (e.g., financial reporting or security audits).</li>
+              <li style={{ marginBottom: '1rem' }}><strong>Legitimate Interests:</strong> Processing is necessary for our legitimate interests, such as improving platform performance, providing customer support, or ensuring network security, provided these do not override your fundamental rights.</li>
             </ul>
           </section>
 
-          <section style={{ marginBottom: '3rem' }}>
-            <h2 style={{ color: 'var(--text-primary)', margin: '0 0 1.5rem 0', fontSize: '1.5rem', fontWeight: 800 }}>4. Data Retention and Deletion</h2>
+          <section style={{ marginBottom: '4rem' }}>
+            <h2 style={{ color: 'var(--text-primary)', margin: '0 0 1.5rem 0', fontSize: '1.75rem', fontWeight: 800 }}>3. Granular Data Collection</h2>
+            <div style={{ paddingLeft: '1rem' }}>
+              <h3 style={{ color: 'var(--text-primary)', fontSize: '1.3rem', marginBottom: '1rem' }}>A. Identity and Authentication Data</h3>
+              <p style={{ marginBottom: '1.5rem' }}>When you register, we collect your email address. We use this as a unique identifier for your cryptographic session and for critical platform communications. We do not collect names, physical addresses, or government identifiers unless voluntarily provided during a high-tier support request.</p>
+              
+              <h3 style={{ color: 'var(--text-primary)', fontSize: '1.3rem', marginBottom: '1rem' }}>B. Financial Intelligence Data</h3>
+              <p style={{ marginBottom: '1.5rem' }}>We store the ledger entries you create. This includes: timestamped transaction amounts, user-defined categories (e.g., "Dining", "Rent"), payment method metadata, and custom notes. Note: We do not integrate with banks via Plaid or Yodlee; all data is manually input by you, giving you full control over the depth of data shared.</p>
+
+              <h3 style={{ color: 'var(--text-primary)', fontSize: '1.3rem', marginBottom: '1rem' }}>C. Digital Footprint (Metadata)</h3>
+              <p style={{ marginBottom: '1.5rem' }}>Our platform automatically captures: IP addresses (anonymized at the network layer), browser fingerprinting data, viewport dimensions, timezone offsets, and clickstream movements. This data is used for security (DDoS mitigation) and UX optimization.</p>
+            </div>
+          </section>
+
+          <section style={{ marginBottom: '4rem' }}>
+            <h2 style={{ color: 'var(--text-primary)', margin: '0 0 1.5rem 0', fontSize: '1.75rem', fontWeight: 800 }}>4. Sensitive Data and "Do Not Sell"</h2>
             <p style={{ marginBottom: '1.5rem' }}>
-              We adhere to the "Right to be Forgotten" principle. Your data is retained only for as long as your account is active. If you choose to delete your account, all personal and financial data is permanently purged from our primary database within 30 days.
+              <strong>Special Categories of Data:</strong> Expensico does not actively solicit or collect "Sensitive Personal Information" as defined by GDPR Article 9 (e.g., race, religion, health data). If you choose to include such data in your transaction "notes", you are explicitly consenting to its storage under the same security protocols as standard data.
             </p>
-            <p>
-              Please note our <strong>Soft-Delete Architecture</strong>: When you delete a transaction, it is marked as "deleted" in our database and hidden from your interface immediately. This allows for a "grace period" should you need to recover a transaction through a support request. However, after a designated cleanup period, these records are physically moved to cold storage before final permanent erasure.
+            <p style={{ fontWeight: 700, color: 'var(--text-primary)' }}>
+              <strong>WE DO NOT SELL YOUR DATA.</strong> Expensico has never sold, and will never sell, your personal or financial data to data brokers, marketers, or any third party. Your data remains your proprietary asset.
             </p>
           </section>
 
-          <section style={{ marginBottom: '3rem' }}>
-            <h2 style={{ color: 'var(--text-primary)', margin: '0 0 1.5rem 0', fontSize: '1.5rem', fontWeight: 800 }}>5. Third-Party Disclosures</h2>
+          <section style={{ marginBottom: '4rem' }}>
+            <h2 style={{ color: 'var(--text-primary)', margin: '0 0 1.5rem 0', fontSize: '1.75rem', fontWeight: 800 }}>5. Cookies, Web Beacons, and DART Technology</h2>
             <p style={{ marginBottom: '1.5rem' }}>
-              Expensico does not sell, trade, or otherwise transfer your personally identifiable information to outside parties. This does not include trusted third parties who assist us in operating our website, conducting our business, or serving our users, so long as those parties agree to keep this information confidential and compliant with global privacy standards (e.g., Cloud database providers).
+              Our "Cookie Ecosystem" is designed to enhance functionality while respecting privacy. We utilize:
             </p>
-            <p>
-              We may release information when its release is appropriate to comply with the law, enforce our site policies, or protect ours or others' rights, property, or safety.
+            <ul style={{ marginBottom: '1.5rem', paddingLeft: '1.5rem' }}>
+              <li style={{ marginBottom: '0.75rem' }}><strong>Essential Cookies:</strong> Required for secure login sessions and CSRF protection.</li>
+              <li style={{ marginBottom: '0.75rem' }}><strong>Preference Cookies:</strong> Store UI states such as Dark/Light mode and chart filters.</li>
+              <li style={{ marginBottom: '0.75rem' }}><strong>Analytics Web Beacons:</strong> Small pixels used to track aggregate interaction rates without identifying individual users.</li>
+            </ul>
+            <p style={{ marginBottom: '1.5rem' }}>
+              <strong>Google DART Cookie:</strong> As an AdSense partner, Google use of the DART cookie enables it to serve ads to our users based on their visit to our site and other sites on the Internet. Users may opt out of the use of the DART cookie by visiting the Google ad and content network privacy policy.
             </p>
           </section>
 
-          <section style={{ marginBottom: '3rem' }}>
-            <h2 style={{ color: 'var(--text-primary)', margin: '0 0 1.5rem 0', fontSize: '1.5rem', fontWeight: 800 }}>6. Cookie Usage Transparency</h2>
-            <p style={{ marginBottom: '1.5rem' }}>
-              Cookies are small files that a site or its service provider transfers to your computer's hard drive through your Web browser (if you allow) that enables the site's or service provider's systems to recognize your browser and capture and remember certain information.
-            </p>
+          <section style={{ marginBottom: '4rem' }}>
+            <h2 style={{ color: 'var(--text-primary)', margin: '0 0 1.5rem 0', fontSize: '1.75rem', fontWeight: 800 }}>6. Automated Decision Making and Profiling</h2>
             <p>
-              We use cookies to:
+              Expensico uses basic automated algorithms to categorize your spending and generate visual reports. However, we do not engage in "Profiling" as defined by the GDPR that produces legal effects or significantly affects you. All financial "decisions" on the platform are initiated and controlled solely by you.
             </p>
-            <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
-              <li style={{ marginBottom: '0.75rem' }}>Maintain your authenticated session (Session Tokens).</li>
-              <li style={{ marginBottom: '0.75rem' }}>Remember your theme preferences (Dark vs. Light mode).</li>
-              <li style={{ marginBottom: '0.75rem' }}>Aggregate anonymous usage data to improve our analytics tools.</li>
+          </section>
+
+          <section style={{ marginBottom: '4rem' }}>
+            <h2 style={{ color: 'var(--text-primary)', margin: '0 0 1.5rem 0', fontSize: '1.75rem', fontWeight: 800 }}>7. Global Data Transfers</h2>
+            <p style={{ marginBottom: '1.5rem' }}>
+              Expensico infrastructure is globally distributed. Data may be transferred to, and maintained on, computers located outside of your state, province, or country. We ensure all such transfers comply with standard contractual clauses (SCCs) and that your data receives an equivalent level of protection as it would in your home jurisdiction.
+            </p>
+          </section>
+
+          <section style={{ marginBottom: '4rem' }}>
+            <h2 style={{ color: 'var(--text-primary)', margin: '0 0 1.5rem 0', fontSize: '1.75rem', fontWeight: 800 }}>8. Data Retention Schedule</h2>
+            <p style={{ marginBottom: '1.5rem' }}>Our retention timelines are strictly governed by necessity:</p>
+            <table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: '1.5rem', border: '1px solid #e2e8f0' }}>
+              <thead style={{ background: '#f1f5f9' }}>
+                <tr>
+                  <th style={{ padding: '1rem', textAlign: 'left', border: '1px solid #e2e8f0' }}>Data Type</th>
+                  <th style={{ padding: '1rem', textAlign: 'left', border: '1px solid #e2e8f0' }}>Retention Period</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style={{ padding: '1rem', border: '1px solid #e2e8f0' }}>Active Account Data</td>
+                  <td style={{ padding: '1rem', border: '1px solid #e2e8f0' }}>Duration of Account Life</td>
+                </tr>
+                <tr>
+                  <td style={{ padding: '1rem', border: '1px solid #e2e8f0' }}>System Audit Logs</td>
+                  <td style={{ padding: '1rem', border: '1px solid #e2e8f0' }}>12 Months</td>
+                </tr>
+                <tr>
+                  <td style={{ padding: '1rem', border: '1px solid #e2e8f0' }}>Deleted Transactions</td>
+                  <td style={{ padding: '1rem', border: '1px solid #e2e8f0' }}>30-Day "Grace" before erasure</td>
+                </tr>
+                <tr>
+                  <td style={{ padding: '1rem', border: '1px solid #e2e8f0' }}>Support Correspondence</td>
+                  <td style={{ padding: '1rem', border: '1px solid #e2e8f0' }}>3 Years from last interaction</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section style={{ marginBottom: '4rem' }}>
+            <h2 style={{ color: 'var(--text-primary)', margin: '0 0 1.5rem 0', fontSize: '1.75rem', fontWeight: 800 }}>9. Children's Online Privacy Protection</h2>
+            <p style={{ marginBottom: '1.5rem' }}>
+              In compliance with <strong>COPPA</strong>, we do not knowingly collect personal data from children under age 13. If you are a parent or guardian and believe your child has provided us with personal data, please contact us immediately. We will take steps to remove such data from our primary and backup servers within 48 hours.
+            </p>
+          </section>
+
+          <section style={{ marginBottom: '4rem' }}>
+            <h2 style={{ color: 'var(--text-primary)', margin: '0 0 1.5rem 0', fontSize: '1.75rem', fontWeight: 800 }}>10. Your Rights and How to Exercise Them</h2>
+            <p style={{ marginBottom: '1.5rem' }}>Depending on your location, you have strong legal rights over your data:</p>
+            <ul style={{ marginBottom: '1.5rem', paddingLeft: '1.5rem' }}>
+              <li style={{ marginBottom: '1rem' }}><strong>Right of Access:</strong> Request a full copy of all data we hold about you (Data Portability).</li>
+              <li style={{ marginBottom: '1rem' }}><strong>Right to Rectification:</strong> Correction of any inaccurate or incomplete financial data.</li>
+              <li style={{ marginBottom: '1rem' }}><strong>Right to Erasure:</strong> "The Right to be Forgotten"—permanent deletion of your account and all associated ledger entries.</li>
+              <li style={{ marginBottom: '1rem' }}><strong>Right to Restrict Processing:</strong> Suspend our use of your data while keeping it stored.</li>
+              <li style={{ marginBottom: '1rem' }}><strong>Right to Object:</strong> Object to processing based on our legitimate interests.</li>
+            </ul>
+            <p>To exercise any of these rights, please contact our support team. We generally respond to all legitimate requests within 30 days.</p>
+          </section>
+
+          <section style={{ marginBottom: '4rem' }}>
+            <h2 style={{ color: 'var(--text-primary)', margin: '0 0 1.5rem 0', fontSize: '1.75rem', fontWeight: 800 }}>11. CAN-SPAM and Communication Policy</h2>
+            <p style={{ marginBottom: '1.5rem' }}>Our email practices are strictly CAN-SPAM compliant:</p>
+            <ul style={{ marginBottom: '1.5rem', paddingLeft: '1.5rem' }}>
+              <li>We will not use false or misleading subject lines.</li>
+              <li>We will include the physical location of our headquarters in every broad-reach email.</li>
+              <li>We will provide an "Unsubscribe" link in all non-transactional emails.</li>
+              <li>We honor opt-out requests within 10 business days.</li>
             </ul>
           </section>
 
-          <section style={{ marginBottom: '3rem' }}>
-            <h2 style={{ color: 'var(--text-primary)', margin: '0 0 1.5rem 0', fontSize: '1.5rem', fontWeight: 800 }}>7. Google AdSense and Advertising Cookies</h2>
-            <p style={{ marginBottom: '1.5rem' }}>
-              We use Google AdSense to serve advertisements on our website. To ensure transparency and compliance with Google's policies, please be aware of the following:
+          <section style={{ marginBottom: '4rem' }}>
+            <h2 style={{ color: 'var(--text-primary)', margin: '0 0 1.5rem 0', fontSize: '1.75rem', fontWeight: 800 }}>12. Interactive Support & Contact</h2>
+            <p style={{ marginBottom: '2rem' }}>
+              For privacy inquiries, compliance requests, or to report a data concern, our specialized team is available via the following channels:
             </p>
-            <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
-              <li style={{ marginBottom: '1rem' }}><strong>Third-Party Vendor Cookies:</strong> Google, as a third-party vendor, uses cookies to serve ads on your site. Google's use of advertising cookies enables it and its partners to serve ads to your users based on their visit to your sites and/or other sites on the Internet.</li>
-              <li style={{ marginBottom: '1rem' }}><strong>Personalized Advertising:</strong> Users may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-color)' }}>Google Ads Settings</a>. Alternatively, you can opt out of a third-party vendor's use of cookies for personalized advertising by visiting <a href="https://www.aboutads.info" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-color)' }}>www.aboutads.info</a>.</li>
-            </ul>
-            <p>
-              If you have not opted out of third-party ad serving, cookies from other third-party vendors or ad networks may also be used to serve ads on our site.
-            </p>
+            <div style={{ padding: '2.5rem', border: '2px solid var(--primary-color)', borderRadius: '24px', background: 'rgba(59, 130, 246, 0.02)', textAlign: 'center' }}>
+              <h4 style={{ color: 'var(--text-primary)', marginBottom: '1rem', fontSize: '1.25rem' }}>Privacy Compliance Office</h4>
+              <p style={{ marginBottom: '0.5rem', fontWeight: 600 }}>Official Digital HQ: Expensico Finance Intelligence</p>
+              <p style={{ marginBottom: '1.5rem', fontSize: '1.15rem' }}><strong>Direct Correspondence:</strong> malikantuparthi@gmail.com</p>
+              <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem' }}>
+                 <Link to="/contact" className="btn btn-primary" style={{ padding: '0.75rem 2rem', borderRadius: '12px' }}>Contact Support</Link>
+              </div>
+            </div>
           </section>
-
-          <section style={{ marginBottom: '3rem' }}>
-            <h2 style={{ color: 'var(--text-primary)', margin: '0 0 1.5rem 0', fontSize: '1.5rem', fontWeight: 800 }}>8. International Compliance</h2>
-            <p style={{ marginBottom: '1.5rem' }}>
-              Although Expensico is accessible globally, we strive to adhere to the highest international standards of data protection, including the principles outlined in the <strong>General Data Protection Regulation (GDPR)</strong> and the <strong>California Consumer Privacy Act (CCPA)</strong>.
-            </p>
-            <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
-              <li style={{ marginBottom: '0.75rem' }}>The right to access your personal data.</li>
-              <li style={{ marginBottom: '0.75rem' }}>The right to rectification of inaccurate data.</li>
-              <li style={{ marginBottom: '0.75rem' }}>The right to data portability.</li>
-              <li style={{ marginBottom: '0.75rem' }}>The right to object to automated individual decision-making.</li>
-            </ul>
-          </section>
-
-          <section style={{ marginBottom: '2rem' }}>
-            <h2 style={{ color: 'var(--text-primary)', margin: '0 0 1.5rem 0', fontSize: '1.5rem', fontWeight: 800 }}>8. Exercise Your Rights</h2>
-            <p>
-              If there are any questions regarding this privacy policy, the methods in which we handle your data, or if you wish to exercise your rights under global privacy laws, you may <Link to="/contact" style={{ color: 'var(--primary-color)', fontWeight: 600 }}>send us a message through our Contact Page</Link>. Our Privacy Compliance Office reviews all inquiries within 24–48 hours.
-            </p>
-          </section>
+          
+          <div style={{ marginTop: '5rem', textAlign: 'center', borderTop: '1px solid #e2e8f0', paddingTop: '2.5rem', color: '#94a3b8', fontSize: '0.9rem' }}>
+            © {new Date().getFullYear()} Expensico Finance. All rights reserved. This document is a legally binding disclosure of data practices.
+          </div>
         </div>
       </div>
     </div>
