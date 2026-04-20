@@ -70,7 +70,7 @@ export default function NavBar() {
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(59, 130, 246, 0.05)', padding: '0.4rem 0.8rem', borderRadius: '20px', border: '1px solid rgba(59, 130, 246, 0.1)' }}>
                 <User size={16} style={{ color: 'var(--primary-color)' }} />
-                <span style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-primary)' }}>{user.name.split(' ')[0]}</span>
+                <span style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-primary)' }}>{(user?.name || user?.email || 'User').split(' ')[0]}</span>
               </div>
               <button onClick={handleLogout} className="btn nav-logout" style={{ padding: '0.4rem 0.6rem' }}>
                 <LogOut size={16} />
