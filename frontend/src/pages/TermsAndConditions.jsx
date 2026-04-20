@@ -1,8 +1,8 @@
-export default function TermsOfService() {
+export default function TermsAndConditions() {
   return (
     <div className="container" style={{ padding: '4rem 1rem', maxWidth: '900px' }}>
       <div className="card" style={{ padding: 'clamp(2rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3rem)' }}>
-        <h1 style={{ marginBottom: '2.5rem', fontSize: 'clamp(2rem, 8vw, 3rem)', fontWeight: 900, color: 'var(--text-primary)', letterSpacing: '-0.03em' }}>Terms & Conditions</h1>
+        <h1 style={{ marginBottom: '2.5rem', fontSize: 'clamp(2rem, 8vw, 3rem)', fontWeight: 900, color: 'var(--text-primary)', letterSpacing: '-0.03em' }}>Terms and Conditions</h1>
         
         <div style={{ color: 'var(--text-secondary)', lineHeight: '1.9', fontSize: '1.05rem' }}>
           <p style={{ marginBottom: '2rem', fontStyle: 'italic', color: 'var(--text-primary)' }}>Effective Date: {new Date().toLocaleDateString()}</p>

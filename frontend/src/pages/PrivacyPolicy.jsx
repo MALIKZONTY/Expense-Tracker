@@ -90,7 +90,21 @@ export default function PrivacyPolicy() {
           </section>
 
           <section style={{ marginBottom: '3rem' }}>
-            <h2 style={{ color: 'var(--text-primary)', margin: '0 0 1.5rem 0', fontSize: '1.5rem', fontWeight: 800 }}>7. International Compliance</h2>
+            <h2 style={{ color: 'var(--text-primary)', margin: '0 0 1.5rem 0', fontSize: '1.5rem', fontWeight: 800 }}>7. Google AdSense and Advertising Cookies</h2>
+            <p style={{ marginBottom: '1.5rem' }}>
+              We use Google AdSense to serve advertisements on our website. To ensure transparency and compliance with Google's policies, please be aware of the following:
+            </p>
+            <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
+              <li style={{ marginBottom: '1rem' }}><strong>Third-Party Vendor Cookies:</strong> Google, as a third-party vendor, uses cookies to serve ads on your site. Google's use of advertising cookies enables it and its partners to serve ads to your users based on their visit to your sites and/or other sites on the Internet.</li>
+              <li style={{ marginBottom: '1rem' }}><strong>Personalized Advertising:</strong> Users may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-color)' }}>Google Ads Settings</a>. Alternatively, you can opt out of a third-party vendor's use of cookies for personalized advertising by visiting <a href="https://www.aboutads.info" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-color)' }}>www.aboutads.info</a>.</li>
+            </ul>
+            <p>
+              If you have not opted out of third-party ad serving, cookies from other third-party vendors or ad networks may also be used to serve ads on our site.
+            </p>
+          </section>
+
+          <section style={{ marginBottom: '3rem' }}>
+            <h2 style={{ color: 'var(--text-primary)', margin: '0 0 1.5rem 0', fontSize: '1.5rem', fontWeight: 800 }}>8. International Compliance</h2>
             <p style={{ marginBottom: '1.5rem' }}>
               Although Expensico is accessible globally, we strive to adhere to the highest international standards of data protection, including the principles outlined in the <strong>General Data Protection Regulation (GDPR)</strong> and the <strong>California Consumer Privacy Act (CCPA)</strong>.
             </p>

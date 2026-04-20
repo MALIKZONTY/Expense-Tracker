@@ -11,7 +11,7 @@ import Signup from './pages/Signup';
 import Features from './pages/Features';
 import Demo from './pages/Demo';
 import PrivacyPolicy from './pages/PrivacyPolicy';
-import TermsOfService from './pages/TermsOfService';
+import TermsAndConditions from './pages/TermsAndConditions';
 import Disclaimer from './pages/Disclaimer';
 import Contact from './pages/Contact';
 import AdminInquiries from './pages/AdminInquiries';
@@ -75,8 +75,8 @@ function NavBar() {
             <>
               <Link to="/about" className={`nav-link ${isActive('/about')}`}>About</Link>
               <Link to="/contact" className={`nav-link ${isActive('/contact')}`}>Contact</Link>
-              <Link to="/privacy" className={`nav-link ${isActive('/privacy')}`}>Privacy</Link>
-              <Link to="/terms" className={`nav-link ${isActive('/terms')}`}>Terms</Link>
+              <Link to="/privacy-policy" className={`nav-link ${isActive('/privacy-policy')}`}>Privacy Policy</Link>
+              <Link to="/terms-and-conditions" className={`nav-link ${isActive('/terms-and-conditions')}`}>Terms and Conditions</Link>
               <Link to="/disclaimer" className={`nav-link ${isActive('/disclaimer')}`}>Disclaimer</Link>
             </>
           )}
@@ -109,8 +109,8 @@ function App() {
                 <Route path="/transactions" element={<ProtectedRoute><TransactionList /></ProtectedRoute>} />
                 <Route path="/about" element={<About />} />
                 <Route path="/demo" element={<Demo />} />
-                <Route path="/privacy" element={<PrivacyPolicy />} />
-                <Route path="/terms" element={<TermsOfService />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
                 <Route path="/disclaimer" element={<Disclaimer />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/blog" element={<BlogList />} />
