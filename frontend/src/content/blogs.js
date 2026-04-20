@@ -1250,6 +1250,14 @@ A Trust is a legal arrangement where a third party (the trustee) holds assets on
 In 2026, much of our lives live on servers. Who has the passwords to your bank accounts? Who can access your photos? Who can close your social media profiles?
 Part of modern estate planning is creating a "Digital Vault." This could be a secure password manager or a list of instructions stored with your legal documents. If your family can't access your digital life, they may lose years of memories and valuable digital assets.
 
+### 8. Tactical Checklist: Starting Your Plan This Weekend
+
+If you don’t have a plan yet, the "Whole Plan" feels overwhelming. Break it down into these four steps:
+1.  **Account Audit**: Open **Expensico** and list every financial account you own. Note down which ones have beneficiary designations.
+2.  **The "In Case of Emergency" (ICE) Folder**: Put copies of your ID, your insurance cards, and a list of your bank accounts in one physical folder. Tell one person you trust where it is.
+3.  **Appoint a Proxy**: Call the person you want to be your Healthcare Power of Attorney and ask for their permission. Most people are honored to be asked.
+4.  **Draft a Basic Will**: Use a reputable online service or a local lawyer. A basic Will is better than no Will.
+
 ### Conclusion
 
 Estate planning is an act of love. It is the final gift you give to the people you care about the most. By spending a few hours setting up these documents, you spare your family from unnecessary confusion, conflict, and legal fees.
@@ -1322,6 +1330,17 @@ The government *wants* you to provide housing, so they provide significant tax b
 
 Real estate involves a lot of moving parts: mortgage dates, insurance renewals, repair receipts, and rental income. 
 By using **Expensico**, you can create a dedicated category for your property. Tracking every dollar spent on repairs ensures you are getting the full tax deduction at the end of the year. It turns a "side project" into a professional investment portfolio. You see exactly how your property is performing compared to your other investments.
+
+### 8. Real Estate FAQ: Common Hurdles for Beginners
+
+**Q: Do I need 20% down?**  
+A: No. Many conventional loans allow for 3.5% or 5% down for your "Primary Residence." A common strategy is "House Hacking"—buying a duplex, living in one side, and renting the other. The bank treats this as a primary residence loan with lower down payment requirements.
+
+**Q: Is "Fix and Flip" better than "Long-Term Rental"?**  
+A: Flipping is an active job, not an investment. It is high-risk and taxable as ordinary income. Long-term rentals provide passive income and have much lower tax rates. For wealth building, we recommend starting with long-term rentals.
+
+**Q: How do I handle repairs if I’m not "handy"?**  
+A: You don't have to be. You build a "Power Team" of a plumber, an electrician, and a general handyman. You bake these costs into your **Expensico** budget. Even after paying for professional repairs, a good property should still be cash-flow positive.
 
 ### Conclusion
 
@@ -1397,6 +1416,16 @@ The moment you become a homeowner, you become your own landlord.
 - **The 1% Rule**: Set aside 1% of the home's value every year for maintenance. A $300,000 home needs $3,000 a year (or $250 a month) in a "Maintenance Fund." 
 - **Track Everything**: Use **Expensico** to log every home-related expense. Improvements (like a new deck or kitchen) should be tracked separately because they can potentially reduce your capital gains tax when you sell the house years later.
 
+### 8. Case Study: The "Hidden" Costs of a $300,000 Home
+
+Imagine you buy a house for $300,000 with a $2,000 monthly mortgage. Many buyers think that’s their cost. But let's look at the **Expensico Reality**:
+- **Property Taxes**: $300 / month
+- **Insurance**: $150 / month
+- **Utilities**: $250 / month
+- **1% Maintenance Fund**: $250 / month
+- **Total Monthly Cost**: **$2,950**
+Buying a home is the beginning of a financial commitment, not the end. By understanding these numbers *before* you sign, you ensure your home is a blessing, not a burden.
+
 ### Conclusion
 
 Buying a home is more than a financial transaction; it is a lifestyle transition. By preparing your finances early, building a professional team, and staying logical during the search, you can turn the stress of homebuying into the joy of homeownership.
@@ -1461,6 +1490,15 @@ If you are healthy and have a high-deductible health plan, the HSA is essentiall
 
 The reason most people overpay their taxes is that they lose track of their deductible expenses. 
 This is where **Expensico** becomes your most valuable tax tool. By logging your "Business Expenses," "Charitable Giving," and "Medical Costs" throughout the year, you have a complete, searchable record come tax season. You don't have to go hunting through shoe-boxes of receipts. You simply export your report and hand it to your accountant (or enter it into your software).
+
+### 8. The "Tax Efficiency" Hierarchy
+
+If you have an extra $1,000 to save, where should it go to minimize taxes? Follow this priority list:
+1.  **Employee Match**: 100% immediate return (No tax today).
+2.  **HSA**: Triple tax threat.
+3.  **Roth IRA**: Future tax-freedom.
+4.  **401(k) / 401(k)**: Large current tax deduction.
+5.  **Brokerage Account**: Capital gains and dividend income (low tax rates).
 
 ### Conclusion
 

@@ -32,7 +32,7 @@ export default function Signup() {
   return (
     <div className="container flex justify-center items-center" style={{ minHeight: '60vh' }}>
       <div className="card" style={{ width: '100%', maxWidth: '400px' }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '1.5rem' }}>Create Account</h2>
+        <h1 style={{ textAlign: 'center', marginBottom: '1.5rem', fontSize: '1.5rem', fontWeight: 'bold' }}>Create Account</h1>
         {error && <div className="badge badge-expense" style={{ display: 'block', marginBottom: '1rem', textAlign: 'center' }}>{error}</div>}
         <form onSubmit={handleSubmit} className="flex-col gap-1">
           <div className="form-group">

@@ -180,12 +180,100 @@ const Features = () => {
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link to="/register" className="btn btn-primary btn-lg">Get Started Now</Link>
-            <a href="#tour" className="btn btn-outline btn-lg">Start the Tour</a>
+            <a href="#why" className="btn btn-outline btn-lg">Why Expensico?</a>
           </div>
         </div>
       </section>
 
-      <div id="tour" className="container">
+      {/* --- NEW CONTENT SECTIONS FOR ADSENSE & USER EXPLAINER --- */}
+
+      {/* Section 1: The "Why" - Financial Sovereignty */}
+      <section id="why" className="container" style={{ marginTop: '8rem', textAlign: 'center' }}>
+        <span className="badge badge-income" style={{ marginBottom: '1.5rem', display: 'inline-block' }}>The Philosophy</span>
+        <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 900, marginBottom: '2rem', color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
+          Why Control Your Spending?
+        </h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', textAlign: 'left', marginTop: '4rem' }}>
+          <div className="explainer-box">
+            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--primary-color)', marginBottom: '1rem' }}>Radical Transparency</h3>
+            <p style={{ color: 'var(--text-secondary)', lineHeight: 1.7, fontSize: '1.1rem' }}>
+              You cannot manage what you do not measure. Expensico brings your "invisible" spending into the light, removing the anxiety of the unknown and replacing it with the confidence of an informed decision-maker.
+            </p>
+          </div>
+          <div className="explainer-box">
+            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#8b5cf6', marginBottom: '1rem' }}>The Mindfulness Effect</h3>
+            <p style={{ color: 'var(--text-secondary)', lineHeight: 1.7, fontSize: '1.1rem' }}>
+              The simple act of logging a transaction creates a "micro-pause" in your pulse. This awareness naturally breaks the cycle of impulse spending, helping you stay aligned with your long-term wealth goals.
+            </p>
+          </div>
+          <div className="explainer-box">
+            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#10b981', marginBottom: '1rem' }}>Sovereignty Over Energy</h3>
+            <p style={{ color: 'var(--text-secondary)', lineHeight: 1.7, fontSize: '1.1rem' }}>
+              Money is a representation of your time and life energy. Tracking isn't about restriction; it's about reclaiming the power to decide where that energy is focused and making your money work for you.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 2: Core Pillars (Grid) */}
+      <section style={{ marginTop: '10rem', background: 'rgba(59,130,246,0.03)', padding: '6rem 2rem', borderRadius: '40px' }}>
+        <div className="container" style={{ maxWidth: '1100px', margin: '0 auto', textAlign: 'center' }}>
+          <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '4rem' }}>Built for the Modern Economy</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
+            <div className="card" style={{ padding: '2.5rem', textAlign: 'left', border: '1px solid rgba(0,0,0,0.05)', background: 'white' }}>
+              <div style={{ color: 'var(--primary-color)', marginBottom: '1.5rem', fontWeight: 900, fontSize: '1.5rem' }}>01</div>
+              <h4 style={{ fontSize: '1.3rem', fontWeight: 800, marginBottom: '1rem' }}>Visual Intelligence</h4>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6 }}>
+                Our dashboard uses state-of-the-art charts to categorize your flow instantly. No more digging through bank statements.
+              </p>
+            </div>
+            <div className="card" style={{ padding: '2.5rem', textAlign: 'left', border: '1px solid rgba(0,0,0,0.05)', background: 'white' }}>
+              <div style={{ color: '#8b5cf6', marginBottom: '1.5rem', fontWeight: 900, fontSize: '1.5rem' }}>02</div>
+              <h4 style={{ fontSize: '1.3rem', fontWeight: 800, marginBottom: '1rem' }}>Mobile-First Speed</h4>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6 }}>
+                Log a coffee or a paycheck in under 3 seconds. Designed for the real world where timing is everything.
+              </p>
+            </div>
+            <div className="card" style={{ padding: '2.5rem', textAlign: 'left', border: '1px solid rgba(0,0,0,0.05)', background: 'white' }}>
+              <div style={{ color: '#10b981', marginBottom: '1.5rem', fontWeight: 900, fontSize: '1.5rem' }}>03</div>
+              <h4 style={{ fontSize: '1.3rem', fontWeight: 800, marginBottom: '1rem' }}>Financial Literacy</h4>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6 }}>
+                Access our exclusive library of long-form guides. Learn the math of compounding and the strategy of debt-free living.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3: Simple 3-Step Path */}
+      <section className="container" style={{ marginTop: '10rem', textAlign: 'center' }}>
+        <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '1.5rem' }}>Getting Started is Simple</h2>
+        <p style={{ color: 'var(--text-secondary)', marginBottom: '5rem', fontSize: '1.1rem' }}>Transformation doesn't have to be complicated.</p>
+        
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap', alignItems: 'flex-start' }}>
+          <div style={{ maxWidth: '250px' }}>
+            <div style={{ width: '60px', height: '60px', background: 'var(--primary-color)', color: 'white', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem auto', fontWeight: 900, fontSize: '1.5rem' }}>1</div>
+            <h5 style={{ fontWeight: 800, marginBottom: '0.75rem', fontSize: '1.1rem' }}>Secure Setup</h5>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Create your encrypted account in under 60 seconds.</p>
+          </div>
+          <div style={{ maxWidth: '250px' }}>
+            <div style={{ width: '60px', height: '60px', background: '#8b5cf6', color: 'white', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem auto', fontWeight: 900, fontSize: '1.5rem' }}>2</div>
+            <h5 style={{ fontWeight: 800, marginBottom: '0.75rem', fontSize: '1.1rem' }}>Log & Observe</h5>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Record your next three transactions to start the habit.</p>
+          </div>
+          <div style={{ maxWidth: '250px' }}>
+            <div style={{ width: '60px', height: '60px', background: '#10b981', color: 'white', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem auto', fontWeight: 900, fontSize: '1.5rem' }}>3</div>
+            <h5 style={{ fontWeight: 800, marginBottom: '0.75rem', fontSize: '1.1rem' }}>Gain Clarity</h5>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Watch your dashboard reveal your unique financial story.</p>
+          </div>
+        </div>
+      </section>
+
+      <div id="tour" className="container" style={{ marginTop: '8rem' }}>
+        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+          <h2 style={{ fontSize: '3rem', fontWeight: 900 }}>The Product Tour</h2>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem' }}>See the precision of Expensico in action across all sections.</p>
+        </div>
         {FEATURE_CONFIG.map((feature) => (
           <section key={feature.id} className="feature-section">
             <div className="feature-content">
