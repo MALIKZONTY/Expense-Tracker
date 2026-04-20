@@ -12,7 +12,7 @@ export default function PrivacyPolicy() {
           <section style={{ marginBottom: '3rem' }}>
             <h2 style={{ color: 'var(--text-primary)', margin: '0 0 1.5rem 0', fontSize: '1.5rem', fontWeight: 800 }}>1. Comprehensive Data Stewardship</h2>
             <p style={{ marginBottom: '1.5rem' }}>
-              At SmartTracker, we recognize that privacy is not merely a feature, but a fundamental human right. This Privacy Policy is our commitment to transparency, outlining the meticulous measures we take to safeguard your personal and financial information. By using our services, you entrust us with your data, and we take that responsibility with the utmost gravity.
+              At Expensico, we recognize that privacy is not merely a feature, but a fundamental human right. This Privacy Policy is our commitment to transparency, outlining the meticulous measures we take to safeguard your personal and financial information. By using our services, you entrust us with your data, and we take that responsibility with the utmost gravity.
             </p>
             <p>
               We operate under the principle of <strong>Data Sovereignty</strong>, meaning you retain full ownership and control over your data at all times. Our systems are designed to minimize data collection, ensuring that we only possess the information absolutely necessary to provide you with a world-class financial tracking experience.
@@ -32,7 +32,7 @@ export default function PrivacyPolicy() {
               
               <h4 style={{ color: 'var(--text-primary)', marginBottom: '0.75rem' }}>B. Financial Transaction Data</h4>
               <p style={{ marginBottom: '1rem' }}>
-                As a core service of SmartTracker, we store the transaction data you manually input. This includes amounts, categories, dates, payment methods, and optional notes. This data is logically isolated per user and is never aggregated for third-party marketing purposes.
+                As a core service of Expensico, we store the transaction data you manually input. This includes amounts, categories, dates, payment methods, and optional notes. This data is logically isolated per user and is never aggregated for third-party marketing purposes.
               </p>
 
               <h4 style={{ color: 'var(--text-primary)', marginBottom: '0.75rem' }}>C. System and Usage Logs</h4>
@@ -67,7 +67,7 @@ export default function PrivacyPolicy() {
           <section style={{ marginBottom: '3rem' }}>
             <h2 style={{ color: 'var(--text-primary)', margin: '0 0 1.5rem 0', fontSize: '1.5rem', fontWeight: 800 }}>5. Third-Party Disclosures</h2>
             <p style={{ marginBottom: '1.5rem' }}>
-              SmartTracker does not sell, trade, or otherwise transfer your personally identifiable information to outside parties. This does not include trusted third parties who assist us in operating our website, conducting our business, or serving our users, so long as those parties agree to keep this information confidential and compliant with global privacy standards (e.g., Cloud database providers).
+              Expensico does not sell, trade, or otherwise transfer your personally identifiable information to outside parties. This does not include trusted third parties who assist us in operating our website, conducting our business, or serving our users, so long as those parties agree to keep this information confidential and compliant with global privacy standards (e.g., Cloud database providers).
             </p>
             <p>
               We may release information when its release is appropriate to comply with the law, enforce our site policies, or protect ours or others' rights, property, or safety.
@@ -92,7 +92,7 @@ export default function PrivacyPolicy() {
           <section style={{ marginBottom: '3rem' }}>
             <h2 style={{ color: 'var(--text-primary)', margin: '0 0 1.5rem 0', fontSize: '1.5rem', fontWeight: 800 }}>7. International Compliance</h2>
             <p style={{ marginBottom: '1.5rem' }}>
-              Although SmartTracker is accessible globally, we strive to adhere to the highest international standards of data protection, including the principles outlined in the <strong>General Data Protection Regulation (GDPR)</strong> and the <strong>California Consumer Privacy Act (CCPA)</strong>.
+              Although Expensico is accessible globally, we strive to adhere to the highest international standards of data protection, including the principles outlined in the <strong>General Data Protection Regulation (GDPR)</strong> and the <strong>California Consumer Privacy Act (CCPA)</strong>.
             </p>
             <ul style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
               <li style={{ marginBottom: '0.75rem' }}>The right to access your personal data.</li>

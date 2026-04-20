@@ -36,7 +36,7 @@ The problem is that money is a poor substitute for emotional work. The bill that
 
 If spending is an unconscious psychological loop, how do we break it? The answer is **Mindfulness through Awareness**.
 
-Tools like **SmartTracker** act as a "logical anchor." By requiring you to log each transaction, you are forced to bring the decision out of the emotional limbic system and into the logical part of your brain. 
+Tools like **Expensico** act as a "logical anchor." By requiring you to log each transaction, you are forced to bring the decision out of the emotional limbic system and into the logical part of your brain. 
 - It creates a "friction" point in the checkout process.
 - It provides a visual history of your "emotional hits," making them harder to ignore.
 - It replaces the "high" of spending with the "high" of seeing your savings goal grow.

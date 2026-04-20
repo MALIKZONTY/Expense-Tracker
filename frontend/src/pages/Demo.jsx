@@ -35,7 +35,7 @@ export default function Demo() {
       <div style={{ textAlign: 'center', padding: '6rem 1rem 4rem 1rem', background: 'linear-gradient(to bottom, #f8fafc 0%, #ffffff 100%)' }}>
         <h1 style={{ fontSize: '3.5rem', fontWeight: 800, marginBottom: '1.5rem', color: 'var(--text-primary)' }}>Take a Guided Tour</h1>
         <p style={{ maxWidth: '700px', margin: '0 auto', fontSize: '1.25rem', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
-          Discover how SmartTracker empowers you to manage your finances with precision, clarity, and ease. 
+          Discover how Expensico empowers you to manage your finances with precision, clarity, and ease. 
           See every feature in action through this complete walkthrough.
         </p>
       </div>
@@ -55,7 +55,7 @@ export default function Demo() {
           badge="Management"
           icon={PlusCircle}
           reverse
-          description="Logging an expense takes seconds. Categorize your spending, add detailed notes, and select your payment method. SmartTracker handles the rest, updating your balances and trends in real-time."
+          description="Logging an expense takes seconds. Categorize your spending, add detailed notes, and select your payment method. Expensico handles the rest, updating your balances and trends in real-time."
           imageSrc="" // Placeholder
         />
 
@@ -72,7 +72,7 @@ export default function Demo() {
           badge="Flexibility"
           icon={Wallet}
           reverse
-          description="Whether it's cash in your pocket or a bank transfer, SmartTracker keeps everything organized. Monitor multiple payment methods seamlessly and see exact balances for each wallet."
+          description="Whether it's cash in your pocket or a bank transfer, Expensico keeps everything organized. Monitor multiple payment methods seamlessly and see exact balances for each wallet."
           imageSrc="" // Placeholder
         />
 
@@ -80,10 +80,10 @@ export default function Demo() {
         <div className="card shadow-glow" style={{ textAlign: 'center', padding: '5rem 2rem', background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)', color: 'white', borderRadius: '32px', marginTop: '4rem' }}>
           <h2 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '1.5rem' }}>Ready to start your journey?</h2>
           <p style={{ fontSize: '1.1rem', marginBottom: '2.5rem', opacity: 0.9, maxWidth: '600px', margin: '0 auto 2.5rem auto' }}>
-            Join thousands of users who are already mastering their finances with SmartTracker. It only takes a minute to set up.
+            Join thousands of users who are already mastering their finances with Expensico. It only takes a minute to set up.
           </p>
           <Link to="/register" className="btn" style={{ background: 'white', color: 'var(--primary-color)', padding: '1rem 3rem', borderRadius: '12px', fontWeight: 700, fontSize: '1.1rem', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.75rem', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>
-            Join SmartTracker Today <ArrowRight size={20} />
+            Join Expensico Today <ArrowRight size={20} />
           </Link>
         </div>
 

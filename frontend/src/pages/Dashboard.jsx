@@ -38,7 +38,7 @@ export default function Dashboard() {
 
   return (
     <div className="container dashboard-container">
-      <h1>Dashboard</h1>
+      <h1 style={{ marginBottom: '2rem' }}>Dashboard Overview</h1>
 
       <div className="dashboard-grid">
         <div className="card flex-col items-center justify-center" style={{ padding: '1.25rem' }}>

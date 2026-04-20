@@ -40,7 +40,10 @@ function NavBar() {
   return (
     <nav className="navbar">
       <div className="navbar-top">
-        <Link to="/" className="nav-brand">SmartTracker</Link>
+        <Link to="/" className="nav-brand" style={{ display: 'flex', flexDirection: 'column', gap: '0px', lineHeight: '1.1', textDecoration: 'none' }}>
+          <span style={{ fontSize: '1.6rem', fontWeight: 900, color: 'var(--primary-color)', letterSpacing: '-0.02em' }}>Expensico</span>
+          <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--text-secondary)', opacity: 0.8 }}>Track where your money goes</span>
+        </Link>
         {user ? (
           <button 
             onClick={handleLogout} 
@@ -51,7 +54,7 @@ function NavBar() {
         ) : (
           <div className="nav-auth-links">
             <Link to="/login" className="nav-link">Login</Link>
-            <Link to="/register" className="btn btn-primary nav-signup-btn">Sign Up</Link>
+            <Link to="/register" className="btn btn-primary btn-sm nav-signup-btn">Sign Up</Link>
           </div>
         )}
       </div>

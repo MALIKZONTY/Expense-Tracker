@@ -52,7 +52,7 @@ export default function Login() {
               </button>
             </div>
           </div>
-          <button disabled={loading} type="submit" className="btn btn-primary" style={{ marginTop: '1rem' }}>
+          <button disabled={loading} type="submit" className="btn btn-primary btn-full">
             {loading ? 'Logging in...' : 'Log In'}
           </button>
         </form>

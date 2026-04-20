@@ -72,8 +72,8 @@ export default function Signup() {
               />
             </div>
           </div>
-          <button disabled={loading} type="submit" className="btn btn-primary" style={{ marginTop: '1rem' }}>
-            {loading ? 'Creating...' : 'Sign Up'}
+          <button disabled={loading} type="submit" className="btn btn-primary btn-full">
+            {loading ? 'Creating Account...' : 'Sign Up'}
           </button>
         </form>
         <p style={{ textAlign: 'center', marginTop: '1.5rem', fontSize: '0.9rem' }}>

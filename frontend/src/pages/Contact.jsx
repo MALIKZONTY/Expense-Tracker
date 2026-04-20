@@ -223,11 +223,11 @@ export default function Contact() {
           />
           <FAQItem 
             question="Can I track multiple payment methods?"
-            answer="Yes, SmartTracker allows you to categorize transactions by wallet type—from cash and bank transfers to credit cards and digital wallets—giving you a complete view of your liquidity."
+            answer="Yes, Expensico allows you to categorize transactions by wallet type—from cash and bank transfers to credit cards and digital wallets—giving you a complete view of your liquidity."
           />
           <FAQItem 
             question="Is there a limit to how many transactions I can log?"
-            answer="There are no limits. SmartTracker is built on a high-performance PostgreSQL database designed to handle thousands of historical records seamlessly without compromising performance."
+            answer="There are no limits. Expensico is built on a high-performance PostgreSQL database designed to handle thousands of historical records seamlessly without compromising performance."
           />
           <FAQItem 
             question="Can I export my transaction history?"
@@ -238,7 +238,7 @@ export default function Contact() {
             answer="We use a soft-delete architecture. When you delete a transaction, it is hidden from your view but retained securely in any backups to prevent accidental data loss until a final cleanup cycle."
           />
           <FAQItem 
-            question="Is SmartTracker free to use?"
+            question="Is Expensico free to use?"
             answer="Our core features for tracking and visualization are completely free. We believe that financial clarity should be accessible to everyone who wants to better their future."
           />
         </div>

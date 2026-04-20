@@ -64,7 +64,7 @@ Apps often send notifications about "deals" that tempt you to spend money you wo
 
 Finally, saving money requires consistent reflection. Spend 10 minutes at the end of every week reviewing your transactions. Did you stick to your plan? Where did you overspend? 
 
-Tools like **SmartTracker** are invaluable here because they provide visual clarity. Seeing a chart of your spending habits makes it impossible to ignore the "leaks" in your budget. It turns abstract numbers into a concrete story about your financial health. 
+Tools like **Expensico** are invaluable here because they provide visual clarity. Seeing a chart of your spending habits makes it impossible to ignore the "leaks" in your budget. It turns abstract numbers into a concrete story about your financial health. 
 
 ### Conclusion
 

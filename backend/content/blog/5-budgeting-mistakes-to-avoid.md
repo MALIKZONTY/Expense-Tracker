@@ -10,7 +10,7 @@ The most common mistake people make is creating a budget for the person they *wa
 
 You might decide that starting tomorrow, you will never eat out again, you will stop buying coffee, and you will spend exactly $100 a week on groceries. This is aspirational, not realistic. When your budget is too restrictive, you are setting yourself up for failure. The moment you inevitably break one of these harsh rules, you feel a sense of defeat and "blow" the rest of the budget in frustration.
 
-**The Fix**: Look at your actual spending for the last three months using **SmartTracker**. If you have been spending $400 a month on dining out, don't try to drop it to $0. Try dropping it to $300. Build a budget that reflects your reality, and then slowly optimize it over time.
+**The Fix**: Look at your actual spending for the last three months using **Expensico**. If you have been spending $400 a month on dining out, don't try to drop it to $0. Try dropping it to $300. Build a budget that reflects your reality, and then slowly optimize it over time.
 
 ### 2. Forgetting the "Phantom" Expenses
 
@@ -48,4 +48,4 @@ These small expenses are psychological "micro-doses" of spending that feel insig
 
 Budgeting is not about restriction; it's about **permission**. It's about giving yourself permission to spend money on what truly matters because you know you aren't wasting it on what doesn't. 
 
-By avoiding these five common mistakes, you turn your budget from a source of stress into a source of power. You move from being a victim of your finances to being the architect of your future. Start by using **SmartTracker** to find the truth in your numbers, and the rest will follow.
+By avoiding these five common mistakes, you turn your budget from a source of stress into a source of power. You move from being a victim of your finances to being the architect of your future. Start by using **Expensico** to find the truth in your numbers, and the rest will follow.

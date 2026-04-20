@@ -26,7 +26,7 @@ const FEATURE_CONFIG = [
   {
     id: 'mobile',
     title: 'Precision Tracking on the Go',
-    description: 'Designed for the speed of real life. Log every transaction the moment it happens with our mobile-first architecture. Whether you are paying for coffee or receiving a paycheck, SmartTracker ensures your records are updated in seconds with zero friction.',
+    description: 'Designed for the speed of real life. Log every transaction the moment it happens with our mobile-first architecture. Whether you are paying for coffee or receiving a paycheck, Expensico ensures your records are updated in seconds with zero friction.',
     icon: Smartphone,
     badge: 'Mobile App',
     images: ['/mobile-3.png', '/web-3.png'],
@@ -41,7 +41,7 @@ const FEATURE_CONFIG = [
   {
     id: 'blog',
     title: 'The Financial Literacy Hub',
-    description: 'More than just a tracker—SmartTracker is your partner in building wealth. Access an exclusive library of 20+ expert-written articles covering everything from tax-saving strategies to the psychology of spending. We provide the tools *and* the knowledge.',
+    description: 'More than just a tracker—Expensico is your partner in building wealth. Access an exclusive library of 20+ expert-written articles covering everything from tax-saving strategies to the psychology of spending. We provide the tools *and* the knowledge.',
     icon: Globe,
     badge: 'Education',
     images: ['/web-5.png', '/web-6.png'],
@@ -176,9 +176,9 @@ const Features = () => {
             Experience Financial <span style={{ color: 'var(--primary-color)' }}>Clarity.</span>
           </h1>
           <p style={{ fontSize: '1.25rem', color: 'var(--text-secondary)', maxWidth: '700px', margin: '0 auto 3rem auto', lineHeight: '1.6' }}>
-            Take an in-depth tour of SmartTracker—from high-level visual dashboards to granular transaction tracking on any device.
+            Take an in-depth tour of Expensico—from high-level visual dashboards to granular transaction tracking on any device.
           </p>
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link to="/register" className="btn btn-primary btn-lg">Get Started Now</Link>
             <a href="#tour" className="btn btn-outline btn-lg">Start the Tour</a>
           </div>
@@ -208,7 +208,7 @@ const Features = () => {
               )}
 
               {feature.cta && (
-                <Link to={feature.cta.link} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--primary-color)', fontWeight: 700, textDecoration: 'none' }}>
+                <Link to={feature.cta.link} className="btn btn-outline" style={{ display: 'inline-flex', alignSelf: 'flex-start' }}>
                   {feature.cta.text} <ArrowRight size={18} />
                 </Link>
               )}
@@ -224,14 +224,14 @@ const Features = () => {
         <section className="feature-section" style={{ display: 'block', textAlign: 'center' }}>
           <h2 style={{ fontSize: '3rem', fontWeight: 900, marginBottom: '4rem' }}>Works Anywhere You Are</h2>
           <div className="responsive-grid">
-            {renderImageFrame(SHOWCASE_IMAGES.web)}
-            <div className="mobile-mockup-group" style={{ display: 'flex', gap: '2rem', justifyContent: 'center' }}>
+            <div className="mobile-mockup-group" style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               {SHOWCASE_IMAGES.mobile.map((img, i) => (
-                <div key={i} className="phone-frame" style={{ marginTop: i % 2 !== 0 ? '3rem' : 0, width: '180px' }}>
+                <div key={i} className="phone-frame">
                   <img src={img} alt="Mobile Showcase" className="mockup-image" />
                 </div>
               ))}
             </div>
+            {renderImageFrame(SHOWCASE_IMAGES.web)}
           </div>
         </section>
       </div>
@@ -241,7 +241,7 @@ const Features = () => {
         <div className="container">
           <h2 style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '2rem' }}>Ready to Take Control?</h2>
           <p style={{ fontSize: '1.25rem', opacity: 0.8, marginBottom: '3rem', maxWidth: '600px', margin: '0 auto 3rem auto' }}>
-            Join thousands of users who have transformed their financial health with SmartTracker's beautiful automation.
+            Join the growing community who have transformed their financial health with Expensico's beautiful automation.
           </p>
           <Link to="/register" className="btn btn-primary btn-lg" style={{ padding: '1.2rem 3rem' }}>
             Get Started for Free <ArrowRight size={20} style={{ marginLeft: '1rem' }} />

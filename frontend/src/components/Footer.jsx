@@ -26,9 +26,9 @@ const Footer = () => {
 
         {/* Brand and Copyright Section */}
         <div className="footer-bottom" style={{ textAlign: 'center' }}>
-          <Link to="/" style={{ fontSize: '1.1rem', fontWeight: 800, color: 'var(--primary-color)', textDecoration: 'none', display: 'block', marginBottom: '1rem' }}>SmartTracker</Link>
+          <Link to="/" style={{ fontSize: '1.1rem', fontWeight: 800, color: 'var(--primary-color)', textDecoration: 'none', display: 'block', marginBottom: '1rem' }}>Expensico</Link>
           <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: '1.6', maxWidth: '500px', margin: '0 auto' }}>
-            Taking control of your financial future through intelligent tracking. &copy; {currentYear} SmartTracker. All rights reserved.
+            Taking control of your financial future through intelligent tracking. &copy; {currentYear} Expensico. All rights reserved.
           </p>
         </div>
       </div>

@@ -44,7 +44,7 @@ export default function BlogPost() {
               <Calendar size={18} /> {post.date}
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
-              <User size={18} /> SmartTracker Editor
+              <User size={18} /> Expensico Editor
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
               <Clock size={18} /> 10 min read

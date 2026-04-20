@@ -20,7 +20,7 @@ Knowing that you have to "log" that $5 coffee or that $50 impulse buy at the pha
 
 The "best" tracking method is the one you will actually use. While paper journals have a certain romanticism, they are rarely practical in a fast-paced digital world. On the other hand, fully automated apps that sync with your bank can sometimes be *too* passive—you never actually look at the data until it's too late.
 
-The "Goldilocks Zone" is a system like **SmartTracker**. It provides a professional, user-friendly interface that allows you to easily log transactions as they happen. By manually (or semi-manually) entering your data, you stay engaged with your finances while benefiting from the powerful visual charts that digital tools provide.
+The "Goldilocks Zone" is a system like **Expensico**. It provides a professional, user-friendly interface that allows you to easily log transactions as they happen. By manually (or semi-manually) entering your data, you stay engaged with your finances while benefiting from the powerful visual charts that digital tools provide.
 
 ### Step 2: Categorizing Your Life
 
@@ -67,6 +67,6 @@ If you don't know what you spend, you don't know how much you need to be free. B
 
 ### Conclusion: Start Today
 
-Don't wait for the first of the month or a "fresh start." The best time to start tracking was ten years ago; the second best time is right now. Open your **SmartTracker**, log your last purchase, and take the first step toward a life without financial fog.
+Don't wait for the first of the month or a "fresh start." The best time to start tracking was ten years ago; the second best time is right now. Open your **Expensico**, log your last purchase, and take the first step toward a life without financial fog.
 
 Accuracy over speed. Awareness over automation. Intentionality over impulse. These are the pillars of the expense-tracking habit. Mastery of your money starts with the simple act of paying attention.

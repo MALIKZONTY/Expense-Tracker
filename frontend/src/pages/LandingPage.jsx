@@ -29,15 +29,18 @@ export default function LandingPage() {
             <div style={{ display: 'inline-block', alignSelf: 'flex-start', padding: '0.4rem 1rem', background: 'rgba(59,130,246,0.1)', color: 'var(--primary-color)', borderRadius: '30px', fontWeight: 'bold', fontSize: '0.9rem', marginBottom: '1.5rem', border: '1px solid rgba(59,130,246,0.2)' }}>
               ✨ The Smart Way to Track
             </div>
-            <h1 className="hero-h1" style={{ fontSize: '3.5rem', color: 'var(--text-color)', marginBottom: '1.5rem', fontWeight: 800, lineHeight: 1.1 }}>
-              Master Your Money, <br />
-              <span style={{ background: 'linear-gradient(to right, #3b82f6, #8b5cf6)', WebkitBackgroundClip: 'text', color: 'transparent' }}>Zero Stress.</span>
+            <h1 className="hero-h1" style={{ fontSize: '4.5rem', color: 'var(--text-color)', marginBottom: '1.5rem', fontWeight: 900, lineHeight: 1.0, letterSpacing: '-0.04em' }}>
+              Expensico
             </h1>
+            <div style={{ marginBottom: '2.5rem' }}>
+              <p style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--primary-color)', marginBottom: '0.5rem' }}>Track where your money goes</p>
+              <h2 style={{ fontSize: '2.5rem', fontWeight: 800, background: 'linear-gradient(to right, #3b82f6, #8b5cf6)', WebkitBackgroundClip: 'text', color: 'transparent' }}>Zero Stress.</h2>
+            </div>
             <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', marginBottom: '2.5rem', lineHeight: 1.6 }}>
-              Say goodbye to messy spreadsheets. SmartTracker provides effortless expense management, beautiful visualizations, and precise analytics—all wrapped in a clean, modern interface.
+              Say goodbye to messy spreadsheets. Expensico provides effortless expense management, beautiful visualizations, and precise analytics—all wrapped in a clean, modern interface.
             </p>
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-              <Link to="/register" className="btn btn-primary" style={{ padding: '1rem 2.5rem', fontSize: '1.1rem', borderRadius: '12px', boxShadow: '0 10px 25px rgba(59,130,246,0.25)', transition: 'all 0.3s ease' }}>
+              <Link to="/register" className="btn btn-primary btn-lg">
                 Create Account
               </Link>
             </div>

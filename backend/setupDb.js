@@ -34,7 +34,7 @@ const setupDB = async () => {
     // Insert dummy user if doesn't exist
     const { rows } = await pool.query('SELECT * FROM users WHERE id = 1');
     if (rows.length === 0) {
-      await pool.query(`INSERT INTO users (id, email, password) VALUES (1, 'demo@smarttracker.com', 'password')`);
+      await pool.query(`INSERT INTO users (id, email, password) VALUES (1, 'demo@expensico.com', 'password')`);
     }
 
     console.log('Database setup complete.');
