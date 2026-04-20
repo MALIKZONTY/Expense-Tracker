@@ -18,73 +18,7 @@ import AdminInquiries from './pages/AdminInquiries';
 import BlogList from './pages/BlogList';
 import BlogPost from './pages/BlogPost';
 import Footer from './components/Footer';
-
-function NavBar() {
-  const location = useLocation();
-  const { user, logout } = useContext(AuthContext);
-  const { confirm } = useUI();
-  const isActive = (path) => location.pathname === path ? 'active' : '';
-
-  const handleLogout = async () => {
-    const confirmed = await confirm({
-      title: 'Logout',
-      message: 'Are you sure you want to log out of your account?',
-      confirmText: 'Logout',
-      type: 'danger'
-    });
-    if (confirmed) logout();
-  };
-
-  const isAdmin = user?.role === 'admin';
-
-  return (
-    <nav className="navbar">
-      <div className="navbar-top">
-        <Link to="/" className="nav-brand" style={{ display: 'flex', flexDirection: 'column', gap: '0px', lineHeight: '1.1', textDecoration: 'none' }}>
-          <span style={{ fontSize: '1.6rem', fontWeight: 900, color: 'var(--primary-color)', letterSpacing: '-0.02em' }}>Expensico</span>
-          <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--text-secondary)', opacity: 0.8 }}>Track where your money goes</span>
-        </Link>
-        {user ? (
-          <button 
-            onClick={handleLogout} 
-            className="btn nav-logout"
-          >
-            Logout
-          </button>
-        ) : (
-          <div className="nav-auth-links">
-            <Link to="/login" className="nav-link">Login</Link>
-            <Link to="/register" className="btn btn-primary btn-sm nav-signup-btn">Sign Up</Link>
-          </div>
-        )}
-      </div>
-
-      <div className="navbar-bottom">
-        <div className="nav-links">
-          {user && (
-            <>
-              <Link to="/" className={`nav-link ${isActive('/')}`}>Dashboard</Link>
-              <Link to="/add" className={`nav-link ${isActive('/add')}`}>Add Transaction</Link>
-              <Link to="/transactions" className={`nav-link ${isActive('/transactions')}`}>Transactions</Link>
-              {isAdmin && <Link to="/admin/inquiries" className={`nav-link ${isActive('/admin/inquiries')}`}>Inquiry Dashboard</Link>}
-            </>
-          )}
-          {!user && <Link to="/" className={`nav-link ${isActive('/')}`}>Home</Link>}
-          <Link to="/blog" className={`nav-link ${isActive('/blog')}`}>Blog</Link>
-          {!user && (
-            <>
-              <Link to="/about" className={`nav-link ${isActive('/about')}`}>About</Link>
-              <Link to="/contact" className={`nav-link ${isActive('/contact')}`}>Contact</Link>
-              <Link to="/privacy-policy" className={`nav-link ${isActive('/privacy-policy')}`}>Privacy Policy</Link>
-              <Link to="/terms-and-conditions" className={`nav-link ${isActive('/terms-and-conditions')}`}>Terms and Conditions</Link>
-              <Link to="/disclaimer" className={`nav-link ${isActive('/disclaimer')}`}>Disclaimer</Link>
-            </>
-          )}
-        </div>
-      </div>
-    </nav>
-  );
-}
+import NavBar from './components/NavBar';
 
 const ProtectedRoute = ({ children, adminOnly = false }) => {
   const { user } = useContext(AuthContext);

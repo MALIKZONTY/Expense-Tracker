@@ -3,46 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms and Conditions | Expensico Finance</title>
+    <title>Terms and Conditions | Expensico Usage Agreement</title>
+    <meta name="description" content="Official Terms and Conditions for Expensico Finance. Review our governing law, intellectual property rights, and user license agreements.">
     <link rel="canonical" href="https://expense-tracker-theta-weld.vercel.app/terms-and-conditions" />
     <style>
         :root { --primary-color: #3b82f6; --text-primary: #1e293b; --text-secondary: #64748b; --border-color: #e2e8f0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.8; color: var(--text-primary); max-width: 900px; margin: 0 auto; padding: 4rem 1.5rem; background-color: #f8fafc; }
-        .container { background: white; padding: 4rem; border-radius: 32px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); border: 1px solid var(--border-color); }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.8; color: var(--text-primary); margin: 0; background-color: #f8fafc; }
+        
+        .nav-mock { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-color); padding: 0.75rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .nav-brand-group { display: flex; flexDirection: column; gap: 0px; line-height: 1.1; text-decoration: none; }
+        .nav-brand { font-size: 1.5rem; font-weight: 900; color: var(--primary-color); text-decoration: none; letter-spacing: -0.04em; }
+        .nav-sub-brand { font-size: 0.7rem; font-weight: 600; color: var(--text-secondary); opacity: 0.8; letter-spacing: 0.05em; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 1rem; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text-secondary); font-weight: 600; font-size: 0.9rem; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--primary-color); }
+        .nav-auth { display: flex; gap: 1rem; align-items: center; margin-left: 1rem; }
+        .btn-primary { background: var(--primary-color); color: white !important; padding: 0.6rem 1.2rem; border-radius: 10px; font-weight: 700; font-size: 0.85rem; }
+
+        .container { max-width: 1000px; margin: 4rem auto; padding: 0 1.5rem; }
+        .card { background: white; padding: 4rem; border-radius: 32px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); border: 1px solid var(--border-color); }
         h1 { font-size: 3.5rem; font-weight: 900; letter-spacing: -0.04em; margin-bottom: 1.5rem; color: var(--text-primary); }
-        h2 { font-size: 1.75rem; font-weight: 800; margin-top: 3rem; margin-bottom: 1.25rem; }
-        p { margin-bottom: 1.5rem; }
-        .back-link { display: inline-block; margin-bottom: 3rem; color: var(--primary-color); text-decoration: none; font-weight: 700; }
-        footer { margin-top: 5rem; text-align: center; color: var(--text-secondary); font-size: 0.9rem; }
+        h2 { font-size: 1.75rem; font-weight: 800; margin-top: 3rem; margin-bottom: 1.25rem; color: var(--text-primary); border-left: 4px solid var(--primary-color); padding-left: 1.5rem; }
+        p { margin-bottom: 1.5rem; color: var(--text-secondary); font-size: 1.1rem; }
+        .badge { background: rgba(59, 130, 246, 0.1); color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.85rem; display: inline-block; margin-bottom: 1.5rem; }
+        
+        footer { margin-top: 5rem; text-align: center; color: var(--text-secondary); font-size: 0.9rem; padding: 3rem 0; background: white; border-top: 1px solid var(--border-color); }
+        .footer-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 1.5rem; }
+        .footer-links a { text-decoration: none; color: var(--text-secondary); font-weight: 500; }
     </style>
 </head>
 <body>
-    <a href="/" class="back-link">← Back to Dashboard</a>
+    <nav class="nav-mock">
+        <a href="/" class="nav-brand-group">
+            <div class="nav-brand">Expensico</div>
+            <div class="nav-sub-brand">Finance Intelligence</div>
+        </a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/blog">Blog</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/privacy-policy.html" style="font-weight: 500; font-size: 0.85rem;">Privacy</a>
+            <a href="/terms-and-conditions.html" style="font-weight: 500; font-size: 0.85rem;">Terms</a>
+            <a href="/disclaimer.html" style="font-weight: 500; font-size: 0.85rem;">Disclaimer</a>
+            <div class="nav-auth">
+                <a href="/login">Login</a>
+                <a href="/register" class="btn-primary">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
-        <h1>Terms and Conditions</h1>
-        <p><strong>Effective Date: April 20, 2026</strong></p>
-        
-        <section>
-            <h2>1. Agreement to Terms</h2>
-            <p>By accessing or using Expensico Finance, you agree to be bound by these Terms and Conditions. If you do not agree to all terms, you are prohibited from using the service.</p>
-        </section>
+        <div class="card">
+            <span class="badge">Legal Agreement</span>
+            <h1>Terms & Conditions</h1>
+            <p><strong>Last Updated: April 20, 2026</strong></p>
+            <p>These Terms and Conditions constitute a legally binding agreement between you and Expensico Finance regarding your use of the platform.</p>
+            
+            <h2>1. User Account Responsibility</h2>
+            <p>Users are responsible for maintaining the confidentiality of their credentials and for all activities that occur under their account. Expensico uses high-entropy encryption for password storage but cannot be held liable for security breaches resulting from user negligence.</p>
 
-        <section>
-            <h2>2. Intellectual Property</h2>
-            <p>All software, designs, and content on Expensico are the proprietary property of the Company and protected by copyright and trademark laws.</p>
-        </section>
-
-        <section>
-            <h2>3. User Responsibilities</h2>
-            <p>Users are responsible for maintaining the security of their accounts and for the accuracy of any manual data entry performed within the service.</p>
-        </section>
-
-        <section>
-            <h2>4. Limitation of Liability</h2>
-            <p>Expensico is provided "as is" for informational purposes only. We are not liable for any financial losses or damages arising from the use of our tracking tools.</p>
-        </section>
-
-        <footer>© 2026 Expensico Finance. All rights reserved.</footer>
+            <h2>2. Intellectual Property Rights</h2>
+            <p>Unless otherwise indicated, Expensico is our proprietary property and all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics are owned or controlled by us.</p>
+        </div>
     </div>
+
+    <footer>
+        <div>© 2026 Expensico Finance. All rights reserved.</div>
+        <div class="footer-links">
+            <a href="/privacy-policy.html">Privacy</a>
+            <a href="/terms-and-conditions.html">Terms</a>
+            <a href="/disclaimer.html">Disclaimer</a>
+        </div>
+    </footer>
 </body>
 </html>
