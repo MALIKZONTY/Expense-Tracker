@@ -1,146 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Debt-Free Living: A Step-by-Step Roadmap to Financial Independence — Expensico Blog</title>
-  <meta name="description" content="Break the chains of high-interest debt. Discover the math and psychology behind the Debt Snowball vs. Avalanche methods and how to stay debt-free forever.">
-  <link rel="canonical" href="https://expense-tracker-theta-weld.vercel.app/blog/debt-free-living" />
-  <style>
-    :root { --primary: #3b82f6; --text: #1e293b; --secondary: #64748b; --bg: #f8fafc; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: var(--text); margin: 0; background: var(--bg); }
-    .header { background: white; border-bottom: 1px solid #e2e8f0; padding: 0.75rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
-    .logo-container { display: flex; flex-direction: column; line-height: 1.1; text-decoration: none; }
-    .logo { font-size: 1.5rem; font-weight: 900; color: var(--primary); letter-spacing: -0.04em; }
-    .logo-sub { font-size: 0.7rem; font-weight: 600; color: var(--secondary); text-transform: uppercase; }
-    .nav-links { display: flex; gap: 1.5rem; align-items: center; }
-    .nav-link { text-decoration: none; color: var(--secondary); font-weight: 600; font-size: 0.9rem; }
-    .btn { background: var(--primary); color: white; padding: 0.6rem 1.2rem; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 0.85rem; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debt-Free Living: A Step-by-Step Roadmap to Financial Independence | Expensico Finance Blog</title>
+    <meta name="description" content="Break the chains of high-interest debt. Discover the math and psychology behind the Debt Snowball vs. Avalanche methods and how to stay debt-free forever.">
+    <link rel="canonical" href="https://expense-tracker-theta-weld.vercel.app/blog/debt-free-living" />
     
-    .container { max-width: 800px; margin: 4rem auto; padding: 0 1.5rem; }
-    .article-header { margin-bottom: 3rem; }
-    .category { color: var(--primary); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 0.5rem; display: block; }
-    h1 { font-size: 3rem; font-weight: 900; color: #0f172a; line-height: 1.1; margin: 0.5rem 0 1.5rem; letter-spacing: -0.02em; }
-    .meta { color: var(--secondary); font-size: 0.95rem; display: flex; gap: 1rem; align-items: center; }
-    
-    .content { background: white; padding: 3rem; border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); }
-    .content h2, .content h3 { color: #0f172a; margin-top: 2.5rem; }
-    .content p { margin-bottom: 1.5rem; font-size: 1.1rem; color: #334155; }
-    .content img { width: 100%; border-radius: 16px; margin: 2rem 0; }
-    
-    footer { margin-top: 6rem; padding: 4rem 2rem; background: #0f172a; color: white; text-align: center; }
-    .footer-links { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; opacity: 0.7; }
-    .footer-links a { color: white; text-decoration: none; font-size: 0.85rem; }
-  </style>
-  
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Debt-Free Living: A Step-by-Step Roadmap to Financial Independence",
-    "description": "Break the chains of high-interest debt. Discover the math and psychology behind the Debt Snowball vs. Avalanche methods and how to stay debt-free forever.",
-    "datePublished": "2026-04-20",
-    "author": {"@type": "Organization", "name": "Expensico Team"},
-    "publisher": {"@type": "Organization", "name": "Expensico Finance", "logo": {"@type": "ImageObject", "url": "https://expense-tracker-theta-weld.vercel.app/logo.png"}},
-    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://expense-tracker-theta-weld.vercel.app/blog/debt-free-living"}
-  }
-  </script>
+    <!-- JSON-LD for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Debt-Free Living: A Step-by-Step Roadmap to Financial Independence",
+      "description": "Break the chains of high-interest debt. Discover the math and psychology behind the Debt Snowball vs. Avalanche methods and how to stay debt-free forever.",
+      "author": {
+        "@type": "Organization",
+        "name": "Expensico Finance"
+      },
+      "datePublished": "2026-04-20",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Expensico",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://expense-tracker-theta-weld.vercel.app/logo.png"
+        }
+      }
+    }
+    </script>
+
+    <style>
+        :root { --primary-color: #3b82f6; --text-primary: #1e293b; --text-secondary: #64748b; --border-color: #e2e8f0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.8; color: var(--text-primary); margin: 0; background-color: #f8fafc; }
+        
+        .nav-mock { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-color); padding: 0.75rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .nav-brand-group { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+        .nav-brand-icon { background: var(--primary-color); color: white; padding: 0.4rem; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+        .nav-brand-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .nav-brand { font-size: 1.5rem; font-style: italic; font-weight: 900; color: var(--primary-color); letter-spacing: -0.04em; }
+        .nav-sub-brand { font-size: 0.7rem; font-weight: 600; color: var(--text-secondary); opacity: 0.8; letter-spacing: 0.05em; text-transform: uppercase; }
+        
+        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text-secondary); font-weight: 600; font-size: 0.9rem; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--primary-color); }
+        .btn-primary { background: var(--primary-color); color: white !important; padding: 0.6rem 1.2rem; border-radius: 10px; font-weight: 700; }
+
+        .container { max-width: 900px; margin: 4rem auto; padding: 0 1.5rem; }
+        .blog-header { margin-bottom: 3rem; }
+        .blog-meta { display: flex; gap: 1rem; color: var(--text-secondary); font-size: 0.9rem; font-weight: 600; margin-bottom: 1rem; }
+        .category-tag { background: rgba(59, 130, 246, 0.1); color: var(--primary-color); padding: 0.2rem 0.8rem; border-radius: 100px; }
+        
+        .blog-content { background: white; padding: 4rem; border-radius: 32px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); border: 1px solid var(--border-color); }
+        .blog-content h1 { font-size: 3rem; line-height: 1.2; letter-spacing: -0.04em; margin-bottom: 2rem; }
+        .blog-content h3 { font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .blog-content p { margin-bottom: 1.5rem; font-size: 1.15rem; color: #334155; }
+        .blog-image-container { margin: 2.5rem -4rem; text-align: center; background: #f1f5f9; }
+        .blog-image-container img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+        
+        .related-articles { margin-top: 5rem; border-top: 1px solid var(--border-color); padding-top: 4rem; }
+        .related-articles h2 { font-size: 2rem; margin-bottom: 2.5rem; letter-spacing: -0.02em; }
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .related-card { background: white; padding: 2rem; border-radius: 24px; border: 1px solid var(--border-color); text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s; }
+        .related-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .related-cat { font-size: 0.75rem; font-weight: 800; color: var(--primary-color); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.75rem; }
+        .related-card h3 { margin: 0 0 1rem 0; font-size: 1.1rem; line-height: 1.4; }
+        .read-more { font-size: 0.85rem; font-weight: 700; color: var(--primary-color); }
+
+        footer { margin-top: 6rem; padding: 4rem 2rem; background: white; border-top: 1px solid var(--border-color); text-align: center; }
+        .footer-logo { display: flex; align-items: center; justify-content: center; gap: 0.5rem; text-decoration: none; margin-bottom: 1.5rem; }
+        .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap; }
+        .footer-links a { text-decoration: none; color: var(--text-secondary); font-size: 0.9rem; font-weight: 500; }
+        .copyright { color: var(--text-secondary); font-size: 0.85rem; }
+
+        @media (max-width: 768px) {
+            .blog-content { padding: 2rem; }
+            .blog-content h1 { font-size: 2.25rem; }
+            .blog-image-container { margin: 2rem -2rem; }
+        }
+    </style>
 </head>
 <body>
-  <header class="header">
-    <a href="/" class="logo-container">
-      <span class="logo">Expensico</span>
-      <span class="logo-sub">Finance Intelligence</span>
-    </a>
-    <nav class="nav-links">
-      <a href="/" class="nav-link">Home</a>
-      <a href="/about.html" class="nav-link">About</a>
-      <a href="/blog" class="nav-link" style="color: var(--primary);">Blog</a>
-      <a href="/contact.html" class="nav-link">Contact</a>
-      <a href="/login" class="nav-link" style="font-weight: 700;">Login</a>
-      <a href="/register" class="btn">Sign Up</a>
-    </nav>
-  </header>
-
-  <main class="container">
-    <article>
-      <header class="article-header">
-        <span class="category">Debt Management</span>
-        <h1>Debt-Free Living: A Step-by-Step Roadmap to Financial Independence</h1>
-        <div class="meta">
-          <span>Published on 2026-04-20</span>
-          <span>•</span>
-          <span>Professional Finance Insight</span>
+    <nav class="nav-mock">
+        <a href="/" class="nav-brand-group">
+            <div class="nav-brand-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <div class="nav-brand-text">
+                <div class="nav-brand">Expensico</div>
+                <div class="nav-sub-brand">Finance Intelligence</div>
+            </div>
+        </a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/faq">FAQ</a>
+            <a href="/login">Login</a>
+            <a href="/register" class="btn-primary">Sign Up</a>
         </div>
-      </header>
-      
-      <div class="content">
-        <!-- H1 removed -->
-<p>Debt is often described as a "weight" or a "chain," and for millions of people, that is exactly how it feels. It is the feeling of running a race with a backpack full of bricks—no matter how hard you work or how much you earn, you can't seem to make progress because the interest is pulling you backward.</p>
-<img src="/blogs/blog-7.1.png" alt="Breaking Free from Debt">
-<p>Living debt-free is not just about a $0 balance on a statement; it is about reclaiming your freedom. When you don't owe anyone anything, every dollar you earn belongs to YOU. In this guide, we will provide a clear, step-by-step roadmap to help you shed that weight and find your way to financial independence.</p>
-<h3>1. The Confrontation: Mapping Your Debt</h3>
-<p>The first step is often the most painful: You must know exactly how much you owe. Many people avoid looking at their total debt out of fear, but you cannot defeat an enemy you haven't identified.</p>
-<p>Create a list (or use **Expensico** to log these as "negative" obligations) containing:
-- The name of the creditor.
-- The total balance remaining.
-- The interest rate (APR).
-- The minimum monthly payment.</p>
-<p>Seeing the total number can be shocking, but it is the start of your liberation. This is the "Point of No Return."</p>
-<h3>2. Strategy A: The Debt Snowball (The Psychological Win)</h3>
-<p>Popularized by financial experts who understand that human behavior is driven by momentum, the **Debt Snowball** method focuses on the smallest balance first.</p>
-<p>You pay the minimum on everything except the debt with the smallest balance. Every extra dollar you can find goes toward that small debt until it is gone. Once it’s paid off, you take all the money you were paying on it and roll it into the next smallest debt. 
-- **The internal win**: You get a "victory" quickly. This releases dopamine and gives you the psychological fuel to keep going for the long haul.</p>
-<h3>3. Strategy B: The Debt Avalanche (The Mathematical Win)</h3>
-<p>If you are strictly driven by numbers, the **Debt Avalanche** targets the debt with the highest interest rate first.</p>
-<p>You pay minimums on everything except the debt with the highest APR (usually credit cards). Once that is gone, you move to the next highest rate.
-- **The math win**: You save the most money on interest and potentially finish a few months sooner. However, if your highest interest debt is also your largest (like a massive student loan), it might take months or years before you feel a "win," which increases the risk of quitting.</p>
-<h3>4. Celebrate the Milestones</h3>
-<img src="/blogs/blog-7.2.png" alt="Celebrating Financial Milestones">
-<p>The journey to debt-freedom can be long, and it is easy to lose motivation. This is why it is critical to celebrate the "small wins."</p>
-<h3>5. Step 1: Stopping the Bleed</h3>
-<p>You cannot dig your way out of a hole while you are still digging down. To get out of debt, you must commit to **no new debt.**</p>
-<p>This means:
-- Deleting your saved credit card info from shopping sites.
-- Unsubscribing from "Sales" emails that tempt you.
-- Switching to a debit card or cash for all daily purchases.
-If you don't have the cash for it, you can't have it. This is a difficult transition, but it is the only way to ensure your progress isn't erased by next month's impulse.</p>
-<h3>6. Step 2: The "Debt-Specific" Budget</h3>
-<p>Your budget needs a new priority. Every dollar that isn't for an "Absolute Essential" (Hearth, Home, Health, and Basic Food) must be redirected toward your debt.</p>
-<p>This is the season of **"Temporary Sacrifice for Permanent Freedom."** It might mean no dining out for six months or canceling your premium streaming services. Remember, this isn't forever. It is a focused burst of energy to break the chains. When you use **Expensico**, you can see your "Debt Repayment" category grow as your "Discretionary" spending shrinks—a powerful visual motivator.</p>
-<h3>7. Step 3: Increasing the Velocity (Income)</h3>
-<p>Cutting expenses has a floor (you have to eat), but increasing your income has no ceiling. To accelerate your debt freedom, look for ways to bring in more cash that goes 100% toward your debt.
-- Sell items you no longer use.
-- Take on a side hustle for a defined period.
-- Negotiate a raise at your current job.</p>
-<p>If you add just $200 extra a month to your debt payments, you could shave years off your repayment timeline.</p>
-<h3>8. Dealing with the "Interest Trap"</h3>
-<p>Interest is the reason debt is so hard to escape. If you are only paying the minimum, you are barely covering the interest, and your balance stays the same for decades.
-- **Negotiate**: Call your credit card companies. If you have been a loyal customer, ask for a lower interest rate. 
-- **Consolidate**: If your credit score is still decent, a 0% balance transfer card or a lower-interest personal loan can help you stop the high-interest bleed—**but only if you have stopped the spending habit.** If you consolidate and then keep spending on the old cards, you will double your debt.</p>
-<h3>9. Living Debt-Free: The Reward</h3>
-<p>Once the final payment is made, the feeling is indescribable. You have given yourself a massive "raise." The hundreds or thousands of dollars that used to go to bankers now stays in your pocket.</p>
-<p>You can now:
-- Build a massive emergency fund.
-- Invest aggressively for your future.
-- Give generously to causes you care about.
-- Live with a level of peace that most people will never experience.</p>
-<h3>Conclusion</h3>
-<p>Debt-free living is not about being "cheap." It is about being **free.** It is about moving from a life of obligations to a life of opportunities.</p>
-<p>The roadmap is simple, but the journey is hard. It requires you to be different from everyone else. It requires you to say "no" today so you can say "yes" for the rest of your life. Open your **Expensico**, map your debts, choose your strategy, and take the first step. The chains only stay as long as you let them.</p>
-      </div>
-    </article>
-  </main>
+    </nav>
 
-  <footer>
-    <div style="font-size: 1.2rem; font-weight: 900; margin-bottom: 1rem;">Expensico</div>
-    <div style="opacity: 0.6; font-size: 0.8rem;">© 2026 Expensico Finance. All rights reserved.</div>
-    <div class="footer-links">
-      <a href="/privacy-policy.html">Privacy Policy</a>
-      <a href="/terms-and-conditions.html">Terms</a>
-      <a href="/disclaimer.html">Disclaimer</a>
-      <a href="/contact.html">Contact Support</a>
+    <div class="container">
+        <article class="blog-content">
+            <div class="blog-meta">
+                <span class="category-tag">Debt Management</span>
+                <span>•</span>
+                <span>2026-04-20</span>
+            </div>
+            <h1>Debt-Free Living: A Step-by-Step Roadmap to Financial Independence</h1>
+
+<p>Debt is often described as a "weight" or a "chain," and for millions of people, that is exactly how it feels. It is the feeling of running a race with a backpack full of bricks—no matter how hard you work or how much you earn, you can't seem to make progress because the interest is pulling you backward.</p>
+
+<div class="blog-image-container"><img src="/blogs/blog-7.1.png" alt="Breaking Free from Debt"></div>
+
+<p>Living debt-free is not just about a $0 balance on a statement; it is about reclaiming your freedom. When you don't owe anyone anything, every dollar you earn belongs to YOU. In this guide, we will provide a clear, step-by-step roadmap to help you shed that weight and find your way to financial independence.</p>
+
+<h3>1. The Confrontation: Mapping Your Debt</h3>
+
+<p>The first step is often the most painful: You must know exactly how much you owe. Many people avoid looking at their total debt out of fear, but you cannot defeat an enemy you haven't identified.</p>
+
+<p>Create a list (or use <strong>Expensico</strong> to log these as "negative" obligations) containing:</p>
+<ul><li>The name of the creditor.</li>
+<li>The total balance remaining.</li>
+<li>The interest rate (APR).</li>
+<li>The minimum monthly payment.</li></ul>
+
+<p>Seeing the total number can be shocking, but it is the start of your liberation. This is the "Point of No Return."</p>
+
+<h3>2. Strategy A: The Debt Snowball (The Psychological Win)</h3>
+
+<p>Popularized by financial experts who understand that human behavior is driven by momentum, the <strong>Debt Snowball</strong> method focuses on the smallest balance first. </p>
+
+<p>You pay the minimum on everything except the debt with the smallest balance. Every extra dollar you can find goes toward that small debt until it is gone. Once it’s paid off, you take all the money you were paying on it and roll it into the next smallest debt. </p>
+<ul><li><strong>The internal win</strong>: You get a "victory" quickly. This releases dopamine and gives you the psychological fuel to keep going for the long haul.</li></ul>
+
+<h3>3. Strategy B: The Debt Avalanche (The Mathematical Win)</h3>
+
+<p>If you are strictly driven by numbers, the <strong>Debt Avalanche</strong> targets the debt with the highest interest rate first. </p>
+
+<p>You pay minimums on everything except the debt with the highest APR (usually credit cards). Once that is gone, you move to the next highest rate.</p>
+<ul><li><strong>The math win</strong>: You save the most money on interest and potentially finish a few months sooner. However, if your highest interest debt is also your largest (like a massive student loan), it might take months or years before you feel a "win," which increases the risk of quitting.</li></ul>
+
+<h3>4. Celebrate the Milestones</h3>
+
+<div class="blog-image-container"><img src="/blogs/blog-7.2.png" alt="Celebrating Financial Milestones"></div>
+
+<p>The journey to debt-freedom can be long, and it is easy to lose motivation. This is why it is critical to celebrate the "small wins."</p>
+
+<h3>5. Step 1: Stopping the Bleed</h3>
+
+<p>You cannot dig your way out of a hole while you are still digging down. To get out of debt, you must commit to <strong>no new debt.</strong> </p>
+
+<p>This means:</p>
+<ul><li>Deleting your saved credit card info from shopping sites.</li>
+<li>Unsubscribing from "Sales" emails that tempt you.</li>
+<li>Switching to a debit card or cash for all daily purchases.</li></ul>
+<p>If you don't have the cash for it, you can't have it. This is a difficult transition, but it is the only way to ensure your progress isn't erased by next month's impulse.</p>
+
+<h3>6. Step 2: The "Debt-Specific" Budget</h3>
+
+<p>Your budget needs a new priority. Every dollar that isn't for an "Absolute Essential" (Hearth, Home, Health, and Basic Food) must be redirected toward your debt.</p>
+
+<p>This is the season of <strong>"Temporary Sacrifice for Permanent Freedom."</strong> It might mean no dining out for six months or canceling your premium streaming services. Remember, this isn't forever. It is a focused burst of energy to break the chains. When you use <strong>Expensico</strong>, you can see your "Debt Repayment" category grow as your "Discretionary" spending shrinks—a powerful visual motivator.</p>
+
+<h3>7. Step 3: Increasing the Velocity (Income)</h3>
+
+<p>Cutting expenses has a floor (you have to eat), but increasing your income has no ceiling. To accelerate your debt freedom, look for ways to bring in more cash that goes 100% toward your debt.</p>
+<ul><li>Sell items you no longer use.</li>
+<li>Take on a side hustle for a defined period.</li>
+<li>Negotiate a raise at your current job.</li></ul>
+
+<p>If you add just $200 extra a month to your debt payments, you could shave years off your repayment timeline.</p>
+
+<h3>8. Dealing with the "Interest Trap"</h3>
+
+<p>Interest is the reason debt is so hard to escape. If you are only paying the minimum, you are barely covering the interest, and your balance stays the same for decades.</p>
+<ul><li><strong>Negotiate</strong>: Call your credit card companies. If you have been a loyal customer, ask for a lower interest rate. </li>
+<li><strong>Consolidate</strong>: If your credit score is still decent, a 0% balance transfer card or a lower-interest personal loan can help you stop the high-interest bleed—<strong>but only if you have stopped the spending habit.</strong> If you consolidate and then keep spending on the old cards, you will double your debt.</li></ul>
+
+<h3>9. Living Debt-Free: The Reward</h3>
+
+<p>Once the final payment is made, the feeling is indescribable. You have given yourself a massive "raise." The hundreds or thousands of dollars that used to go to bankers now stays in your pocket. </p>
+
+<p>You can now:</p>
+<ul><li>Build a massive emergency fund.</li>
+<li>Invest aggressively for your future.</li>
+<li>Give generously to causes you care about.</li>
+<li>Live with a level of peace that most people will never experience.</li></ul>
+
+<h3>Conclusion</h3>
+
+<p>Debt-free living is not about being "cheap." It is about being <strong>free.</strong> It is about moving from a life of obligations to a life of opportunities. </p>
+
+<p>The roadmap is simple, but the journey is hard. It requires you to be different from everyone else. It requires you to say "no" today so you can say "yes" for the rest of your life. Open your <strong>Expensico</strong>, map your debts, choose your strategy, and take the first step. The chains only stay as long as you let them.</p>
+        </article>
+
+        <div class="related-articles"><h2>Recommended Reading</h2><div class="related-grid">
+            <a href="/blog/proven-strategies-to-save-money" class="related-card">
+                <span class="related-cat">Budgeting</span>
+                <h3>Proven Strategies to Save Money Every Month</h3>
+                <span class="read-more">Read Article →</span>
+            </a>
+            <a href="/blog/ultimate-guide-to-expense-tracking" class="related-card">
+                <span class="related-cat">Financial Wisdom</span>
+                <h3>The Ultimate Guide to Tracking Your Daily Expenses</h3>
+                <span class="read-more">Read Article →</span>
+            </a>
+            <a href="/blog/5-budgeting-mistakes-to-avoid" class="related-card">
+                <span class="related-cat">Budgeting</span>
+                <h3>5 Common Budgeting Mistakes That Are Draining Your Bank Account</h3>
+                <span class="read-more">Read Article →</span>
+            </a></div></div>
     </div>
-  </footer>
+
+    <footer>
+        <a href="/" class="footer-logo">
+            <span style="font-weight: 900; color: var(--primary-color); font-size: 1.5rem; font-style: italic;">Expensico</span>
+        </a>
+        <div class="footer-links">
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/terms-and-conditions">Terms</a>
+            <a href="/cookie-policy">Cookie Policy</a>
+            <a href="/faq">FAQ</a>
+        </div>
+        <div class="copyright">© 2026 Expensico Finance. All rights reserved. Professional transparency through digital ledgers.</div>
+    </footer>
 </body>
 </html>

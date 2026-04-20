@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import AuthContext from '../context/AuthContext';
 import { useUI } from '../context/UIContext';
-import { Layout, PlusCircle, List, Globe, User, LogOut } from 'lucide-react';
+import { Layout, PlusCircle, List, Globe, User, LogOut, ShieldCheck } from 'lucide-react';
 
 export default function NavBar() {
   const location = useLocation();
@@ -34,11 +34,16 @@ export default function NavBar() {
         alignItems: 'center',
         borderBottom: '1px solid var(--border-color)'
       }}>
-        <Link to="/" className="nav-brand" style={{ display: 'flex', flexDirection: 'column', gap: '0px', lineHeight: '1.1', textDecoration: 'none', flexShrink: 0 }}>
-          <span style={{ fontSize: '1.5rem', fontWeight: 900, color: 'var(--primary-color)', letterSpacing: '-0.04em' }}>Expensico</span>
-          <span style={{ fontSize: '0.7rem', fontWeight: 600, color: 'var(--text-secondary)', opacity: 0.8, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
-            {user ? 'Track your money' : 'Finance Intelligence'}
-          </span>
+        <Link to="/" className="nav-brand" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none', flexShrink: 0 }}>
+          <div style={{ background: 'var(--primary-color)', color: 'white', padding: '0.4rem', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <ShieldCheck size={24} />
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.1' }}>
+            <span style={{ fontSize: '1.5rem', fontStyle: 'italic', fontWeight: 900, color: 'var(--primary-color)', letterSpacing: '-0.04em' }}>Expensico</span>
+            <span style={{ fontSize: '0.7rem', fontWeight: 600, color: 'var(--text-secondary)', opacity: 0.8, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+              {user ? 'Track your money' : 'Finance Intelligence'}
+            </span>
+          </div>
         </Link>
 
         {/* Unified Navigation Links */}
@@ -56,10 +61,11 @@ export default function NavBar() {
               <Link to="/" className={`nav-link ${isActive('/')}`} style={{ fontWeight: 600 }}>Home</Link>
               <Link to="/about" className={`nav-link ${isActive('/about')}`} style={{ fontWeight: 600 }}>About</Link>
               <Link to="/blog" className={`nav-link ${isActive('/blog')}`} style={{ fontWeight: 600 }}>Blog</Link>
+              <Link to="/faq" className={`nav-link ${isActive('/faq')}`} style={{ fontWeight: 600 }}>FAQ</Link>
               <Link to="/contact" className={`nav-link ${isActive('/contact')}`} style={{ fontWeight: 600 }}>Contact</Link>
               <Link to="/privacy-policy" className={`nav-link ${isActive('/privacy-policy')}`} style={{ fontWeight: 500, fontSize: '0.9rem' }}>Privacy</Link>
               <Link to="/terms-and-conditions" className={`nav-link ${isActive('/terms-and-conditions')}`} style={{ fontWeight: 500, fontSize: '0.9rem' }}>Terms</Link>
-              <Link to="/disclaimer" className={`nav-link ${isActive('/disclaimer')}`} style={{ fontWeight: 500, fontSize: '0.9rem' }}>Disclaimer</Link>
+              <Link to="/cookie-policy" className={`nav-link ${isActive('/cookie-policy')}`} style={{ fontWeight: 500, fontSize: '0.9rem' }}>Cookies</Link>
             </>
           )}
         </div>

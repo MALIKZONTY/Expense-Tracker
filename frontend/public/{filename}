@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Expensico Finance</title>
+    <meta name="description" content="Official FAQ for Expensico Finance. Professional financial intelligence and data protection standards.">
+    <link rel="canonical" href="https://expense-tracker-theta-weld.vercel.app/faq" />
+    <style>
+        :root { --primary-color: #3b82f6; --text-primary: #1e293b; --text-secondary: #64748b; --border-color: #e2e8f0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.8; color: var(--text-primary); margin: 0; background-color: #f8fafc; }
+        
+        .nav-mock { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-color); padding: 0.75rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .nav-brand-group { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+        .nav-brand-icon { background: var(--primary-color); color: white; padding: 0.4rem; border-radius: 10px; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+        .nav-brand-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .nav-brand { font-size: 1.5rem; font-style: italic; font-weight: 900; color: var(--primary-color); letter-spacing: -0.04em; }
+        .nav-sub-brand { font-size: 0.7rem; font-weight: 600; color: var(--text-secondary); opacity: 0.8; letter-spacing: 0.05em; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 1rem; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text-secondary); font-weight: 600; font-size: 0.9rem; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--primary-color); }
+        .nav-auth { display: flex; gap: 1rem; align-items: center; margin-left: 1rem; }
+        .btn-primary { background: var(--primary-color); color: white !important; padding: 0.6rem 1.2rem; border-radius: 10px; font-weight: 700; font-size: 0.85rem; }
+
+        .container { max-width: 1000px; margin: 4rem auto; padding: 0 1.5rem; }
+        .card { background: white; padding: 4rem; border-radius: 32px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); border: 1px solid var(--border-color); }
+        h1 { font-size: 3.5rem; font-weight: 900; letter-spacing: -0.04em; margin-bottom: 1.5rem; color: var(--text-primary); }
+        h2 { font-size: 1.75rem; font-weight: 800; margin-top: 3rem; margin-bottom: 1.25rem; color: var(--text-primary); border-left: 4px solid var(--primary-color); padding-left: 1.5rem; }
+        h3 { font-size: 1.25rem; font-weight: 700; margin-top: 2rem; color: var(--text-primary); }
+        p { margin-bottom: 1.5rem; color: var(--text-secondary); font-size: 1.1rem; }
+        ul { margin-bottom: 2rem; color: var(--text-secondary); }
+        li { margin-bottom: 0.75rem; }
+        .badge { background: rgba(59, 130, 246, 0.1); color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.85rem; display: inline-block; margin-bottom: 1.5rem; }
+        
+        footer { margin-top: 5rem; text-align: center; color: var(--text-secondary); font-size: 0.9rem; padding: 3rem 0; background: white; border-top: 1px solid var(--border-color); }
+        .footer-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 1.5rem; flex-wrap: wrap; }
+        .footer-links a { text-decoration: none; color: var(--text-secondary); font-weight: 500; }
+    </style>
+</head>
+<body>
+    <nav class="nav-mock">
+        <a href="/" class="nav-brand-group">
+            <div class="nav-brand-icon">S</div>
+            <div class="nav-brand-text">
+                <div class="nav-brand">Expensico</div>
+                <div class="nav-sub-brand">Finance Intelligence</div>
+            </div>
+        </a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/blog">Blog</a>
+            <a href="/faq.html">FAQ</a>
+            <div class="nav-auth">
+                <a href="/login">Login</a>
+                <a href="/register" class="btn-primary">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <span class="badge">User Knowledge Base</span>
+            
+<h1>Frequently Asked Questions</h1>
+<p>Get answers to common questions about Expensico's world-class financial tracking platform.</p>
+
+<div class="faq-item">
+    <h3>Is Expensico really free to use?</h3>
+    <p>Yes! Our core mission is to provide high-quality financial intelligence to everyone. We support the platform through non-intrusive advertisements (Google AdSense), allowing us to offer our tracking and educational tools at zero cost to you. Unlike other platforms, we don't hide our best features behind a paywall.</p>
+</div>
+
+<div class="faq-item">
+    <h3>How secure is my financial data?</h3>
+    <p>Security is our top priority. We use AES-256 encryption for data at rest and TLS for data in transit. Your records are stored in high-security cloud environments, and we implement a "Soft-Delete" system to protect against accidental data loss. We never see your bank logout passwords as we focus on manual/synced entry for maximum privacy.</p>
+</div>
+
+<div class="faq-item">
+    <h3>Can I export my data to other software?</h3>
+    <p>Absolutely. We believe in data sovereignty. You can export your full transaction history in CSV format at any time from your settings panel. This ensures that your data is never locked in and can be used for deep-dive analysis in Excel or with your accountant.</p>
+</div>
+
+<div class="faq-item">
+    <h3>Does Expensico connect directly to my bank?</h3>
+    <p>To maintain the highest level of privacy and control, Expensico currently focuses on manual logging and synchronization. This ensures that you have full awareness of every transaction and that no third-party aggregator has access to your live bank feeds. This "High-Transparency" approach is preferred by users who value security over convenience.</p>
+</div>
+
+<div class="faq-item">
+    <h3>Is there a mobile app available?</h3>
+    <p>Expensico is a Progressive Web App (PWA). This means it is optimized for all mobile browsers and can be "Added to Home Screen" on both iOS and Android. This provides a native app-like experience without the need for an app store download, ensuring you always have the latest version without updates.</p>
+</div>
+
+<div class="faq-item">
+    <h3>How do I category my expenses?</h3>
+    <p>Our intelligent dashboard allows you to assign categories (like Food, Travel, Rent) with a single tap. Over time, our platform learns your habits and will suggest the most likely category for your recurring expenses, making your log-time faster every day.</p>
+</div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div>© 2026 Expensico Finance. All rights reserved.</div>
+        <div class="footer-links">
+            <a href="/privacy-policy.html">Privacy Policy</a>
+            <a href="/terms-and-conditions.html">Terms</a>
+            <a href="/disclaimer.html">Disclaimer</a>
+            <a href="/cookie-policy.html">Cookie Policy</a>
+            <a href="/faq.html">FAQ</a>
+        </div>
+    </footer>
+</body>
+</html>

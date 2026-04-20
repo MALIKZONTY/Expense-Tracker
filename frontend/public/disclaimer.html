@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disclaimer | Expensico Professional Disclosures</title>
-    <meta name="description" content="Legal Disclosures and Limitation of Liability for Expensico. Important information regarding financial advice, professional summaries, and AdSense.">
+    <title>Disclaimer | Expensico Finance</title>
+    <meta name="description" content="Official Disclaimer for Expensico Finance. Professional financial intelligence and data protection standards.">
     <link rel="canonical" href="https://expense-tracker-theta-weld.vercel.app/disclaimer" />
     <style>
         :root { --primary-color: #3b82f6; --text-primary: #1e293b; --text-secondary: #64748b; --border-color: #e2e8f0; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.8; color: var(--text-primary); margin: 0; background-color: #f8fafc; }
         
         .nav-mock { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-color); padding: 0.75rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
-        .nav-brand-group { display: flex; flexDirection: column; gap: 0px; line-height: 1.1; text-decoration: none; }
-        .nav-brand { font-size: 1.5rem; font-weight: 900; color: var(--primary-color); text-decoration: none; letter-spacing: -0.04em; }
+        .nav-brand-group { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+        .nav-brand-icon { background: var(--primary-color); color: white; padding: 0.4rem; border-radius: 10px; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+        .nav-brand-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .nav-brand { font-size: 1.5rem; font-style: italic; font-weight: 900; color: var(--primary-color); letter-spacing: -0.04em; }
         .nav-sub-brand { font-size: 0.7rem; font-weight: 600; color: var(--text-secondary); opacity: 0.8; letter-spacing: 0.05em; text-transform: uppercase; }
         .nav-links { display: flex; gap: 1rem; align-items: center; }
         .nav-links a { text-decoration: none; color: var(--text-secondary); font-weight: 600; font-size: 0.9rem; transition: color 0.2s; }
@@ -24,28 +26,31 @@
         .card { background: white; padding: 4rem; border-radius: 32px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); border: 1px solid var(--border-color); }
         h1 { font-size: 3.5rem; font-weight: 900; letter-spacing: -0.04em; margin-bottom: 1.5rem; color: var(--text-primary); }
         h2 { font-size: 1.75rem; font-weight: 800; margin-top: 3rem; margin-bottom: 1.25rem; color: var(--text-primary); border-left: 4px solid var(--primary-color); padding-left: 1.5rem; }
+        h3 { font-size: 1.25rem; font-weight: 700; margin-top: 2rem; color: var(--text-primary); }
         p { margin-bottom: 1.5rem; color: var(--text-secondary); font-size: 1.1rem; }
-        .badge { background: rgba(245, 158, 11, 0.1); color: #f59e0b; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.85rem; display: inline-block; margin-bottom: 1.5rem; }
+        ul { margin-bottom: 2rem; color: var(--text-secondary); }
+        li { margin-bottom: 0.75rem; }
+        .badge { background: rgba(59, 130, 246, 0.1); color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.85rem; display: inline-block; margin-bottom: 1.5rem; }
         
         footer { margin-top: 5rem; text-align: center; color: var(--text-secondary); font-size: 0.9rem; padding: 3rem 0; background: white; border-top: 1px solid var(--border-color); }
-        .footer-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 1.5rem; }
+        .footer-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 1.5rem; flex-wrap: wrap; }
         .footer-links a { text-decoration: none; color: var(--text-secondary); font-weight: 500; }
     </style>
 </head>
 <body>
     <nav class="nav-mock">
         <a href="/" class="nav-brand-group">
-            <div class="nav-brand">Expensico</div>
-            <div class="nav-sub-brand">Finance Intelligence</div>
+            <div class="nav-brand-icon">S</div>
+            <div class="nav-brand-text">
+                <div class="nav-brand">Expensico</div>
+                <div class="nav-sub-brand">Finance Intelligence</div>
+            </div>
         </a>
         <div class="nav-links">
             <a href="/">Home</a>
             <a href="/about.html">About</a>
             <a href="/blog">Blog</a>
-            <a href="/contact.html">Contact</a>
-            <a href="/privacy-policy.html" style="font-weight: 500; font-size: 0.85rem;">Privacy</a>
-            <a href="/terms-and-conditions.html" style="font-weight: 500; font-size: 0.85rem;">Terms</a>
-            <a href="/disclaimer.html" style="font-weight: 500; font-size: 0.85rem;">Disclaimer</a>
+            <a href="/faq.html">FAQ</a>
             <div class="nav-auth">
                 <a href="/login">Login</a>
                 <a href="/register" class="btn-primary">Sign Up</a>
@@ -55,22 +60,51 @@
 
     <div class="container">
         <div class="card">
-            <span class="badge">Legal Disclosure</span>
-            <h1>Disclaimer</h1>
-            <p><strong>Last Updated: April 20, 2026</strong></p>
-            <p>The information provided by Expensico Finance ("we," "us", or "our") on this website is for general informational purposes only. ALL INFORMATION ON THE SITE IS PROVIDED IN GOOD FAITH, HOWEVER WE MAKE NO REPRESENTATION OR WARRANTY OF ANY KIND.</p>
+            <span class="badge">Financial Disclosure</span>
             
-            <h2>1. Professional Disclaimer</h2>
-            <p>The Site cannot and does not contain personal financial advice. The financial information is provided for general informational and educational purposes only and is not a substitute for professional advice.</p>
+<h1>Professional & High-Accuracy Disclaimer</h1>
+<p><strong>Last Updated: April 20, 2026</strong></p>
+<h2>1. Financial Education and Information Only</h2>
+<p>The information provided on Expensico (expense-tracker-theta-weld.vercel.app), including but not limited to our dashboard analytics, budgeting tools, and blog content, is intended for general educational and informational purposes only. It is not intended to be as a substitute for professional financial advice, diagnosis, or treatment. Always seek the advice of your financial advisor, accountant, or other qualified professional with any questions you may have regarding a financial plan or investment strategy. The financial markers and metrics provided by our platform are tools for your own analysis and should not be used as the sole basis for any financial decision.</p>
+
+<h2>2. No Professional-Client Relationship</h2>
+<p>Your use of this website and its tools does not establish a professional-client relationship between you and Expensico Finance. Any reliance you place on the information found within our platform is strictly at your own risk. We are not acting as your broker, advisor, or fiduciary in any capacity. The act of registering for an account or reading our blog articles does not create any obligation on our part to provide you with personalized financial guidance.</p>
+
+<h2>3. Accuracy of Information and Forward-Looking Statements</h2>
+<p>While we strive to provide high-quality data visualizations and well-researched financial literacy content, we make no representations or warranties of any kind about the completeness, accuracy, reliability, or suitability of the information. Financial markets, tax regulations, and investment strategies are subject to rapid change; therefore, the information provided may become outdated or inaccurate over time. Any projections or forward-looking statements regarding potential savings, portfolio growth, or market trends are purely hypothetical and do not guarantee future results. Accuracy of the tracking metrics is dependent on the quality and frequency of the user's manual data entry.</p>
+
+<h2>4. AdSense and Third-Party Links Disclaimer</h2>
+<p>Our website contains advertisements served by Google AdSense and may contain links to third-party websites. Expensico does not endorse the products or services advertised, nor do we have control over the content or practices of third-party sites. We are not responsible for any transactions you enter into with third parties discovered through our platform. Clicking on third-party links is done entirely at your own risk and is subject to the terms and privacy policies of those respective sites.</p>
+
+<h2>5. User Personal Responsibility & Due Diligence</h2>
+<p>You acknowledge that you are using our services voluntarily and that any choices, actions, and results now and in the future are solely your responsibility. Expensico will not be liable to you or any other party for any decision made or action taken in reliance on the information given by our service. You agree to perform your own due diligence before implementing any savings strategies or budgeting techniques discussed on our platform. Your results will depend on your unique financial situation, starting point, and dedication to tracking.</p>
+
+<h2>6. Limitation of Liability and "As-Is" Status</h2>
+<p>To the greatest extent permitted under applicable law, the service is provided "as is" and "as available." Expensico Finance and its partners make no representations or warranties regarding the continuous availability, security, or error-free nature of the platform. We shall not be liable for any direct, indirect, incidental, or special damages resulting from the use or inability to use the platform, including any losses of data or capital.</p>
+
+<h2>7. Errors and Omissions</h2>
+<p>This platform may contain typographical errors or inaccuracies and may not be complete or current. We reserve the right to correct any errors, inaccuracies, or omissions and to change or update information at any time without prior notice. We assume no responsibility for such errors and omissions.</p>
+
+<h2>8. Technology and Security Disclaimer</h2>
+<p>While we implement industry-standard security measures, we cannot guarantee that the platform will be 100% free of bugs, errors, or unauthorized access. You are responsible for maintaining your own local backups of critical data and ensuring your hardware and software are updated with the latest security patches. We assume no liability for malfunctions of your device or internet connection while using the platform.</p>
+
+<h2>9. External Endorsement Disclaimer</h2>
+<p>Reference to any specific commercial product, process, or service by trade name, trademark, manufacturer, or otherwise on this platform does not necessarily constitute or imply its endorsement, recommendation, or favoring by Expensico Finance. The views and opinions of authors expressed on our blog do not necessarily state or reflect those of the company as a whole.</p>
+
+<h2>10. Conflict of Interest Disclaimer</h2>
+<p>Expensico may receive compensation from advertisers whose products appear on the site (primarily through Google AdSense). This compensation may influence the selection of advertisements but does not impact our commitment to providing objective financial education content in our core articles.</p>
+
         </div>
     </div>
 
     <footer>
         <div>© 2026 Expensico Finance. All rights reserved.</div>
         <div class="footer-links">
-            <a href="/privacy-policy.html">Privacy</a>
+            <a href="/privacy-policy.html">Privacy Policy</a>
             <a href="/terms-and-conditions.html">Terms</a>
             <a href="/disclaimer.html">Disclaimer</a>
+            <a href="/cookie-policy.html">Cookie Policy</a>
+            <a href="/faq.html">FAQ</a>
         </div>
     </footer>
 </body>

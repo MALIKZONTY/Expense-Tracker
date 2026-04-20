@@ -17,6 +17,8 @@ import Contact from './pages/Contact';
 import AdminInquiries from './pages/AdminInquiries';
 import BlogList from './pages/BlogList';
 import BlogPost from './pages/BlogPost';
+import CookiePolicy from './pages/CookiePolicy';
+import FAQ from './pages/FAQ';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
 
@@ -49,6 +51,8 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/blog" element={<BlogList />} />
                 <Route path="/blog/:slug" element={<BlogPost />} />
+                <Route path="/cookie-policy" element={<CookiePolicy />} />
+                <Route path="/faq" element={<FAQ />} />
                 <Route path="/admin/inquiries" element={<ProtectedRoute adminOnly><AdminInquiries /></ProtectedRoute>} />
               </Routes>
             </div>
