@@ -570,7 +570,7 @@ An **Emergency Fund** is the single most important part of your foundation. Itâ€
 ### 1. What is an Emergency Fund? (And what it's NOT)
 
 An emergency fund is a stash of cash set aside purely for unplanned, essential expenses. 
-- **It IS for**: Medical emergencies, urgent home repairs, car breakdowns, or sudden job loss.
+- **It is for**: Medical emergencies, urgent home repairs, car breakdowns, or sudden job loss.
 - **It is NOT for**: A "great deal" on a new TV, your best friend's destination wedding, or a last-minute vacation.
 
 If an expense is predictable (like your annual car insurance or holiday gifts), it belongs in a "Sinking Fund," not your emergency fund. The emergency fund is for the **unpredictable.**
