@@ -1,7 +1,7 @@
 const blogPosts = [
   {
-    slug: 'proven-strategies-to-save-money',
-    title: 'Proven Strategies to Save Money Every Month',
+    slug: 'how-i-stopped-blowing-paycheck',
+    title: 'How I finally stopped blowing my paycheck every month',
     description: 'Anyone can build a significant financial cushion without feeling like they are sacrificing their quality of life. Learn the foundation of understanding your "Why" and the power of automation.',
     date: '2026-04-20',
     category: 'Budgeting',
@@ -83,12 +83,12 @@ Saving money is not about living a life of "less." It is about making intentiona
 
 ---
 ### Related Reading
-* [Read our guide on The Ultimate Guide to Tracking Your Daily Expenses](/blog/ultimate-guide-to-expense-tracking)
-* [Learn more about 5 Common Budgeting Mistakes That Are Draining Your Bank Account](/blog/5-budgeting-mistakes-to-avoid)`
+* [Read our guide on The Real Reason You Should Track Your Spending](/blog/why-track-spending)
+* [Learn more about Why your budget keeps failing (and how to fix it)](/blog/why-budgets-fail)`
   },
   {
-    slug: 'ultimate-guide-to-expense-tracking',
-    title: 'The Ultimate Guide to Tracking Your Daily Expenses',
+    slug: 'why-track-spending',
+    title: 'The Real Reason You Should Track Your Spending',
     description: 'Reclaiming the power to decide where your life’s energy (your money) is going. Learn the psychology of awareness and how to choose the right tracking method.',
     date: '2026-04-20',
     category: 'Financial Wisdom',
@@ -167,12 +167,12 @@ Accuracy over speed. Awareness over automation. Intentionality over impulse. The
 
 ---
 ### Related Reading
-* [Read our guide on 5 Common Budgeting Mistakes That Are Draining Your Bank Account](/blog/5-budgeting-mistakes-to-avoid)
-* [Learn more about Master Your Personal Finances with Expensico in 2026](/blog/master-finances-with-expensico)`
+* [Read our guide on Why your budget keeps failing (and how to fix it)](/blog/why-budgets-fail)
+* [Learn more about The Story Behind Expensico (and why I built it)](/blog/story-behind-expensico)`
   },
   {
-    slug: '5-budgeting-mistakes-to-avoid',
-    title: '5 Common Budgeting Mistakes That Are Draining Your Bank Account',
+    slug: 'why-budgets-fail',
+    title: 'Why your budget keeps failing (and how to fix it)',
     description: 'Stop the cycle of "budget burnout." Learn why aspirational budgeting and forgetting phantom expenses are leading you to failure, and how to fix them.',
     date: '2026-04-20',
     category: 'Budgeting',
@@ -230,11 +230,11 @@ By avoiding these five common mistakes, you turn your budget from a source of st
 
 ---
 ### Related Reading
-* [Read our guide on Master Your Personal Finances with Expensico in 2026](/blog/master-finances-with-expensico)
-* [Learn more about The Psychology of Spending: Why We Buy What We Don’t Need](/blog/psychology-of-spending)`
+* [Read our guide on The Story Behind Expensico (and why I built it)](/blog/story-behind-expensico)
+* [Learn more about Why do I keep buying stuff I don’t actually need?](/blog/why-we-buy-stuff)`
   },
   {
-    slug: 'master-finances-with-expensico',
+    slug: 'story-behind-expensico',
     title: 'The Story Behind Expensico (and why I built it)',
     description: 'I was tired of messy spreadsheets and random WhatsApp notes. Here is the story of why I built Expensico and how it can help you take back control.',
     date: '2026-04-20',
@@ -296,11 +296,11 @@ Join thousands of others who are taking back control. Start your journey with Ex
 
 ---
 ### Related Reading
-* [Read our guide on The Psychology of Spending: Why We Buy What We Don’t Need](/blog/psychology-of-spending)
-* [Learn more about Investing for Beginners: How to Build Your First Portfolio](/blog/investing-for-beginners)`
+* [Read our guide on Why do I keep buying stuff I don’t actually need?](/blog/why-we-buy-stuff)
+* [Learn more about Don’t let the charts scare you: A beginner’s guide to investing](/blog/investing-for-real-people)`
   },
   {
-    slug: 'psychology-of-spending',
+    slug: 'why-we-buy-stuff',
     title: "Why do I keep buying stuff I don't actually need?",
     description: "Ever wonder why you ended up with a full cart when you only went in for milk? Let's talk about the dopamine loops and marketing traps that get us all.",
     date: '2026-04-20',
@@ -368,11 +368,11 @@ Your money belongs to your future self. Don't let your present impulses steal it
 
 ---
 ### Related Reading
-* [Read our guide on Investing for Beginners: How to Build Your First Portfolio](/blog/investing-for-beginners)
-* [Learn more about Debt-Free Living: A Step-by-Step Roadmap to Financial Independence](/blog/debt-free-living)`
+* [Read our guide on Don’t let the charts scare you: A beginner’s guide to investing](/blog/investing-for-real-people)
+* [Learn more about How to finally shake that ‘debt weight’ once and for all](/blog/shaking-debt-weight)`
   },
   {
-    slug: 'investing-for-beginners',
+    slug: 'investing-for-real-people',
     title: "Don't let the charts scare you: A beginner's guide to investing",
     description: "Investing isn't as scary as the news makes it look. I've broken down exactly how to start building your portfolio without the jargon.",
     date: '2026-04-20',
@@ -452,11 +452,11 @@ Start small, but start today.
 
 ---
 ### Related Reading
-* [Read our guide on Debt-Free Living: A Step-by-Step Roadmap to Financial Independence](/blog/debt-free-living)
-* [Learn more about Emergency Funds 101: Why You Need One and How to Build It Fast](/blog/emergency-funds-101)`
+* [Read our guide on How to finally shake that ‘debt weight’ once and for all](/blog/shaking-debt-weight)
+* [Learn more about The ‘sleep-better-at-night’ fund: Why you need a safety net](/blog/sleep-better-at-night-fund)`
   },
   {
-    slug: 'debt-free-living',
+    slug: 'shaking-debt-weight',
     title: "How to finally shake that 'debt weight' once and for all",
     description: "Debt feels like a heavy backpack you can never take off. Let's look at the real-world roadmap to paying it off and getting your freedom back.",
     date: '2026-04-20',
@@ -550,11 +550,11 @@ The roadmap is simple, but the journey is hard. It requires you to be different 
 
 ---
 ### Related Reading
-* [Read our guide on Emergency Funds 101: Why You Need One and How to Build It Fast](/blog/emergency-funds-101)
-* [Learn more about Smart Shopping Hacks: How to Slash Your Grocery Bill by 40%](/blog/smart-shopping-hacks)`
+* [Read our guide on The ‘sleep-better-at-night’ fund: Why you need a safety net](/blog/sleep-better-at-night-fund)
+* [Learn more about My favorite grocery hacks for saving money (without eating ramen)](/blog/grocery-saving-hacks)`
   },
   {
-    slug: 'emergency-funds-101',
+    slug: 'sleep-better-at-night-fund',
     title: "The 'sleep-better-at-night' fund: Why you need a safety net",
     description: "Life happens. Cars break, jobs change. Here is the simple strategy for building a fund that turns a catastrophe into a minor annoyance.",
     date: '2026-04-20',
@@ -630,11 +630,11 @@ Start your Starter Fund today. Even a $10 transfer is a brick in your wall of pr
 
 ---
 ### Related Reading
-* [Read our guide on Smart Shopping Hacks: How to Slash Your Grocery Bill by 40%](/blog/smart-shopping-hacks)
-* [Learn more about The Power of Compound Interest: Turning Small Savings into Wealth](/blog/power-of-compound-interest)`
+* [Read our guide on My favorite grocery hacks for saving money (without eating ramen)](/blog/grocery-saving-hacks)
+* [Learn more about The (almost) magic math that builds wealth while you sleep](/blog/magic-math-wealth)`
   },
   {
-    slug: 'smart-shopping-hacks',
+    slug: 'grocery-saving-hacks',
     title: "My favorite grocery hacks for saving money (without eating ramen)",
     description: "Stop letting the grocery store bleed your bank account dry. Here's exactly how I reduced my bill by 40% using simple, real-world tricks.",
     date: '2026-04-20',
@@ -711,11 +711,11 @@ The logic is simple: Every dollar you save on your groceries is a dollar that ca
 
 ---
 ### Related Reading
-* [Read our guide on The Power of Compound Interest: Turning Small Savings into Wealth](/blog/power-of-compound-interest)
-* [Learn more about Minimalism and Money: How Owning Less Can Make You Richer](/blog/minimalism-and-money)`
+* [Read our guide on The (almost) magic math that builds wealth while you sleep](/blog/magic-math-wealth)
+* [Learn more about Why owning less actually made me feel richer](/blog/owning-less-feeling-richer)`
   },
   {
-    slug: 'power-of-compound-interest',
+    slug: 'magic-math-wealth',
     title: "The (almost) magic math that builds wealth while you sleep",
     description: "Einstein called compound interest the eighth wonder of the world for a reason. Understand why time, not just money, is your greatest ally.",
     date: '2026-04-20',
@@ -799,11 +799,11 @@ Mastering your money isn't about being "lucky"; it's about being mathematical. O
 
 ---
 ### Related Reading
-* [Read our guide on Minimalism and Money: How Owning Less Can Make You Richer](/blog/minimalism-and-money)
-* [Learn more about Financial Planning for Young Professionals: Starting Your Journey Right](/blog/financial-planning-young-professionals)`
+* [Read our guide on Why owning less actually made me feel richer](/blog/owning-less-feeling-richer)
+* [Learn more about Everything I wish I knew when I got my first paycheck](/blog/first-paycheck-lessons)`
   },
   {
-    slug: 'minimalism-and-money',
+    slug: 'owning-less-feeling-richer',
     title: 'Why owning less actually made me feel richer',
     description: "Minimalism isn't about living in a white room with one chair. It's about getting rid of the noise so you can afford the life you actually want.",
     date: '2026-04-20',
@@ -880,11 +880,11 @@ Start by letting go of one thing today. Your journey to a richer, simpler life b
 
 ---
 ### Related Reading
-* [Read our guide on Financial Planning for Young Professionals: Starting Your Journey Right](/blog/financial-planning-young-professionals)
-* [Learn more about Credit Scores Demystified: Everything You Need to Know to Score 800+](/blog/credit-scores-demystified)`
+* [Read our guide on Everything I wish I knew when I got my first paycheck](/blog/first-paycheck-lessons)
+* [Learn more about Your credit score isn’t a secret grade—here’s how to play the game](/blog/credit-score-game)`
   },
   {
-    slug: 'financial-planning-young-professionals',
+    slug: 'first-paycheck-lessons',
     title: "Everything I wish I knew when I got my first paycheck",
     description: "Your first decade of working is your biggest financial asset. Here's the simple roadmap for winning the money game without missing out on your 20s.",
     date: '2026-04-20',
@@ -958,11 +958,11 @@ Your journey starts with your next paycheck. Make it count.
 
 ---
 ### Related Reading
-* [Read our guide on Credit Scores Demystified: Everything You Need to Know to Score 800+](/blog/credit-scores-demystified)
-* [Learn more about Retirement Planning for Every Age: It’s Never Too Early (or Late)](/blog/retirement-planning-for-every-age)`
+* [Read our guide on Your credit score isn’t a secret grade—here’s how to play the game](/blog/credit-score-game)
+* [Learn more about It’s never too late to take care of your ‘Future Self’](/blog/future-self-retirement)`
   },
   {
-    slug: 'credit-scores-demystified',
+    slug: 'credit-score-game',
     title: "Your credit score isn't a secret grade—here's how to play the game",
     description: "Credit scores feel like a mystery judged by invisible people. Let's pull back the curtain and look at the 5 things that actually matter for an 800+ score.",
     date: '2026-04-20',
@@ -1035,11 +1035,11 @@ Start by checking your utilization today. Small changes lead to massive scores.
 
 ---
 ### Related Reading
-* [Read our guide on Retirement Planning for Every Age: It’s Never Too Early (or Late)](/blog/retirement-planning-for-every-age)
-* [Learn more about Side Hustle Success: How to Increase Your Income Without Burning Out](/blog/side-hustle-success)`
+* [Read our guide on It’s never too late to take care of your ‘Future Self’](/blog/future-self-retirement)
+* [Learn more about Earning extra cash without losing your mind](/blog/extra-cash-without-burnout)`
   },
   {
-    slug: 'retirement-planning-for-every-age',
+    slug: 'future-self-retirement',
     title: "It's never too late to take care of your 'Future Self'",
     description: "Retirement planning isn't just for people nearing 60. It's a simple act of self-love for the person you'll become. Here's the plan for every age.",
     date: '2026-04-20',
@@ -1110,11 +1110,11 @@ Take the first step toward your dignified retirement today.
 
 ---
 ### Related Reading
-* [Read our guide on Side Hustle Success: How to Increase Your Income Without Burning Out](/blog/side-hustle-success)
-* [Learn more about Insurance 101: Protecting What Matters Most](/blog/insurance-101)`
+* [Read our guide on Earning extra cash without losing your mind](/blog/extra-cash-without-burnout)
+* [Learn more about The boring but essential stuff: Protecting what’s yours](/blog/boring-but-essential-insurance)`
   },
   {
-    slug: 'side-hustle-success',
+    slug: 'extra-cash-without-burnout',
     title: "Earning extra cash without losing your mind",
     description: "Side hustles are great for accelerating your freedom, but 'hustle culture' is a trap. Here's how to build a second stream of income that respects your time.",
     date: '2026-04-20',
@@ -1191,11 +1191,11 @@ Your future wealth is waiting in the skills you already have. Go out and earn it
 
 ---
 ### Related Reading
-* [Read our guide on Insurance 101: Protecting What Matters Most](/blog/insurance-101)
-* [Learn more about Estate Planning for Everyone: Why It’s Not Just for the Rich](/blog/estate-planning-for-everyone)`
+* [Read our guide on The boring but essential stuff: Protecting what’s yours](/blog/boring-but-essential-insurance)
+* [Learn more about Estate planning isn’t just for rich people—it’s for everyone you love](/blog/estate-planning-for-love)`
   },
   {
-    slug: 'insurance-101',
+    slug: 'boring-but-essential-insurance',
     title: 'The boring but essential stuff: Protecting what’s yours',
     description: "Insurance isn't fun to talk about, but it's the foundation of everything else. Here's exactly what you need (and what you can skip).",
     date: '2026-04-20',
@@ -1259,11 +1259,11 @@ By using **Expensico** to monitor your premiums, you ensure that your risk manag
 
 ---
 ### Related Reading
-* [Read our guide on Estate Planning for Everyone: Why It’s Not Just for the Rich](/blog/estate-planning-for-everyone)
-* [Learn more about Real Estate Investing: Building Wealth Through Property](/blog/real-estate-investing-basics)`
+* [Read our guide on Estate planning isn’t just for rich people—it’s for everyone you love](/blog/estate-planning-for-love)
+* [Learn more about Should you really buy a rental property? The honest truth](/blog/honest-truth-rental-property)`
   },
   {
-    slug: 'estate-planning-for-everyone',
+    slug: 'estate-planning-for-love',
     title: "Estate planning isn't just for rich people—it's for everyone you love",
     description: "You don't need a mansion to have an estate plan. It's about making sure your family is taken care of if you're not there to do it yourself.",
     date: '2026-04-20',
@@ -1340,11 +1340,11 @@ Don't wait for "someday." Protect your legacy today.
 
 ---
 ### Related Reading
-* [Read our guide on Real Estate Investing: Building Wealth Through Property](/blog/real-estate-investing-basics)
-* [Learn more about The First-Time Home Buyer’s Guide: Navigating the Market with Confidence](/blog/first-time-home-buyer-guide)`
+* [Read our guide on Should you really buy a rental property? The honest truth](/blog/honest-truth-rental-property)
+* [Learn more about Buying your first home without the massive headache](/blog/first-home-no-headache)`
   },
   {
-    slug: 'real-estate-investing-basics',
+    slug: 'honest-truth-rental-property',
     title: "Should you really buy a rental property? The honest truth",
     description: "Real estate has built massive wealth for generations, but it’s not for everyone. Let's look at the pros, cons, and how to get started safely.",
     date: '2026-04-20',
@@ -1427,11 +1427,11 @@ Your property journey starts with the first brick of knowledge.
 
 ---
 ### Related Reading
-* [Read our guide on The First-Time Home Buyer’s Guide: Navigating the Market with Confidence](/blog/first-time-home-buyer-guide)
-* [Learn more about Tax Saving Strategies: How to Keep More of Your Hard-Earned Money](/blog/tax-saving-strategies-2026)`
+* [Read our guide on Buying your first home without the massive headache](/blog/first-home-no-headache)
+* [Learn more about Stop overpaying the government: A simple guide to taxes](/blog/stop-overpaying-taxes)`
   },
   {
-    slug: 'first-time-home-buyer-guide',
+    slug: 'first-home-no-headache',
     title: "Buying your first home without the massive headache",
     description: "Buying a home is probably the biggest financial move you’ll ever make. Here is the strategy for navigating the market without losing your sanity.",
     date: '2026-04-20',
@@ -1512,11 +1512,11 @@ Your home is your sanctuary. Treat it like the valuable asset it is. Start your 
 
 ---
 ### Related Reading
-* [Read our guide on Tax Saving Strategies: How to Keep More of Your Hard-Earned Money](/blog/tax-saving-strategies-2026)
-* [Learn more about Proven Strategies to Save Money Every Month](/blog/proven-strategies-to-save-money)`
+* [Read our guide on Stop overpaying the government: A simple guide to taxes](/blog/stop-overpaying-taxes)
+* [Learn more about How I finally stopped blowing my paycheck every month](/blog/how-i-stopped-blowing-paycheck)`
   },
   {
-    slug: 'tax-saving-strategies-2026',
+    slug: 'stop-overpaying-taxes',
     title: "Stop overpaying the government: A simple guide to taxes",
     description: "Taxes are probably your biggest expense. Let's look at the legal ways to keep more of your hard-earned money in your own pocket.",
     date: '2026-04-20',
@@ -1595,8 +1595,8 @@ The best way to build wealth is to keep more of what you earn. Start your tax-tr
 
 ---
 ### Related Reading
-* [Read our guide on Proven Strategies to Save Money Every Month](/blog/proven-strategies-to-save-money)
-* [Learn more about The Ultimate Guide to Tracking Your Daily Expenses](/blog/ultimate-guide-to-expense-tracking)`
+* [Read our guide on How I finally stopped blowing my paycheck every month](/blog/how-i-stopped-blowing-paycheck)
+* [Learn more about The Real Reason You Should Track Your Spending](/blog/why-track-spending)`
   }
 ];
 
