@@ -49,7 +49,7 @@ const FAQ = () => {
             items: [
                 {
                     q: "Why is Expensico free? Where is the catch?",
-                    a: "There is no 'catch.' We use a monetization model based on non-intrusive Google AdSense advertisements. This allows us to provide institutional-grade tracking tools to everyone for free. We do NOT sell your identifiable financial data to third parties."
+                    a: "There is no 'catch.' I use a monetization model based on non-intrusive Google AdSense advertisements. This allows me to provide professional-grade tracking tools to everyone for free. I do NOT sell your identifiable financial data to third parties."
                 },
                 {
                     q: "How do I exercise my 'Right to be Forgotten' (GDPR)?",
@@ -57,7 +57,7 @@ const FAQ = () => {
                 },
                 {
                     q: "Are the blog articles written by financial experts?",
-                    a: "All our content is researched and drafted by a team of financial analysts and technical writers to ensure accuracy. However, please remember that our content is for educational purposes and does not constitute professional investment advice."
+                    a: "All my content is researched and drafted by me and a dedicated group of financial analysts to ensure accuracy. However, please remember that this content is for educational purposes and does not constitute professional investment advice."
                 }
             ]
         },
@@ -79,7 +79,7 @@ const FAQ = () => {
                 },
                 {
                     q: "How do I report a bug or suggest a feature?",
-                    a: "We love user feedback. Use the 'Contact Support' button in your dashboard side-bar. Our engineering team reviews every submission and frequently implements user-suggested features in our bi-weekly updates."
+                    a: "I love user feedback. Use the 'Contact Support' button in your dashboard side-bar. I review every submission and frequently implement user-suggested features in my updates."
                 },
                 {
                     q: "Can I share my account with a spouse or partner?",

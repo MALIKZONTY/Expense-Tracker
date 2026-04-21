@@ -39,7 +39,7 @@ export default function NavBar() {
           <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.1' }}>
             <span style={{ fontSize: '1.5rem', fontStyle: 'italic', fontWeight: 900, color: 'var(--primary-color)', letterSpacing: '-0.04em' }}>Expensico</span>
             <span style={{ fontSize: '0.7rem', fontWeight: 600, color: 'var(--text-secondary)', opacity: 0.8, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
-              {user ? 'Track your money' : 'Finance Intelligence'}
+              {user ? 'Track your money' : 'Track your money'}
             </span>
           </div>
         </Link>
@@ -65,30 +65,30 @@ export default function NavBar() {
           )}
         </div>
       </div>
-      
+
       {/* Unified Navigation Links (Scrollable on Mobile) */}
       <div className="nav-links-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap', justifyContent: 'center', paddingBottom: '0.5rem', width: '100%' }}>
-          {user ? (
-            <>
-              <Link to="/" className={`nav-link ${isActive('/')}`}><Layout size={18} /> Dashboard</Link>
-              <Link to="/add" className={`nav-link ${isActive('/add')}`}><PlusCircle size={18} /> Add</Link>
-              <Link to="/transactions" className={`nav-link ${isActive('/transactions')}`}><List size={18} /> History</Link>
-              <Link to="/blog" className={`nav-link ${isActive('/blog')}`}><Globe size={18} /> Blog</Link>
-              {isAdmin && <Link to="/admin/inquiries" className={`nav-link ${isActive('/admin/inquiries')}`}>Admin</Link>}
-            </>
-          ) : (
-            <>
-              <Link to="/" className={`nav-link ${isActive('/')}`} style={{ fontWeight: 600 }}>Home</Link>
-              <Link to="/about" className={`nav-link ${isActive('/about')}`} style={{ fontWeight: 600 }}>About</Link>
-              <Link to="/blog" className={`nav-link ${isActive('/blog')}`} style={{ fontWeight: 600 }}>Blog</Link>
-              <Link to="/faq" className={`nav-link ${isActive('/faq')}`} style={{ fontWeight: 600 }}>FAQ</Link>
-              <Link to="/contact" className={`nav-link ${isActive('/contact')}`} style={{ fontWeight: 600 }}>Contact</Link>
-              <Link to="/privacy-policy" className={`nav-link ${isActive('/privacy-policy')}`} style={{ fontWeight: 500, fontSize: '0.9rem' }}>Privacy</Link>
-              <Link to="/terms-and-conditions" className={`nav-link ${isActive('/terms-and-conditions')}`} style={{ fontWeight: 500, fontSize: '0.9rem' }}>Terms</Link>
-              <Link to="/cookie-policy" className={`nav-link ${isActive('/cookie-policy')}`} style={{ fontWeight: 500, fontSize: '0.9rem' }}>Cookies</Link>
-            </>
-          )}
-        </div>
+        {user ? (
+          <>
+            <Link to="/" className={`nav-link ${isActive('/')}`}><Layout size={18} /> Dashboard</Link>
+            <Link to="/add" className={`nav-link ${isActive('/add')}`}><PlusCircle size={18} /> Add</Link>
+            <Link to="/transactions" className={`nav-link ${isActive('/transactions')}`}><List size={18} /> History</Link>
+            <Link to="/blog" className={`nav-link ${isActive('/blog')}`}><Globe size={18} /> Blog</Link>
+            {isAdmin && <Link to="/admin/inquiries" className={`nav-link ${isActive('/admin/inquiries')}`}>Admin</Link>}
+          </>
+        ) : (
+          <>
+            <Link to="/" className={`nav-link ${isActive('/')}`} style={{ fontWeight: 600 }}>Home</Link>
+            <Link to="/about" className={`nav-link ${isActive('/about')}`} style={{ fontWeight: 600 }}>About</Link>
+            <Link to="/blog" className={`nav-link ${isActive('/blog')}`} style={{ fontWeight: 600 }}>Blog</Link>
+            <Link to="/faq" className={`nav-link ${isActive('/faq')}`} style={{ fontWeight: 600 }}>FAQ</Link>
+            <Link to="/contact" className={`nav-link ${isActive('/contact')}`} style={{ fontWeight: 600 }}>Contact</Link>
+            <Link to="/privacy-policy" className={`nav-link ${isActive('/privacy-policy')}`} style={{ fontWeight: 500, fontSize: '0.9rem' }}>Privacy</Link>
+            <Link to="/terms-and-conditions" className={`nav-link ${isActive('/terms-and-conditions')}`} style={{ fontWeight: 500, fontSize: '0.9rem' }}>Terms</Link>
+            <Link to="/cookie-policy" className={`nav-link ${isActive('/cookie-policy')}`} style={{ fontWeight: 500, fontSize: '0.9rem' }}>Cookies</Link>
+          </>
+        )}
+      </div>
 
     </nav>
   );

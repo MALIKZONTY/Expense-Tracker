@@ -145,13 +145,14 @@ export default function Contact() {
                 <Globe size={24} />
               </div>
               <div style={{ width: '100%' }}>
-                <h3 style={{ marginBottom: '0.8rem', fontSize: '1.1rem', fontWeight: 700 }}>Social Media</h3>
-                <div style={{ display: 'flex', gap: '1.2rem', alignItems: 'center' }}>
-                  <a href="https://www.linkedin.com/in/malik-antuparthi/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 600, transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#0A66C2'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text-secondary)'} title="LinkedIn">
-                    LinkedIn
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                  <a href="https://www.linkedin.com/in/malik-antuparthi/" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 600, transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#0A66C2'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text-secondary)'}>
+                    <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#0A66C2' }}></div>
+                    LinkedIn Profile
                   </a>
-                  <a href="https://github.com/MALIKZONTY" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 600, transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#333'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text-secondary)'} title="GitHub">
-                    GitHub
+                  <a href="https://github.com/MALIKZONTY" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 600, transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#333'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text-secondary)'}>
+                    <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#333' }}></div>
+                    GitHub Repository
                   </a>
                 </div>
               </div>
@@ -209,7 +210,7 @@ export default function Contact() {
           {!user ? (
             <div className="card" style={{ padding: '3rem', textAlign: 'center', border: '2px dashed var(--border-color)', background: 'transparent' }}>
               <Lock size={40} style={{ color: 'var(--text-secondary)', opacity: 0.3, marginBottom: '1rem' }} />
-              <p style={{ color: 'var(--text-secondary)' }}>Sign in to view your conversation history with our support team.</p>
+              <p style={{ color: 'var(--text-secondary)' }}>Sign in to view your conversation history with me.</p>
             </div>
           ) : fetching ? (
             <p style={{ color: 'var(--text-secondary)' }}>Loading history...</p>

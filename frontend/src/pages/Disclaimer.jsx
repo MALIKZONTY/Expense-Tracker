@@ -55,7 +55,7 @@ export default function Disclaimer() {
         <div style={{ marginTop: '5rem', padding: '2.5rem', background: '#f8fafc', borderRadius: '24px', border: '1px solid #e2e8f0' }}>
           <h4 style={{ fontWeight: 800, marginBottom: '1rem' }}>Formal Notice</h4>
           <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)', marginBottom: 0 }}>
-            Questions regarding this disclosure? Contact our compliance team at <a href="mailto:malikantuparthi@gmail.com" style={{ color: 'var(--primary-color)', fontWeight: 700 }}>malikantuparthi@gmail.com</a>.
+            Questions regarding this disclosure? Contact me at <a href="mailto:malikantuparthi@gmail.com" style={{ color: 'var(--primary-color)', fontWeight: 700 }}>malikantuparthi@gmail.com</a>.
           </p>
         </div>
       </div>

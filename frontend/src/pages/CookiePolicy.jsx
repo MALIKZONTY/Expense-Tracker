@@ -30,7 +30,7 @@ const CookiePolicy = () => {
                 Expensico Finance ("we," "our," or "us") utilizes cookies, web beacons, pixels, and similar tracking technologies to ensure our platform remains secure, high-performing, and free for all users. In the modern digital landscape, transparency regarding data collection is not just a legal requirement but a fundamental part of the trust relationship we share with our global user base.
               </p>
               <p style={{ color: 'var(--text-secondary)' }}>
-                This Cookie Policy provides an exhaustive technical and operational breakdown of how we leverage these technologies, how they impact your browsing experience, and the granular controls you have over your digital footprint. We are committed to maintaining a high-authority environment where your financial data is protected by the same technological rigor used by major financial institutions.
+                This Cookie Policy provides an exhaustive technical and operational breakdown of how we leverage these technologies, how they impact your browsing experience, and the granular controls you have over your digital footprint. We are committed to maintaining a high-authority environment where your financial data is protected by the same technological rigor used by major banks.
               </p>
             </section>
 

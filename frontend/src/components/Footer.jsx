@@ -69,7 +69,7 @@ const Footer = () => {
             &copy; {currentYear} Expensico Finance. All rights reserved.
           </div>
           <div style={{ display: 'flex', gap: '1.5rem' }}>
-            <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--primary-color)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Institutional Grade Security</span>
+            <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--primary-color)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Industry-Leading Security</span>
           </div>
         </div>
       </div>

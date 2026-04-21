@@ -31,7 +31,7 @@ export default function TermsAndConditions() {
         <section style={{ marginBottom: '3rem', border: '2px solid rgba(239, 68, 68, 0.1)', padding: '2rem', borderRadius: '24px', background: 'rgba(239, 68, 68, 0.02)' }}>
           <h2 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', color: '#dc2626' }}>3. Disclaimers and Liability Limitations (Financial)</h2>
           <p style={{ color: 'var(--text-secondary)', lineHeight: '1.8', fontWeight: 500 }}>
-            <strong>CRITICAL NOTICE</strong>: Expensico Finance is a data tracking and visualization tool. We are NOT a financial institution, bank, or licensed financial advisor. The insights, charts, and blog content provided by our platform are for informational and educational purposes only. They do not constitute professional financial, investment, or legal advice. You should consult with a qualified professional before making any significant financial decisions.
+            <strong>CRITICAL NOTICE</strong>: Expensico is a data tracking and visualization tool. I am NOT a bank, financial institution, or licensed financial advisor. The insights, charts, and blog content provided by this platform are for informational and educational purposes only. They do not constitute professional financial, investment, or legal advice. You should consult with a qualified professional before making any significant financial decisions.
           </p>
         </section>
 

@@ -37,7 +37,7 @@ export default function About() {
         
         <ContentSection title="Our Founding Mission" icon={Award}>
           <p style={{ marginBottom: '1.5rem' }}>
-            Expensico was founded in 2024 as a response to the "Data Opacity" crisis in modern consumer banking. While financial institutions have become more digital, the underlying complexity has made it harder for the average individual to truly understand their net liquidity and spending velocity.
+            Expensico was founded in 2026 as a response to the "Data Opacity" crisis in modern consumer banking. While banks have become more digital, the underlying complexity has made it harder for the average individual to truly understand their net liquidity and spending velocity.
           </p>
           <p style={{ marginBottom: '1.5rem' }}>
             Our vision was to create a <strong>mathematically precise</strong> yet <strong>aesthetically minimalist</strong> interface. We believe that clarity breeds confidence. By removing the friction of manual entry and replacing it with instant visual feedback, we empower users to eliminate debt and accelerate wealth generation.
