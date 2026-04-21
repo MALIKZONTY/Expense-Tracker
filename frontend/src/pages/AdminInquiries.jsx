@@ -117,9 +117,9 @@ export default function AdminInquiries() {
                     <User size={20} />
                   </div>
                   <div>
-                    <h4 style={{ margin: 0, fontSize: '1.1rem' }}>{inquiry.user_email}</h4>
+                    <h4 style={{ margin: 0, fontSize: '1.1rem' }}>{inquiry.display_name || 'Anonymous Guest'}</h4>
                     <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
-                      {new Date(inquiry.created_at).toLocaleString()}
+                      {inquiry.display_email} • {new Date(inquiry.created_at).toLocaleString()}
                     </span>
                   </div>
                 </div>

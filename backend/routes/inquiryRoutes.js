@@ -13,6 +13,7 @@ const isAdmin = (req, res, next) => {
 };
 
 // User routes
+router.post('/public', inquiryController.submitPublicInquiry);
 router.post('/', authMiddleware, inquiryController.submitInquiry);
 router.get('/my', authMiddleware, inquiryController.getMyInquiries);
 

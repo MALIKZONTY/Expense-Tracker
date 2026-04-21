@@ -43,6 +43,9 @@ export default function Contact() {
   const { confirm } = useUI();
   const { user, token } = useContext(AuthContext);
   const [message, setMessage] = useState('');
+  const [guestName, setGuestName] = useState('');
+  const [guestEmail, setGuestEmail] = useState('');
+  const [honeypot, setHoneypot] = useState('');
   const [inquiries, setInquiries] = useState([]);
   const [loading, setLoading] = useState(false);
   const [fetching, setFetching] = useState(false);
@@ -72,31 +75,51 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!user) return;
+    
+    // Simple honeypot protection
+    if (honeypot) return;
     
     setLoading(true);
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/inquiries`, {
+      const endpoint = user 
+        ? `${import.meta.env.VITE_API_URL || ''}/api/inquiries`
+        : `${import.meta.env.VITE_API_URL || ''}/api/inquiries/public`;
+
+      const headers = { 'Content-Type': 'application/json' };
+      if (user) headers['Authorization'] = `Bearer ${token}`;
+
+      const body = user 
+        ? { message } 
+        : { name: guestName, email: guestEmail, message };
+
+      const res = await fetch(endpoint, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
-        },
-        body: JSON.stringify({ message })
+        headers,
+        body: JSON.stringify(body)
       });
 
       if (res.ok) {
+        const data = await res.json();
         await confirm({
-          title: 'Inquiry Submitted',
-          message: 'Your message has been saved. You can track the status and see our reply right here in your inquiry history.',
-          confirmText: 'Got it',
+          title: 'Message Sent',
+          message: user 
+            ? 'Your inquiry has been submitted. You can track our response right here in your history.' 
+            : 'We have received your message! We will reply to your respective email soon.',
+          confirmText: 'Done',
           type: 'success'
         });
+        
         setMessage('');
-        fetchMyInquiries();
+        setGuestName('');
+        setGuestEmail('');
+        if (user) fetchMyInquiries();
+      } else {
+        const errData = await res.json();
+        alert(errData.error || 'Failed to send message');
       }
     } catch (err) {
-      console.error('Failed to submit inquiry:', err);
+      console.error('Failed to submit:', err);
+      alert('Network error. Please try again.');
     } finally {
       setLoading(false);
     }
@@ -108,7 +131,7 @@ export default function Contact() {
         <h1 style={{ fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', fontWeight: 900, marginBottom: '1.5rem', color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>Help Center</h1>
         <p style={{ maxWidth: '650px', margin: '0 auto', fontSize: '1.2rem', color: 'var(--text-secondary)', lineHeight: '1.7' }}>
           Have a question about your financial tracker? We're here to help. 
-          Send us a message and track your support history in real-time.
+          Send us a message and we'll get back to you as soon as possible.
         </p>
       </div>
 
@@ -164,40 +187,73 @@ export default function Contact() {
               <Send size={24} style={{ color: 'var(--primary-color)' }} /> Send a Message
             </h2>
             
-            {user ? (
-              <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                <div className="form-group">
-                  <label>Your Inquiry</label>
-                  <textarea 
-                    required 
-                    className="form-control" 
-                    rows="6" 
-                    placeholder="Describe your question or issue in detail..." 
-                    style={{ resize: 'none', width: '100%', fontSize: '1rem' }}
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    disabled={loading}
-                  ></textarea>
-                </div>
-                <button 
-                  type="submit" 
-                  className="btn btn-primary" 
+            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+              {!user && (
+                <>
+                  <div className="form-group">
+                    <label>Full Name</label>
+                    <input 
+                      type="text"
+                      required
+                      className="form-control"
+                      placeholder="Your Name"
+                      value={guestName}
+                      onChange={(e) => setGuestName(e.target.value)}
+                      disabled={loading}
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label>Email Address</label>
+                    <input 
+                      type="email"
+                      required
+                      className="form-control"
+                      placeholder="name@example.com"
+                      value={guestEmail}
+                      onChange={(e) => setGuestEmail(e.target.value)}
+                      disabled={loading}
+                    />
+                  </div>
+                </>
+              )}
+
+              {/* Honeypot field - hidden from users */}
+              <input 
+                type="text" 
+                style={{ display: 'none' }} 
+                value={honeypot} 
+                onChange={(e) => setHoneypot(e.target.value)} 
+              />
+
+              <div className="form-group">
+                <label>Your Inquiry</label>
+                <textarea 
+                  required 
+                  className="form-control" 
+                  rows="5" 
+                  placeholder="Describe your question or issue in detail..." 
+                  style={{ resize: 'none', width: '100%', fontSize: '1rem' }}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   disabled={loading}
-                  style={{ padding: '1.1rem', borderRadius: '12px', fontWeight: 700, fontSize: '1.1rem', display: 'flex', gap: '0.75rem', justifyContent: 'center' }}
-                >
-                  {loading ? 'Submitting...' : 'Submit Inquiry'} <Send size={18} />
-                </button>
-              </form>
-            ) : (
-              <div style={{ textAlign: 'center', padding: '1rem 0' }}>
-                <div style={{ color: 'var(--expense-color)', marginBottom: '1.5rem', background: '#fee2e2', padding: '1.5rem', borderRadius: '12px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
-                  <Lock size={32} />
-                  <p style={{ fontWeight: 600, margin: 0 }}>Login Required</p>
-                  <p style={{ fontSize: '0.9rem', opacity: 0.8 }}>Please sign in to send messages and track your history.</p>
-                </div>
-                <Link to="/login" className="btn btn-primary" style={{ width: '100%' }}>Login to Contact Us</Link>
+                ></textarea>
               </div>
-            )}
+
+              <button 
+                type="submit" 
+                className="btn btn-primary" 
+                disabled={loading}
+                style={{ padding: '1.1rem', borderRadius: '12px', fontWeight: 700, fontSize: '1.1rem', display: 'flex', gap: '0.75rem', justifyContent: 'center' }}
+              >
+                {loading ? 'Sending...' : 'Send Message'} <Send size={18} />
+              </button>
+
+              {!user && (
+                <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', textAlign: 'center', marginTop: '0.5rem' }}>
+                  Already have an account? <Link to="/login" style={{ color: 'var(--primary-color)', fontWeight: 600 }}>Login here</Link>
+                </p>
+              )}
+            </form>
           </div>
         </div>
 

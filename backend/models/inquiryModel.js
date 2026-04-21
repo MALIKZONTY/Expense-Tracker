@@ -1,10 +1,10 @@
 const db = require('../config/db');
 
 class InquiryModel {
-  static async createInquiry(userId, message) {
+  static async createInquiry(userId, message, guestName = null, guestEmail = null) {
     const result = await db.query(
-      'INSERT INTO inquiries (user_id, message) VALUES ($1, $2) RETURNING *',
-      [userId, message]
+      'INSERT INTO inquiries (user_id, message, guest_name, guest_email) VALUES ($1, $2, $3, $4) RETURNING *',
+      [userId, message, guestName, guestEmail]
     );
     return result.rows[0];
   }
@@ -19,9 +19,13 @@ class InquiryModel {
 
   static async getAll() {
     const result = await db.query(`
-      SELECT i.*, u.email as user_email 
+      SELECT 
+        i.*, 
+        u.email as user_email,
+        COALESCE(i.guest_name, u.email) as display_name,
+        COALESCE(i.guest_email, u.email) as display_email
       FROM inquiries i
-      JOIN users u ON i.user_id = u.id
+      LEFT JOIN users u ON i.user_id = u.id
       ORDER BY 
         CASE WHEN i.status = 'pending' THEN 0 ELSE 1 END,
         i.created_at DESC
