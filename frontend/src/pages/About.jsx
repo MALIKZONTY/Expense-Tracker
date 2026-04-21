@@ -67,6 +67,7 @@ export default function About() {
                   src="/linkedin-profile.jpeg"
                   alt="Manoha Malik Paul"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -99,7 +100,7 @@ export default function About() {
                   boxShadow: '0 4px 14px rgba(10, 102, 194, 0.25)'
                 }}
               >
-                <img src="/linkedin-logo.jpg" alt="LinkedIn" style={{ width: '20px', height: '20px', borderRadius: '4px' }} />
+                <img src="/linkedin-logo.jpg" alt="LinkedIn" style={{ width: '20px', height: '20px', borderRadius: '4px' }} loading="lazy" />
                 <span>Connect on LinkedIn</span>
               </a>
             </div>

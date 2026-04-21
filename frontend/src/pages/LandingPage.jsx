@@ -53,6 +53,7 @@ export default function LandingPage() {
               alt="3D Aesthetic Finance Illustration" 
               className="float-anim"
               style={{ width: '100%', maxWidth: '500px', filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.1))' }}
+              // No loading="lazy" here as this is the LCP image
             />
           </div>
 

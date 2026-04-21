@@ -155,13 +155,13 @@ const Features = () => {
           <div className="browser-header">
             <div className="dot"></div><div className="dot"></div><div className="dot"></div>
           </div>
-          <img src={img} alt="Product screenshot" className="mockup-image" />
+          <img src={img} alt="Product screenshot" className="mockup-image" loading="lazy" />
         </div>
       );
     }
     return (
       <div className="phone-frame">
-        <img src={img} alt="Mobile screenshot" className="mockup-image" />
+        <img src={img} alt="Mobile screenshot" className="mockup-image" loading="lazy" />
       </div>
     );
   };
