@@ -8,26 +8,24 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="footer" style={{ 
-      borderTop: '1px solid var(--border-color)', 
-      padding: '4rem 0', 
-      marginTop: '6rem', 
+    <footer className="footer" style={{
+      borderTop: '1px solid var(--border-color)',
+      padding: '4rem 0',
+      marginTop: '6rem',
       background: '#ffffff',
       boxShadow: '0 -10px 40px rgba(0,0,0,0.02)'
     }}>
       <div className="container" style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 2rem' }}>
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', 
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
           gap: '3rem',
           marginBottom: '4rem'
         }}>
           {/* Brand Column */}
           <div>
-            <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', marginBottom: '1.25rem' }}>
-              <div style={{ background: 'var(--primary-color)', color: 'white', padding: '0.3rem', borderRadius: '8px', display: 'flex' }}>
-                <ShieldCheck size={20} />
-              </div>
+            <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.1rem', textDecoration: 'none', marginBottom: '1.25rem' }}>
+              <img src="/logo.png" alt="Expensico Logo" style={{ width: '90px', height: '90px', objectFit: 'contain' }} />
               <span style={{ fontSize: '1.25rem', fontWeight: 900, color: 'var(--primary-color)', fontStyle: 'italic' }}>Expensico</span>
             </Link>
             <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
@@ -58,21 +56,20 @@ const Footer = () => {
           </div>
         </div>
 
-        <div style={{ 
-          paddingTop: '2rem', 
-          borderTop: '1px solid var(--border-color)', 
-          display: 'flex', 
-          justifyContent: 'space-between', 
+        <div style={{
+          paddingTop: '2rem',
+          borderTop: '1px solid var(--border-color)',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
           alignItems: 'center',
-          flexWrap: 'wrap',
           gap: '1rem'
         }}>
-          <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+          <div style={{ fontSize: '0.95rem', color: 'var(--text-secondary)', fontWeight: 500, textAlign: 'center' }}>
             &copy; {currentYear} Expensico Finance. All rights reserved.
-          </p>
+          </div>
           <div style={{ display: 'flex', gap: '1.5rem' }}>
-             {/* Security badges placeholder if needed */}
-             <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--primary-color)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Institutional Grade Security</span>
+            <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--primary-color)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Institutional Grade Security</span>
           </div>
         </div>
       </div>

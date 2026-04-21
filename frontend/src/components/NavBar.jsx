@@ -25,7 +25,7 @@ export default function NavBar() {
   return (
     <nav className="navbar shadow-soft" style={{ position: 'sticky', top: 0, zIndex: 1000 }}>
       {/* Consolidated Single-Tier Header */}
-      <div className="navbar-top" style={{ 
+      <div className="navbar-top" style={{
         background: user ? 'var(--nav-bg)' : 'rgba(255, 255, 255, 0.95)',
         backdropFilter: 'blur(20px)',
         padding: '0.75rem 2rem',
@@ -34,10 +34,8 @@ export default function NavBar() {
         alignItems: 'center',
         borderBottom: '1px solid var(--border-color)'
       }}>
-        <Link to="/" className="nav-brand" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none', flexShrink: 0 }}>
-          <div style={{ background: 'var(--primary-color)', color: 'white', padding: '0.4rem', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <ShieldCheck size={24} />
-          </div>
+        <Link to="/" className="nav-brand" style={{ display: 'flex', alignItems: 'center', gap: '0.1rem', textDecoration: 'none', flexShrink: 0 }}>
+          <img src="/logo.png" alt="Expensico Logo" style={{ width: '90px', height: '90px', objectFit: 'contain' }} />
           <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.1' }}>
             <span style={{ fontSize: '1.5rem', fontStyle: 'italic', fontWeight: 900, color: 'var(--primary-color)', letterSpacing: '-0.04em' }}>Expensico</span>
             <span style={{ fontSize: '0.7rem', fontWeight: 600, color: 'var(--text-secondary)', opacity: 0.8, letterSpacing: '0.05em', textTransform: 'uppercase' }}>

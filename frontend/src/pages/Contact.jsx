@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from 'react';
-import { Mail, MapPin, Send, HelpCircle, CheckCircle2, MessageSquare, Clock, Reply, Lock } from 'lucide-react';
+import { Mail, MapPin, Send, HelpCircle, CheckCircle2, MessageSquare, Clock, Reply, Lock, Twitter, Linkedin, Github, Globe } from 'lucide-react';
 import { useUI } from '../context/UIContext';
 import AuthContext from '../context/AuthContext';
 import { Link } from 'react-router-dom';
@@ -137,6 +137,23 @@ export default function Contact() {
                   80-ft road, Sujatha Nagara,<br />
                   Pendurthi, Visakhapatnam
                 </p>
+              </div>
+            </div>
+
+            <div className="card" style={{ padding: '2rem', display: 'flex', alignItems: 'flex-start', gap: '1.5rem' }}>
+              <div style={{ background: 'rgba(236, 72, 153, 0.1)', padding: '1rem', borderRadius: '12px', color: '#ec4899' }}>
+                <Globe size={24} />
+              </div>
+              <div style={{ width: '100%' }}>
+                <h3 style={{ marginBottom: '0.8rem', fontSize: '1.1rem', fontWeight: 700 }}>Social Media</h3>
+                <div style={{ display: 'flex', gap: '1rem' }}>
+                  <a href="https://www.linkedin.com/in/malik-antuparthi/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#0A66C2'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text-secondary)'} title="LinkedIn">
+                    <Linkedin size={22} />
+                  </a>
+                  <a href="https://github.com/MALIKZONTY" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)', transition: 'color 0.2s' }} onMouseOver={(e) => e.currentTarget.style.color = '#333'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text-secondary)'} title="GitHub">
+                    <Github size={22} />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
