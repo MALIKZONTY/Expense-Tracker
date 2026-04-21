@@ -100,28 +100,30 @@ const ImageCarousel = ({ images, renderFrame }) => {
   return (
     <div className="feature-carousel">
       <div className="carousel-container">
-        {images.length > 1 && (
-          <button className="carousel-nav prev" onClick={prev}><ChevronLeft size={20} /></button>
-        )}
-
         <div className="carousel-slide">
           {renderFrame(images[currentIndex])}
         </div>
-
-        {images.length > 1 && (
-          <button className="carousel-nav next" onClick={next}><ChevronRight size={20} /></button>
-        )}
       </div>
 
       {images.length > 1 && (
-        <div className="carousel-indicators">
-          {images.map((_, i) => (
-            <div
-              key={i}
-              className={`indicator ${i === currentIndex ? 'active' : ''}`}
-              onClick={() => setCurrentIndex(i)}
-            />
-          ))}
+        <div className="carousel-controls-bar">
+          <button className="carousel-nav prev" onClick={prev} aria-label="Previous slide">
+            <ChevronLeft size={20} />
+          </button>
+          
+          <div className="carousel-indicators">
+            {images.map((_, i) => (
+              <div
+                key={i}
+                className={`indicator ${i === currentIndex ? 'active' : ''}`}
+                onClick={() => setCurrentIndex(i)}
+              />
+            ))}
+          </div>
+
+          <button className="carousel-nav next" onClick={next} aria-label="Next slide">
+            <ChevronRight size={20} />
+          </button>
         </div>
       )}
     </div>
@@ -188,7 +190,7 @@ const Features = () => {
       {/* --- NEW CONTENT SECTIONS FOR ADSENSE & USER EXPLAINER --- */}
 
       {/* Section 1: The "Why" - Financial Sovereignty */}
-      <section id="why" className="container" style={{ marginTop: '8rem', textAlign: 'center' }}>
+      <section id="why" className="container" style={{ marginTop: '5rem', textAlign: 'center' }}>
         <span className="badge badge-income" style={{ marginBottom: '1.5rem', display: 'inline-block' }}>The Philosophy</span>
         <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 900, marginBottom: '2rem', color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
           Why Control Your Spending?
@@ -216,7 +218,7 @@ const Features = () => {
       </section>
 
       {/* Section 2: Core Pillars (Grid) */}
-      <section style={{ marginTop: '10rem', background: 'rgba(59,130,246,0.03)', padding: '6rem 2rem', borderRadius: '40px' }}>
+      <section style={{ marginTop: '6rem', background: 'rgba(59,130,246,0.03)', padding: '4rem 1.5rem', borderRadius: '40px' }}>
         <div className="container" style={{ maxWidth: '1100px', margin: '0 auto', textAlign: 'center' }}>
           <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '4rem' }}>Built for the Modern Economy</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
@@ -246,7 +248,7 @@ const Features = () => {
       </section>
 
       {/* Section 3: Simple 3-Step Path */}
-      <section className="container" style={{ marginTop: '10rem', textAlign: 'center' }}>
+      <section className="container" style={{ marginTop: '6rem', textAlign: 'center' }}>
         <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '1.5rem' }}>Getting Started is Simple</h2>
         <p style={{ color: 'var(--text-secondary)', marginBottom: '5rem', fontSize: '1.1rem' }}>Transformation doesn't have to be complicated.</p>
         
@@ -269,8 +271,8 @@ const Features = () => {
         </div>
       </section>
 
-      <div id="tour" className="container" style={{ marginTop: '8rem' }}>
-        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+      <div id="tour" className="container" style={{ marginTop: '5rem' }}>
+        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
           <h2 style={{ fontSize: '3rem', fontWeight: 900 }}>The Product Tour</h2>
           <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem' }}>See the precision of Expensico in action across all sections.</p>
         </div>
@@ -325,7 +327,7 @@ const Features = () => {
       </div>
 
       {/* Final CTA */}
-      <section style={{ padding: '8rem 0', textAlign: 'center', background: 'var(--text-primary)', color: 'white', marginTop: '4rem' }}>
+      <section style={{ padding: '6rem 0', textAlign: 'center', background: 'var(--text-primary)', color: 'white', marginTop: '4rem' }}>
         <div className="container">
           <h2 style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '2rem' }}>Ready to Take Control?</h2>
           <p style={{ fontSize: '1.25rem', opacity: 0.8, marginBottom: '3rem', maxWidth: '600px', margin: '0 auto 3rem auto' }}>

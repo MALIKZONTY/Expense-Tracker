@@ -45,7 +45,7 @@ p { color: var(--text-secondary); }
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .flex { display: flex; }
@@ -640,14 +640,14 @@ tr:last-child td {
 }
 
 .product-hero {
-  padding: 8rem 0;
+  padding: 5rem 0;
   text-align: center;
   background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.05), transparent),
               radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.05), transparent);
 }
 
 .feature-section {
-  padding: 6rem 0;
+  padding: 3rem 0;
   display: flex;
   align-items: center;
   gap: 4rem;
@@ -685,31 +685,52 @@ tr:last-child td {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+  padding: 0 1rem; /* Buffer for arrows */
 }
 
 .carousel-container {
   width: 100%;
   position: relative;
-  overflow: hidden;
-  border-radius: 12px;
+  /* Remove overflow:hidden so arrows can potentially peek out if container is small */
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 480px; /* Force a consistent height base */
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    min-height: 320px;
+  }
 }
 
 .carousel-slide {
   width: 100%;
   display: flex;
   justify-content: center;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  align-items: center;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.carousel-controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  background: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 40px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .carousel-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: white;
-  border: 1px solid var(--border-color);
+  background: transparent;
+  border: none;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -717,19 +738,48 @@ tr:last-child td {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 10;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: all 0.2s;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  color: var(--text-secondary);
 }
 
 .carousel-nav:hover {
   background: var(--primary-color);
   color: white;
-  border-color: var(--primary-color);
+  transform: scale(1.1);
 }
 
-.carousel-nav.prev { left: 10px; }
-.carousel-nav.next { right: 10px; }
+.carousel-nav:active {
+  transform: scale(0.95);
+}
+
+.carousel-indicators {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background: var(--primary-color);
+  width: 20px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .carousel-controls-bar {
+    gap: 1.5rem;
+    padding: 0.5rem 1rem;
+    margin-top: 1.5rem;
+  }
+}
 
 .carousel-indicators {
   display: flex;
@@ -815,8 +865,8 @@ tr:last-child td {
 @media (max-width: 968px) {
   .feature-section, .feature-section:nth-child(even) {
     flex-direction: column;
-    padding: 3rem 0;
-    gap: 2rem;
+    padding: 2rem 0;
+    gap: 1.5rem;
     text-align: center;
   }
   
