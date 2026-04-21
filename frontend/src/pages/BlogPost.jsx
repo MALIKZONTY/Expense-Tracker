@@ -29,9 +29,21 @@ export default function BlogPost() {
         </Link>
 
         <div style={{ display: 'flex', gap: '0.75rem', marginBottom: '2rem' }}>
-          <span className="badge badge-income" style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+          <Link 
+            to={`/blog?category=${encodeURIComponent(post.category || 'Financial Wisdom')}`} 
+            className="badge badge-income" 
+            style={{ 
+              fontSize: '0.8rem', 
+              textTransform: 'uppercase', 
+              letterSpacing: '0.05em',
+              textDecoration: 'none',
+              transition: 'opacity 0.2s ease'
+            }}
+            onMouseOver={(e) => e.currentTarget.style.opacity = '0.8'}
+            onMouseOut={(e) => e.currentTarget.style.opacity = '1'}
+          >
             {post.category || 'Financial Wisdom'}
-          </span>
+          </Link>
         </div>
 
         <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 900, lineHeight: '1.2', color: 'var(--text-primary)', marginBottom: '2rem', letterSpacing: '-0.03em' }}>

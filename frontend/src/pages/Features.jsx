@@ -48,10 +48,10 @@ const FEATURE_CONFIG = [
     layout: 'web',
     cta: { text: 'Explore the Blog', link: '/blog' },
     bulletPoints: [
+      'Browse by Topic: Budgeting, Investing, and Psychology',
       '20+ long-form professional financial guides',
-      'Deep dives into debt management and investing',
       'Actionable advice for first-time home buyers',
-      'Regularly updated content for AdSense authority'
+      'Searchable archive for instant knowledge access'
     ]
   },
   {

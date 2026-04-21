@@ -1,19 +1,46 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { BookOpen, Calendar, ArrowRight, Search } from 'lucide-react';
+import { Link, useSearchParams } from 'react-router-dom';
+import { BookOpen, Calendar, ArrowRight, Search, Hash } from 'lucide-react';
 import blogPosts from '../content/blogs';
 
 export default function BlogList() {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState(searchParams.get('category') || 'All');
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const filteredPosts = blogPosts.filter(post => 
-    post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    post.description.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  // Update selected category when URL changes
+  useEffect(() => {
+    const cat = searchParams.get('category');
+    if (cat) {
+      setSelectedCategory(cat);
+    } else {
+      setSelectedCategory('All');
+    }
+  }, [searchParams]);
+
+  // Extract unique categories
+  const categories = ['All', ...new Set(blogPosts.map(post => post.category).filter(Boolean))];
+
+  const filteredPosts = blogPosts.filter(post => {
+    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         post.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+
+  const handleCategoryClick = (category) => {
+    if (category === 'All') {
+      searchParams.delete('category');
+    } else {
+      searchParams.set('category', category);
+    }
+    setSearchParams(searchParams);
+    setSelectedCategory(category);
+  };
 
   return (
     <div className="container" style={{ padding: '4rem 1.25rem', maxWidth: '1200px' }}>
@@ -26,19 +53,110 @@ export default function BlogList() {
         </p>
       </header>
 
-      {/* Search Bar */}
-      <div style={{ position: 'relative', maxWidth: '600px', margin: '0 auto 5rem auto' }}>
-        <div style={{ position: 'absolute', left: '1.25rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-secondary)' }}>
-          <Search size={20} />
+      {/* Search & Category Filter Section */}
+      <div style={{ maxWidth: '800px', margin: '0 auto 5rem auto' }}>
+        <div style={{ position: 'relative', marginBottom: '1.5rem' }}>
+          <div style={{ position: 'absolute', left: '1.25rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-secondary)' }}>
+            <Search size={20} />
+          </div>
+          <input 
+            type="text" 
+            placeholder="Search articles..." 
+            className="form-control"
+            style={{ paddingLeft: '3.5rem', paddingRight: '1rem', height: '3.5rem', borderRadius: '16px', fontSize: '1.1rem', background: '#fff', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
         </div>
-        <input 
-          type="text" 
-          placeholder="Search articles..." 
-          className="form-control"
-          style={{ paddingLeft: '3.5rem', paddingRight: '1rem', height: '3.5rem', borderRadius: '16px', fontSize: '1.1rem', background: '#fff', boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
+
+        {/* Category Navigation */}
+        <nav 
+          aria-label="Blog categories" 
+          style={{ 
+            marginTop: '2rem',
+            position: 'relative',
+            display: 'flex',
+            justifyContent: 'center'
+          }}
+        >
+          {/* Scroll Container */}
+          <div 
+            className="category-scroll-container"
+            style={{ 
+              display: 'flex', 
+              gap: '0.75rem', 
+              overflowX: 'auto', 
+              padding: '0.5rem 1rem 1.5rem 1rem',
+              maxWidth: '100%',
+              scrollbarWidth: 'none', // Firefox
+              msOverflowStyle: 'none', // IE/Edge
+              WebkitOverflowScrolling: 'touch',
+              justifyContent: 'flex-start', // Default for scrolling
+              maskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)', // Fade edges
+              WebkitMaskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)'
+            }}
+          >
+            {/* CSS to hide scrollbar but keep functionality */}
+            <style>{`
+              .category-scroll-container::-webkit-scrollbar {
+                display: none;
+              }
+              @media (min-width: 1024px) {
+                .category-scroll-container {
+                  justify-content: center !important;
+                  overflow-x: visible !important;
+                  mask-image: none !important;
+                  WebkitMaskImage: none !important;
+                  flex-wrap: wrap;
+                }
+              }
+            `}</style>
+
+            {categories.map(category => {
+              const isActive = selectedCategory === category;
+              const targetUrl = category === 'All' ? '/blog' : `/blog?category=${encodeURIComponent(category)}`;
+              
+              return (
+                <Link
+                  key={category}
+                  to={targetUrl}
+                  style={{
+                    padding: '0.6rem 1.25rem',
+                    borderRadius: '30px',
+                    border: '1px solid',
+                    borderColor: isActive ? 'var(--primary-color)' : 'var(--border-color)',
+                    background: isActive ? 'var(--primary-color)' : 'rgba(255, 255, 255, 0.8)',
+                    color: isActive ? 'white' : 'var(--text-secondary)',
+                    fontWeight: 600,
+                    fontSize: '0.9rem',
+                    textDecoration: 'none',
+                    whiteSpace: 'nowrap',
+                    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.5rem',
+                    boxShadow: isActive ? '0 8px 16px rgba(59,130,246,0.25)' : '0 2px 4px rgba(0,0,0,0.02)',
+                    flexShrink: 0
+                  }}
+                  onMouseOver={(e) => {
+                    if (!isActive) {
+                      e.currentTarget.style.borderColor = 'var(--primary-color)';
+                      e.currentTarget.style.transform = 'translateY(-2px)';
+                    }
+                  }}
+                  onMouseOut={(e) => {
+                    if (!isActive) {
+                      e.currentTarget.style.borderColor = 'var(--border-color)';
+                      e.currentTarget.style.transform = 'translateY(0)';
+                    }
+                  }}
+                >
+                  <Hash size={14} style={{ opacity: 0.6 }} /> {category}
+                </Link>
+              );
+            })}
+          </div>
+        </nav>
       </div>
 
       {filteredPosts.length === 0 ? (
