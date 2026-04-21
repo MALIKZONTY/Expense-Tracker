@@ -25,7 +25,7 @@ const Footer = () => {
           {/* Brand Column */}
           <div>
             <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.1rem', textDecoration: 'none', marginBottom: '1.25rem' }}>
-              <img src="/logo.png" alt="Expensico Logo" style={{ width: '90px', height: '90px', objectFit: 'contain' }} />
+              <img src="/logo.png" className="custom-logo" alt="Expensico Logo" style={{ width: '90px', height: '90px', objectFit: 'contain' }} />
               <span style={{ fontSize: '1.25rem', fontWeight: 900, color: 'var(--primary-color)', fontStyle: 'italic' }}>Expensico</span>
             </Link>
             <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.6' }}>

@@ -35,7 +35,7 @@ export default function NavBar() {
         borderBottom: '1px solid var(--border-color)'
       }}>
         <Link to="/" className="nav-brand" style={{ display: 'flex', alignItems: 'center', gap: '0.1rem', textDecoration: 'none', flexShrink: 0 }}>
-          <img src="/logo.png" alt="Expensico Logo" style={{ width: '90px', height: '90px', objectFit: 'contain' }} />
+          <img src="/logo.png" className="custom-logo" alt="Expensico Logo" style={{ width: '90px', height: '90px', objectFit: 'contain' }} />
           <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.1' }}>
             <span style={{ fontSize: '1.5rem', fontStyle: 'italic', fontWeight: 900, color: 'var(--primary-color)', letterSpacing: '-0.04em' }}>Expensico</span>
             <span style={{ fontSize: '0.7rem', fontWeight: 600, color: 'var(--text-secondary)', opacity: 0.8, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
@@ -43,9 +43,31 @@ export default function NavBar() {
             </span>
           </div>
         </Link>
-
-        {/* Unified Navigation Links */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+        {/* Auth Actions (Top Tier) */}
+        <div className="nav-actions" style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexShrink: 0 }}>
+          {user ? (
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(59, 130, 246, 0.05)', padding: '0.4rem 0.8rem', borderRadius: '20px', border: '1px solid rgba(59, 130, 246, 0.1)' }} className="hide-mobile">
+                <User size={16} style={{ color: 'var(--primary-color)' }} />
+                <span style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-primary)' }}>{(user?.name || user?.email || 'User').split(' ')[0]}</span>
+              </div>
+              <button onClick={handleLogout} className="btn nav-logout" style={{ padding: '0.4rem 0.6rem' }}>
+                <LogOut size={16} />
+              </button>
+            </div>
+          ) : (
+            <div className="nav-auth-links" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+              <Link to="/login" className="nav-link" style={{ fontWeight: 700, padding: '0.4rem 0.6rem', fontSize: '0.85rem' }}>Login</Link>
+              <Link to="/register" className="btn btn-primary" style={{ padding: '0.4rem 0.8rem', borderRadius: '8px', fontSize: '0.85rem' }}>
+                Sign Up
+              </Link>
+            </div>
+          )}
+        </div>
+      </div>
+      
+      {/* Unified Navigation Links (Scrollable on Mobile) */}
+      <div className="nav-links-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap', justifyContent: 'center', paddingBottom: '0.5rem', width: '100%' }}>
           {user ? (
             <>
               <Link to="/" className={`nav-link ${isActive('/')}`}><Layout size={18} /> Dashboard</Link>
@@ -68,28 +90,6 @@ export default function NavBar() {
           )}
         </div>
 
-        {/* Auth Actions */}
-        <div className="nav-actions" style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexShrink: 0 }}>
-          {user ? (
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(59, 130, 246, 0.05)', padding: '0.4rem 0.8rem', borderRadius: '20px', border: '1px solid rgba(59, 130, 246, 0.1)' }}>
-                <User size={16} style={{ color: 'var(--primary-color)' }} />
-                <span style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-primary)' }}>{(user?.name || user?.email || 'User').split(' ')[0]}</span>
-              </div>
-              <button onClick={handleLogout} className="btn nav-logout" style={{ padding: '0.4rem 0.6rem' }}>
-                <LogOut size={16} />
-              </button>
-            </div>
-          ) : (
-            <div className="nav-auth-links" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-              <Link to="/login" className="nav-link" style={{ fontWeight: 700 }}>Login</Link>
-              <Link to="/register" className="btn btn-primary" style={{ padding: '0.6rem 1.2rem', borderRadius: '10px', fontSize: '0.9rem' }}>
-                Sign Up
-              </Link>
-            </div>
-          )}
-        </div>
-      </div>
     </nav>
   );
 }

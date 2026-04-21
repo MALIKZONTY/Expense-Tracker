@@ -94,8 +94,8 @@ const FAQ = () => {
     ];
 
     return (
-        <div className="auth-container" style={{ padding: '4rem 2rem', background: '#f8fafc', minHeight: '100vh' }}>
-            <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+        <div className="auth-container page-container py-16 px-8 bg-slate-50 min-h-screen">
+            <div className="container mx-auto max-w-[1000px]">
                 <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
                     <div style={{ display: 'inline-flex', background: 'var(--primary-color)', color: 'white', padding: '0.75rem', borderRadius: '15px', marginBottom: '1.5rem' }}>
                         <ShieldCheck size={32} />
@@ -134,10 +134,10 @@ const FAQ = () => {
                     ))}
                 </div>
 
-                <div style={{ marginTop: '5rem', textAlign: 'center', background: 'white', padding: '3rem', borderRadius: '24px', border: '1px solid #e2e8f0' }}>
+                <div className="page-card" style={{ marginTop: '5rem', textAlign: 'center', background: 'white', borderRadius: '24px', border: '1px solid #e2e8f0' }}>
                     <h2 style={{ fontSize: '1.75rem', fontWeight: 800, marginBottom: '1rem' }}>Still have questions?</h2>
                     <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>Our technical specialists are ready to help you optimize your financial workflow.</p>
-                    <a href="/contact" className="btn-primary" style={{ padding: '1rem 2.5rem', borderRadius: '12px', textDecoration: 'none', fontWeight: 700, fontSize: '1.1rem' }}>
+                    <a href="/contact" className="btn btn-primary" style={{ textDecoration: 'none', minWidth: '200px' }}>
                         Contact Expert Support
                     </a>
                 </div>

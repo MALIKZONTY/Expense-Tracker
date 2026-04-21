@@ -3,23 +3,22 @@ import { ShieldCheck, Info, Fingerprint, Eye, ShieldAlert } from 'lucide-react';
 
 const CookiePolicy = () => {
   return (
-    <div className="auth-container" style={{ padding: '4rem 2rem', background: '#f8fafc', minHeight: '100vh' }}>
-      <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-        {/* Institutional Header */}
-        <div style={{ background: 'white', padding: '4rem', borderRadius: '32px 32px 0 0', border: '1px solid #e2e8f0', borderBottom: 'none', textAlign: 'center' }}>
-          <div style={{ display: 'inline-flex', background: 'var(--primary-color)', color: 'white', padding: '0.75rem', borderRadius: '15px', marginBottom: '1.5rem' }}>
-            <ShieldCheck size={32} />
+    <div className="auth-container page-container py-16 px-8" style={{ background: '#f8fafc', minHeight: '100vh' }}>
+      <div className="container" style={{ maxWidth: '900px', margin: '0 auto' }}>
+        
+        <div className="page-card p-16" style={{ background: 'white', borderRadius: '32px 32px 0 0', border: '1px solid #e2e8f0', borderBottom: 'none', textAlign: 'center' }}>
+          <div style={{ background: 'rgba(59, 130, 246, 0.1)', color: 'var(--primary-color)', padding: '0.6rem 1.2rem', borderRadius: '20px', display: 'inline-block', fontWeight: 700, fontSize: '0.85rem', marginBottom: '1.5rem' }}>
+            Data Transparency
           </div>
-          <h1 style={{ fontSize: '3.5rem', fontWeight: 900, color: 'var(--text-primary)', letterSpacing: '-0.04em', marginBottom: '1rem' }}>
-            Cookie Policy
+          <h1 style={{ fontSize: '3rem', fontWeight: 900, marginBottom: '1.5rem', letterSpacing: '-0.03em', color: '#0f172a' }}>
+            Cookie <span style={{ color: '#3b82f6' }}>Policy</span>
           </h1>
-          <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-            Version 4.2 | High-Authority Compliance Standards
+          <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto', lineHeight: '1.6' }}>
+            Understanding how we use cookies to improve your experience and serve relevant content.
           </p>
         </div>
 
-        {/* Content Body */}
-        <div style={{ background: 'white', padding: '4rem', borderRadius: '0 0 32px 32px', border: '1px solid #e2e8f0', boxShadow: '0 10px 40px rgba(0,0,0,0.03)' }}>
+        <div className="page-card p-16" style={{ background: 'white', borderRadius: '0 0 32px 32px', border: '1px solid #e2e8f0', boxShadow: '0 10px 40px rgba(0,0,0,0.03)' }}>
           <div style={{ color: 'var(--text-primary)', lineHeight: '1.8', fontSize: '1.1rem' }}>
             
             <section style={{ marginBottom: '3.5rem' }}>
@@ -130,7 +129,7 @@ const CookiePolicy = () => {
             <div style={{ marginTop: '4rem', padding: '3rem', background: '#3b82f6', borderRadius: '24px', color: 'white', textAlign: 'center' }}>
               <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem' }}>Questions regarding our data collection?</h3>
               <p style={{ opacity: 0.9, marginBottom: '2rem' }}>Our data protection specialists are available to provide technical clarity.</p>
-              <a href="mailto:malikantuparthi@gmail.com" style={{ background: 'white', color: '#3b82f6', padding: '1rem 2rem', borderRadius: '12px', textDecoration: 'none', fontWeight: 800 }}>
+              <a href="mailto:malikantuparthi@gmail.com" className="btn" style={{ background: 'white', color: '#3b82f6', textDecoration: 'none', minWidth: '200px' }}>
                 Email Data Officer
               </a>
             </div>

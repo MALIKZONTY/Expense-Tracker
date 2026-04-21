@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 
 export default function Disclaimer() {
   return (
-    <div className="container" style={{ padding: '8rem 2rem' }}>
-      <div className="card shadow-soft" style={{ maxWidth: '1000px', margin: '0 auto', padding: '4rem', background: 'white', borderRadius: '32px' }}>
+    <div className="container page-container">
+      <div className="card shadow-soft page-card" style={{ maxWidth: '1000px', margin: '0 auto', background: 'white', borderRadius: '32px' }}>
         <div style={{ background: 'rgba(59, 130, 246, 0.1)', color: 'var(--primary-color)', padding: '0.6rem 1.2rem', borderRadius: '20px', display: 'inline-block', fontWeight: 700, fontSize: '0.85rem', marginBottom: '1.5rem' }}>
           Professional Disclosure
         </div>
