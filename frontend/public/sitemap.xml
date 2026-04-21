@@ -56,50 +56,6 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Static HTML Entry Points (Crawler Optimization) -->
-  <url>
-    <loc>https://expense-tracker-theta-weld.vercel.app/privacy-policy.html</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://expense-tracker-theta-weld.vercel.app/terms-and-conditions.html</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://expense-tracker-theta-weld.vercel.app/disclaimer.html</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://expense-tracker-theta-weld.vercel.app/about.html</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://expense-tracker-theta-weld.vercel.app/contact.html</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://expense-tracker-theta-weld.vercel.app/cookie-policy.html</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://expense-tracker-theta-weld.vercel.app/faq.html</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-
   <!-- High-Authority Blog Articles -->
   <url>
     <loc>https://expense-tracker-theta-weld.vercel.app/blog/proven-strategies-to-save-money</loc>
