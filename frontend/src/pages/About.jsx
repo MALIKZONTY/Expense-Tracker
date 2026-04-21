@@ -22,22 +22,21 @@ export default function About() {
 
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <h1 style={{ fontSize: 'clamp(3rem, 10vw, 5rem)', fontWeight: 900, color: 'var(--text-primary)', marginBottom: '2.5rem', letterSpacing: '-0.05em', lineHeight: 1.05 }}>
-            Pioneering the Era of <br />
-            <span style={{ background: 'linear-gradient(135deg, #3b82f6, #6366f1)', WebkitBackgroundClip: 'text', color: 'transparent' }}>Autonomous Finance</span>
+            Built for people who are <br />
+            <span style={{ background: 'linear-gradient(135deg, #3b82f6, #6366f1)', WebkitBackgroundClip: 'text', color: 'transparent' }}>Tired of Messy Notes</span>
           </h1>
           <p style={{ maxWidth: '900px', margin: '0 auto', fontSize: 'clamp(1.2rem, 4vw, 1.5rem)', color: 'var(--text-secondary)', lineHeight: '1.8', fontWeight: 500 }}>
-            Expensico is a global leader in personal financial visualization.
-            Our mission is to democratize financial intelligence by providing
-            enterprise-grade tracking tools to every individual, free of charge.
+            I started Expensico because I was tired of scrolling through old WhatsApp messages and random notes to find where my money went. 
+            Now, it's a free tool built for everyone who wants a simpler way to track their spending.
           </p>
         </div>
       </div>
 
       <div className="container" style={{ maxWidth: '1150px', margin: '0 auto', padding: '6rem 1rem' }}>
 
-        <ContentSection title="Our Founding Mission" icon={Award}>
+        <ContentSection title="Why I Built This" icon={Award}>
           <p style={{ marginBottom: '2.5rem' }}>
-            Expensico was founded in 2026 as a response to the "Data Opacity" crisis in modern consumer banking. While banks have become more digital, the underlying complexity has made it harder for the average individual to truly understand their net liquidity and spending velocity.
+            Before Expensico, I used to rely on WhatsApp groups with myself or random notes to track my expenses. It was difficult to manage, and I often lost track of where my money was going. I realized I wasn't alone—when I spoke to friends and colleagues, many were facing the exact same issue.
           </p>
 
           {/* Side-by-Side Founder Card */}
@@ -78,7 +77,7 @@ export default function About() {
                 Founder
               </p>
               <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: '1.8', marginBottom: '2rem' }}>
-                A passionate engineer with extensive experience in building scalable products and leading engineering teams. I founded <strong>Expensico</strong> with the vision of helping individuals and businesses gain true financial clarity by building next-gen tracking solutions that drive real wealth outcomes.
+                I'm a passionate engineer who believes that technology should solve real-life problems. After trying dozens of other expense apps, I found they were either too cluttered with unnecessary features or hid the best tools behind a paywall. I built <strong>Expensico</strong> to be different—a clean, free, and simple solution for myself and for you.
               </p>
               <a
                 href="https://www.linkedin.com/in/malik-antuparthi/"
@@ -107,7 +106,7 @@ export default function About() {
           </div>
 
           <p style={{ marginBottom: '1.5rem' }}>
-            Our vision was to create a <strong>mathematically precise</strong> yet <strong>aesthetically minimalist</strong> interface. We believe that clarity breeds confidence. By removing the friction of manual entry and replacing it with instant visual feedback, we empower users to eliminate debt and accelerate wealth generation.
+            My vision for Expensico was to create something that is <strong>simple to use</strong> but <strong>powerful enough</strong> to show you the big picture. I believe that when you can see your spending clearly, you gain the confidence to make better financial choices. No more guesswork, no more clutter—just a straightforward path to your goals.
           </p>
           <p>
             Today, our platform represents the gold standard in privacy-first financial tracking, built on the bedrock of user sovereignty and data integrity.
@@ -133,12 +132,12 @@ export default function About() {
           </div>
         </div>
 
-        <ContentSection title="Engineering for Reliability" icon={Cpu}>
+        <ContentSection title="Fast and Reliable" icon={Cpu}>
           <p style={{ marginBottom: '1.5rem' }}>
-            Expensico is engineered using a high-availability architecture designed for zero downtime. Our frontend utilizes a <strong>High-Performance Vite React</strong> pipeline, ensuring that every interaction—from logging a transaction to rendering a complex quarterly chart—is executed in sub-100ms speeds.
+            I've built Expensico to be lightning-fast on any device. Whether you're logging a coffee on your phone or reviewing your monthly charts on a laptop, everything happens instantly. I prioritize a smooth, zero-lag experience so that tracking your money never feels like a wait.
           </p>
           <p style={{ marginBottom: '1.5rem' }}>
-            Our backend infrastructure is anchored by a high-concurrency Node.js cluster, paired with a horizontally scalable relational database. This allows for deep relational analysis of transaction data, enabling the platform to provide unique insights into "Spending Trends," "Wallet Performance," and "Category Distribution" with surgical precision.
+            The backbone of the platform is designed to handle your data securely and efficiently, using modern web technologies to ensure that your records are always available when you need them.
           </p>
         </ContentSection>
 

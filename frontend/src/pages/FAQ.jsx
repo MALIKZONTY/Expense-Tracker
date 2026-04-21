@@ -8,16 +8,16 @@ const FAQ = () => {
             icon: <Lock style={{ color: 'var(--primary-color)' }} size={24} />,
             items: [
                 {
-                    q: "How does Expensico protect my sensitive data?",
-                    a: "Security is our core pillar. We implement AES-256 encryption for data at rest and TLS 1.3/SSL for all data in transit. Furthermore, our architecture utilizes JSON Web Tokens (JWT) for secure session management and follows strict OWASP guidelines to prevent common vulnerabilities like XSS and SQL Injection."
+                    q: "How does Expensico protect my data?",
+                    a: "I take security very seriously. Expensico uses the same high-level encryption standards as major banking apps to make sure your financial records stay private and visible only to you."
                 },
                 {
-                    q: "What is the 'Soft-Delete' system?",
-                    a: "To protect you from accidental data loss, Expensico uses a soft-delete mechanism. When you delete a transaction, it is moved to a secure archive for 30 days before being permanently purged. This allows for data recovery in case of mistakes."
+                    q: "What if I delete something by mistake?",
+                    a: "Don't worry—Expensico has a 'safety net.' If you delete a transaction, it's held in a secure archive for 30 days before being permanently removed, giving you plenty of time to get it back."
                 },
                 {
-                    q: "Does Expensico support Multi-Factor Authentication (MFA)?",
-                    a: "Currently, we rely on secure email-based authentication and robust password hashing. We are actively developing a dedicated TOTP-based MFA (e.g., Google Authenticator) layer to be released in the upcoming Q3 update."
+                    q: "Is there an extra security layer?",
+                    a: "I'm currently working on adding Two-Factor Authentication (MFA) to give you even more peace of mind. For now, your data is protected by secure, encrypted login sessions."
                 }
             ]
         },
@@ -26,20 +26,20 @@ const FAQ = () => {
             icon: <BarChart3 style={{ color: 'var(--primary-color)' }} size={24} />,
             items: [
                 {
-                    q: "Can I track multiple currencies simultaneously?",
-                    a: "Yes. Expensico allows you to designate a primary base currency while logging transactions in any global currency. Our system uses real-time exchange rate logic (cached daily) to give you a unified view of your net worth across different denominations."
+                    q: "Can I use different currencies?",
+                    a: "Yes! You can set your main currency and still log transactions in any other currency. Expensico handles the conversion for you so you can always see your total balance in one place."
                 },
                 {
-                    q: "Is there a limit to the number of transactions I can log?",
-                    a: "Absolutely not. Expensico is built on a high-performance PostgreSQL backend designed to handle millions of records. Whether you log ten transactions or ten thousand, your dashboard will remain responsive."
+                    q: "Is there a limit to how much I can track?",
+                    a: "Not at all. I've engineered the system to handle thousands of entries without breaking a sweat. Whether you're tracking daily coffees or complex business expenses, it'll stay fast."
                 },
                 {
-                    q: "How does 'Intelligent Categorization' work?",
-                    a: "Our system analyzes your historical spending patterns to predict the category of new entries. If you frequently log 'Starbucks' as 'Food,' the system will learn this behavior and suggest that category automatically for future entries, saving you time."
+                    q: "Will the app learn my habits?",
+                    a: "Yes, it actually gets smarter the more you use it. If you usually mark 'Starbucks' as 'Food,' the app will start suggesting that category for you automatically to save you time."
                 },
                 {
-                    q: "Can I import data from my bank or other apps?",
-                    a: "We provide a robust CSV import tool in your settings. This allows you to migrate data from bank statements or other trackers directly into Expensico. We are also building out a specialized JSON-API for power users."
+                    q: "Can I move my data from other apps?",
+                    a: "I've included a simple CSV import tool. You can bring in your history from bank statements or other trackers so you don't have to start from scratch."
                 }
             ]
         },
@@ -53,11 +53,11 @@ const FAQ = () => {
                 },
                 {
                     q: "How do I exercise my 'Right to be Forgotten' (GDPR)?",
-                    a: "You can initiate a full account deletion from your profile settings. This triggers a permanent purge of all your personal data, transaction history, and metadata from our primary databases in compliance with global privacy laws."
+                    a: "If you ever decide to leave, you can delete your account directly from your profile settings. This permanently wipes all your data from my servers—no questions asked."
                 },
                 {
                     q: "Are the blog articles written by financial experts?",
-                    a: "All my content is researched and drafted by me and a dedicated group of financial analysts to ensure accuracy. However, please remember that this content is for educational purposes and does not constitute professional investment advice."
+                    a: "I write and research the content myself, often with input from financial analysts to make sure the information is solid. Just keep in mind that this is for educational purposes and isn't professional financial advice."
                 }
             ]
         },
@@ -67,11 +67,11 @@ const FAQ = () => {
             items: [
                 {
                     q: "Does Expensico have an offline mode?",
-                    a: "As a Progressive Web App (PWA), Expensico can be added to your home screen and caches core UI elements. While transaction syncing requires an internet connection, you can view your cached history even when offline."
+                    a: "Yes! You can add Expensico to your phone's home screen like an app. While you need a connection to sync new transactions, you can still open the app and view your past history even when you're offline."
                 },
                 {
                     q: "Is my data backed up against server failures?",
-                    a: "Yes. Our databases (hosted on Neon/Railway) feature point-in-time recovery and are geographically redundant. We perform automated nightly backups to ensure your financial history is protected from catastrophic infrastructure events."
+                    a: "Definitely. I perform automated nightly backups and use reliable, redundant hosting services to make sure your financial history is safe and sound, no matter what happens."
                 },
                 {
                     q: "What browsers are officially supported?",
@@ -136,9 +136,9 @@ const FAQ = () => {
 
                 <div className="page-card" style={{ marginTop: '5rem', textAlign: 'center', background: 'white', borderRadius: '24px', border: '1px solid #e2e8f0' }}>
                     <h2 style={{ fontSize: '1.75rem', fontWeight: 800, marginBottom: '1rem' }}>Still have questions?</h2>
-                    <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>Our technical specialists are ready to help you optimize your financial workflow.</p>
+                    <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>I'm always happy to help you get the most out of your tracking.</p>
                     <a href="/contact" className="btn btn-primary" style={{ textDecoration: 'none', minWidth: '200px' }}>
-                        Contact Expert Support
+                        Send me a message
                     </a>
                 </div>
             </div>

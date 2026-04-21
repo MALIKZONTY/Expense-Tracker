@@ -193,25 +193,25 @@ const Features = () => {
       <section id="why" className="container" style={{ marginTop: '5rem', textAlign: 'center' }}>
         <span className="badge badge-income" style={{ marginBottom: '1.5rem', display: 'inline-block' }}>The Philosophy</span>
         <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 900, marginBottom: '2rem', color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
-          Why Control Your Spending?
+          Why I care about tracking
         </h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', textAlign: 'left', marginTop: '4rem' }}>
           <div className="explainer-box">
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--primary-color)', marginBottom: '1rem' }}>Radical Transparency</h3>
+            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--primary-color)', marginBottom: '1rem' }}>No more mysteries</h3>
             <p style={{ color: 'var(--text-secondary)', lineHeight: 1.7, fontSize: '1.1rem' }}>
-              You cannot manage what you do not measure. Expensico brings your "invisible" spending into the light, removing the anxiety of the unknown and replacing it with the confidence of an informed decision-maker.
+              You can't fix what you can't see. Expensico brings those "invisible" daily spends into the light, so you can stop worrying about where the money went and start deciding where it should go next.
             </p>
           </div>
           <div className="explainer-box">
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#8b5cf6', marginBottom: '1rem' }}>The Mindfulness Effect</h3>
+            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#8b5cf6', marginBottom: '1rem' }}>Simple habits, big results</h3>
             <p style={{ color: 'var(--text-secondary)', lineHeight: 1.7, fontSize: '1.1rem' }}>
-              The simple act of logging a transaction creates a "micro-pause" in your pulse. This awareness naturally breaks the cycle of impulse spending, helping you stay aligned with your long-term wealth goals.
+              Logging a coffee or a bill takes 3 seconds, but it changes how you think about spending. That small "pause" helps you break the cycle of buying things you don't really need.
             </p>
           </div>
           <div className="explainer-box">
-            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#10b981', marginBottom: '1rem' }}>Sovereignty Over Energy</h3>
+            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#10b981', marginBottom: '1rem' }}>It's about your time</h3>
             <p style={{ color: 'var(--text-secondary)', lineHeight: 1.7, fontSize: '1.1rem' }}>
-              Money is a representation of your time and life energy. Tracking isn't about restriction; it's about reclaiming the power to decide where that energy is focused and making your money work for you.
+              Money is just a way to measure the time and effort you put into your work. Tracking isn't about being "cheap"—it's about making sure your hard work goes toward the things that actually matter to you.
             </p>
           </div>
         </div>
@@ -224,9 +224,9 @@ const Features = () => {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
             <div className="card" style={{ padding: '2.5rem', textAlign: 'left', border: '1px solid rgba(0,0,0,0.05)', background: 'white' }}>
               <div style={{ color: 'var(--primary-color)', marginBottom: '1.5rem', fontWeight: 900, fontSize: '1.5rem' }}>01</div>
-              <h4 style={{ fontSize: '1.3rem', fontWeight: 800, marginBottom: '1rem' }}>Visual Intelligence</h4>
+              <h4 style={{ fontSize: '1.3rem', fontWeight: 800, marginBottom: '1rem' }}>Charts that actually help</h4>
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6 }}>
-                Our dashboard uses state-of-the-art charts to categorize your flow instantly. No more digging through bank statements.
+                Our dashboard shows your spending in a way that makes sense instantly. No more digging through bank apps.
               </p>
             </div>
             <div className="card" style={{ padding: '2.5rem', textAlign: 'left', border: '1px solid rgba(0,0,0,0.05)', background: 'white' }}>

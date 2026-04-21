@@ -33,11 +33,11 @@ export default function LandingPage() {
               Expensico
             </h1>
             <div style={{ marginBottom: '2.5rem' }}>
-              <p style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--primary-color)', marginBottom: '0.5rem' }}>Track where your money goes</p>
-              <h2 style={{ fontSize: '2.5rem', fontWeight: 800, background: 'linear-gradient(to right, #3b82f6, #8b5cf6)', WebkitBackgroundClip: 'text', color: 'transparent' }}>Zero Stress.</h2>
+              <p style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--primary-color)', marginBottom: '0.5rem' }}>Take the stress out of saving.</p>
+              <h2 style={{ fontSize: '2.5rem', fontWeight: 800, background: 'linear-gradient(to right, #3b82f6, #8b5cf6)', WebkitBackgroundClip: 'text', color: 'transparent' }}>Stop Guessing.</h2>
             </div>
             <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', marginBottom: '2.5rem', lineHeight: 1.6 }}>
-              Say goodbye to messy spreadsheets. Expensico provides effortless expense management, beautiful visualizations, and precise analytics—all wrapped in a clean, modern interface.
+              Stop fighting with messy spreadsheets or scrolling through old WhatsApp notes to find what you spent. I built Expensico to make tracking your money feel natural, not like another chore on your to-do list.
             </p>
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <Link to="/register" className="btn btn-primary btn-lg">
@@ -61,9 +61,9 @@ export default function LandingPage() {
 
         {/* Bottom Graphic Section */}
         <div className="fade-in-up" style={{ marginTop: '5rem', animationDelay: '0.4s', textAlign: 'center' }}>
-          <h2 style={{ fontSize: '2rem', marginBottom: '1rem', color: 'var(--text-primary)' }}>Visual Intelligence</h2>
+          <h2 style={{ fontSize: '2rem', marginBottom: '1rem', color: 'var(--text-primary)' }}>See Your Money Move</h2>
           <p style={{ color: 'var(--text-secondary)', marginBottom: '3rem', maxWidth: '600px', margin: '0 auto 3rem auto' }}>
-            Our dynamic, real-time charts automatically organize your spending so you intuitively understand where your money travels every single week.
+            Get a clear view of your weekly spending. Our simple charts organize everything for you, so you can stop worrying about the math and start focusing on your goals.
           </p>
           
           <div className="card" style={{ maxWidth: '800px', margin: '0 auto', background: 'rgba(255, 255, 255, 0.7)', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.4)', borderRadius: '24px', padding: '2rem', boxShadow: '0 20px 40px rgba(0,0,0,0.05)' }}>
