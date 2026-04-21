@@ -5,7 +5,7 @@ import { useUI } from '../context/UIContext';
 
 const EXPENSE_CATEGORIES = ['Food', 'Groceries', 'Travel', 'Rent', 'Shopping', 'Bills', 'Entertainment', 'Unknown', 'Other'];
 const INCOME_CATEGORIES = ['Salary', 'Freelance', 'Business', 'Gift', 'Unknown', 'Other'];
-const PAYMENT_METHODS = ['Online Payment', 'Cash', 'Credit Card', 'Bank Transfer', 'Gift Card'];
+const PAYMENT_METHODS = ['PhonePe', 'Paytm', 'Google Pay', 'Amazon Pay', 'Cash', 'Bank Transfer', 'Credit Card', 'Debit Card'];
 
 const getDateRange = (filter, customStart, customEnd) => {
   const now = new Date();
@@ -188,20 +188,30 @@ export default function TransactionList() {
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                 <div className="form-group" style={{ flex: '1 1 200px' }}>
                   <label>Category</label>
-                  <select className="form-control" value={editingTransaction.category} onChange={e => setEditingTransaction({ ...editingTransaction, category: e.target.value })}>
-                    {(editingTransaction.type === 'expense' ? EXPENSE_CATEGORIES : INCOME_CATEGORIES).map(cat => (
+                  <select className="form-control" value={editingTransaction.category} onChange={e => setEditingTransaction({ ...editingTransaction, category: e.target.value })} disabled={editingTransaction.type === 'exchange'}>
+                    {(editingTransaction.type === 'expense' ? EXPENSE_CATEGORIES : (editingTransaction.type === 'income' ? INCOME_CATEGORIES : ['Exchange'])).map(cat => (
                       <option key={cat} value={cat}>{cat}</option>
                     ))}
                   </select>
                 </div>
                 <div className="form-group" style={{ flex: 1 }}>
-                  <label>Method</label>
+                  <label>{editingTransaction.type === 'exchange' ? 'From' : 'Method'}</label>
                   <select className="form-control" value={editingTransaction.payment_method} onChange={e => setEditingTransaction({ ...editingTransaction, payment_method: e.target.value })}>
                     {PAYMENT_METHODS.map(m => (
                       <option key={m} value={m}>{m}</option>
                     ))}
                   </select>
                 </div>
+                {editingTransaction.type === 'exchange' && (
+                  <div className="form-group" style={{ flex: 1 }}>
+                    <label>To</label>
+                    <select className="form-control" value={editingTransaction.to_payment_method} onChange={e => setEditingTransaction({ ...editingTransaction, to_payment_method: e.target.value })}>
+                      {PAYMENT_METHODS.map(m => (
+                        <option key={m} value={m}>{m}</option>
+                      ))}
+                    </select>
+                  </div>
+                )}
               </div>
 
               <div className="form-group">
@@ -251,6 +261,7 @@ export default function TransactionList() {
               <option value="">All Types</option>
               <option value="income">Income</option>
               <option value="expense">Expense</option>
+              <option value="exchange">Exchange</option>
             </select>
           </div>
 
@@ -331,15 +342,25 @@ export default function TransactionList() {
                           {t.category}
                         </span>
                       </td>
-                      <td style={{ padding: '1.2rem 1.5rem' }}>{t.payment_method || 'Cash'}</td>
                       <td style={{ padding: '1.2rem 1.5rem' }}>
-                        <span className={`badge badge-${t.type === 'income' ? 'income' : 'expense'}`} style={{ fontWeight: 600 }}>
+                        {t.type === 'exchange' ? (
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.85rem' }}>
+                            <span style={{ color: 'var(--text-primary)', fontWeight: 500 }}>{t.payment_method}</span>
+                            <span style={{ color: 'var(--text-secondary)' }}>➔</span>
+                            <span style={{ color: 'var(--text-primary)', fontWeight: 500 }}>{t.to_payment_method}</span>
+                          </div>
+                        ) : (
+                          t.payment_method || 'Cash'
+                        )}
+                      </td>
+                      <td style={{ padding: '1.2rem 1.5rem' }}>
+                        <span className={`badge badge-${t.type}`} style={{ fontWeight: 600 }}>
                           {t.type.toUpperCase()}
                         </span>
                       </td>
                       <td style={{ padding: '1.2rem 1.5rem', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>{t.note || '-'}</td>
-                      <td style={{ padding: '1.2rem 1.5rem', textAlign: 'right', fontWeight: 700, fontSize: '1.05rem' }} className={t.type === 'income' ? 'income-text' : 'expense-text'}>
-                        {t.type === 'income' ? '+' : '-'}₹{Number(t.amount).toLocaleString('en-IN')}
+                      <td style={{ padding: '1.2rem 1.5rem', textAlign: 'right', fontWeight: 700, fontSize: '1.05rem' }} className={t.type === 'exchange' ? '' : (t.type === 'income' ? 'income-text' : 'expense-text')}>
+                        {t.type === 'exchange' ? '' : (t.type === 'income' ? '+' : '-')}₹{Number(t.amount).toLocaleString('en-IN')}
                       </td>
                       <td style={{ padding: '1.2rem 1.5rem', textAlign: 'center' }}>
                         <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center' }}>
@@ -373,14 +394,14 @@ export default function TransactionList() {
                     <div>
                       <div style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: '0.2rem' }}>{t.category}</div>
                       <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
-                        {new Date(t.date).toLocaleDateString(undefined, { day: 'numeric', month: 'short' })} • {t.payment_method || 'Cash'}
+                        {new Date(t.date).toLocaleDateString(undefined, { day: 'numeric', month: 'short' })} • {t.type === 'exchange' ? `${t.payment_method} ➔ ${t.to_payment_method}` : (t.payment_method || 'Cash')}
                       </div>
                     </div>
                     <div style={{ textAlign: 'right' }}>
-                      <div style={{ fontWeight: 800, fontSize: '1.2rem' }} className={t.type === 'income' ? 'income-text' : 'expense-text'}>
-                        {t.type === 'income' ? '+' : '-'}₹{Number(t.amount).toLocaleString('en-IN')}
+                      <div style={{ fontWeight: 800, fontSize: '1.2rem' }} className={t.type === 'exchange' ? '' : (t.type === 'income' ? 'income-text' : 'expense-text')}>
+                        {t.type === 'exchange' ? '' : (t.type === 'income' ? '+' : '-')}₹{Number(t.amount).toLocaleString('en-IN')}
                       </div>
-                      <span className={`badge badge-${t.type === 'income' ? 'income' : 'expense'}`} style={{ fontSize: '0.7rem', padding: '0.2rem 0.5rem', marginTop: '0.3rem' }}>
+                      <span className={`badge badge-${t.type}`} style={{ fontSize: '0.7rem', padding: '0.2rem 0.5rem', marginTop: '0.3rem' }}>
                         {t.type.toUpperCase()}
                       </span>
                     </div>

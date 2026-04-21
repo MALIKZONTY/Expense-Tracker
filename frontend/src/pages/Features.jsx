@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Layout, Smartphone, Globe, ArrowRight, Zap, CheckCircle, Shield, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Layout, Smartphone, Globe, ArrowRight, Zap, CheckCircle, Shield, ChevronLeft, ChevronRight, RefreshCw } from 'lucide-react';
 
 /**
  * 🛠️ FEATURE CONFIGURATION DICTIONARY
@@ -19,7 +19,7 @@ const FEATURE_CONFIG = [
     bulletPoints: [
       'Real-time balance synchronization across all wallets',
       'Dynamic charts powered by visual analytics',
-      'Instant breakdown of income vs. expense ratios',
+      'Track PhonePe, Paytm, and GPay balances instantly',
       'At-a-glance summary of top spending categories'
     ]
   },
@@ -81,6 +81,21 @@ const FEATURE_CONFIG = [
       'Real-time status tracking for every ticket',
       'Personal dashboard for managing all queries',
       '24/7 access to the contact and help infrastructure'
+    ]
+  },
+  {
+    id: 'exchange',
+    title: 'Smart Money Exchange',
+    description: 'We live in a world where cash and digital money are constantly swapped. Whether you gave cash to a friend for a PhonePe transfer or moved money from your Bank to Paytm, Expensico handles these internal transfers with zero impact on your expense reports.',
+    icon: RefreshCw,
+    badge: 'Transfers',
+    images: ['/mobile-3.png', '/web-1.png'],
+    layout: 'mixed',
+    bulletPoints: [
+      'Track "Cash to Online" transfers seamlessly',
+      'Built-in support for PhonePe, Paytm, and GPay',
+      'Neutral transfers that won\'t skew your income/expense charts',
+      'Keep your account balances accurate across all methods'
     ]
   }
 ];

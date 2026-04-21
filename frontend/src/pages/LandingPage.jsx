@@ -37,7 +37,7 @@ export default function LandingPage() {
               <h2 style={{ fontSize: '2.5rem', fontWeight: 800, background: 'linear-gradient(to right, #3b82f6, #8b5cf6)', WebkitBackgroundClip: 'text', color: 'transparent' }}>Stop Guessing.</h2>
             </div>
             <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', marginBottom: '2.5rem', lineHeight: 1.6 }}>
-              Stop fighting with messy spreadsheets or scrolling through old WhatsApp notes to find what you spent. I built Expensico to make tracking your money feel natural, not like another chore on your to-do list.
+              Stop fighting with messy spreadsheets. Whether it's a <strong>PhonePe</strong> transfer to a friend or a <strong>Cash</strong> swap for dinner, Expensico tracks your money accurately across every digital wallet and physical pocket.
             </p>
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <Link to="/register" className="btn btn-primary btn-lg">

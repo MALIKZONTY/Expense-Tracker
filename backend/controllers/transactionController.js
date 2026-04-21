@@ -2,11 +2,11 @@ const TransactionModel = require('../models/transactionModel');
 
 exports.addTransaction = async (req, res) => {
   try {
-    const { amount, type, category, note, date, paymentMethod } = req.body;
+    const { amount, type, category, note, date, paymentMethod, toPaymentMethod } = req.body;
     if (!amount || !type || !category || !date) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
-    const transaction = await TransactionModel.createTransaction(req.user.id, amount, type, category, note, date, paymentMethod);
+    const transaction = await TransactionModel.createTransaction(req.user.id, amount, type, category, note, date, paymentMethod, toPaymentMethod);
     res.status(201).json(transaction);
   } catch (err) {
     console.error(err);
@@ -49,12 +49,11 @@ exports.getDashboard = async (req, res) => {
     const summaryData = await TransactionModel.getSummary(req.user.id);
     let totalIncome = 0;
     let totalExpenses = 0;
-    let totalTransactions = 0;
+    let totalTransactions = summaryData.totalTransactions;
 
-    summaryData.forEach(row => {
+    summaryData.rows.forEach(row => {
       if (row.type === 'income') totalIncome += Number(row.total);
       if (row.type === 'expense') totalExpenses += Number(row.total);
-      totalTransactions += Number(row.count);
     });
 
     const categoryData = await TransactionModel.getExpensesByCategory(req.user.id);

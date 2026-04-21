@@ -245,6 +245,7 @@ p { color: var(--text-secondary); }
 }
 .badge-income { background: #d1fae5; color: var(--income-color); }
 .badge-expense { background: #fee2e2; color: var(--expense-color); }
+.badge-exchange { background: #f1f5f9; color: #64748b; }
 
 /* Table */
 .table-wrapper {

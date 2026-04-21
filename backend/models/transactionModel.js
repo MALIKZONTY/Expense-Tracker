@@ -1,13 +1,13 @@
 const db = require('../config/db');
 
 class TransactionModel {
-  static async createTransaction(userId, amount, type, category, note, date, paymentMethod = 'Cash') {
+  static async createTransaction(userId, amount, type, category, note, date, paymentMethod = 'Cash', toPaymentMethod = null) {
     const query = `
-      INSERT INTO transactions (user_id, amount, type, category, note, date, payment_method)
-      VALUES ($1, $2, $3, $4, $5, $6, $7)
+      INSERT INTO transactions (user_id, amount, type, category, note, date, payment_method, to_payment_method)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
       RETURNING *;
     `;
-    const values = [userId, amount, type, category, note, date, paymentMethod];
+    const values = [userId, amount, type, category, note, date, paymentMethod, toPaymentMethod];
     const result = await db.query(query, values);
     return result.rows[0];
   }
@@ -65,11 +65,20 @@ class TransactionModel {
     const query = `
       SELECT type, COALESCE(SUM(amount), 0) as total, COUNT(*) as count
       FROM transactions
-      WHERE user_id = $1 AND is_deleted = false
+      WHERE user_id = $1 AND is_deleted = false AND type IN ('income', 'expense')
       GROUP BY type;
     `;
     const result = await db.query(query, [userId]);
-    return result.rows;
+    
+    // Add total count including exchanges
+    const countQuery = `SELECT COUNT(*) FROM transactions WHERE user_id = $1 AND is_deleted = false`;
+    const countResult = await db.query(countQuery, [userId]);
+    
+    // We'll return the array but the caller expects certain types for total display
+    return {
+      rows: result.rows,
+      totalTransactions: parseInt(countResult.rows[0].count)
+    };
   }
 
   static async getExpensesByCategory(userId) {
@@ -112,10 +121,34 @@ class TransactionModel {
 
   static async getWalletBalances(userId) {
     const query = `
-      SELECT payment_method as name, SUM(CASE WHEN type = 'income' THEN amount ELSE -amount END) as balance
-      FROM transactions
-      WHERE user_id = $1 AND is_deleted = false
-      GROUP BY payment_method;
+      SELECT method as name, SUM(val) as balance FROM (
+        -- Regular Incomes
+        SELECT payment_method as method, amount as val 
+        FROM transactions 
+        WHERE user_id = $1 AND is_deleted = false AND type = 'income'
+        
+        UNION ALL
+        
+        -- Regular Expenses
+        SELECT payment_method as method, -amount as val 
+        FROM transactions 
+        WHERE user_id = $1 AND is_deleted = false AND type = 'expense'
+        
+        UNION ALL
+        
+        -- Exchange Outflows
+        SELECT payment_method as method, -amount as val 
+        FROM transactions 
+        WHERE user_id = $1 AND is_deleted = false AND type = 'exchange'
+        
+        UNION ALL
+        
+        -- Exchange Inflows
+        SELECT to_payment_method as method, amount as val 
+        FROM transactions 
+        WHERE user_id = $1 AND is_deleted = false AND type = 'exchange' AND to_payment_method IS NOT NULL
+      ) as movements
+      GROUP BY method;
     `;
     const result = await db.query(query, [userId]);
     return result.rows;
@@ -144,7 +177,7 @@ class TransactionModel {
   }
 
   static async updateTransaction(id, userId, updates) {
-    const { amount, type, category, note, paymentMethod, date } = updates;
+    const { amount, type, category, note, paymentMethod, to_payment_method, date } = updates;
     const query = `
       UPDATE transactions
       SET amount = COALESCE($1, amount),
@@ -152,11 +185,12 @@ class TransactionModel {
           category = COALESCE($3, category),
           note = COALESCE($4, note),
           payment_method = COALESCE($5, payment_method),
-          date = COALESCE($6, date)
-      WHERE id = $7 AND user_id = $8 AND is_deleted = false
+          to_payment_method = COALESCE($6, to_payment_method),
+          date = COALESCE($7, date)
+      WHERE id = $8 AND user_id = $9 AND is_deleted = false
       RETURNING *;
     `;
-    const values = [amount, type, category, note, paymentMethod, date, id, userId];
+    const values = [amount, type, category, note, paymentMethod, to_payment_method, date, id, userId];
     const result = await db.query(query, values);
     return result.rows[0];
   }

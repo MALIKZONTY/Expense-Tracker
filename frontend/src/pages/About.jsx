@@ -106,10 +106,10 @@ export default function About() {
           </div>
 
           <p style={{ marginBottom: '1.5rem' }}>
-            My vision for Expensico was to create something that is <strong>simple to use</strong> but <strong>powerful enough</strong> to show you the big picture. I believe that when you can see your spending clearly, you gain the confidence to make better financial choices. No more guesswork, no more clutter—just a straightforward path to your goals.
+            My vision for Expensico was to create something that is <strong>simple to use</strong> but <strong>powerful enough</strong> to show you the big picture. I realized that money isn't just about what we earn or spend—it's about how it moves. That's why I added support for <strong>Money Exchanges</strong>. I noticed so many times I would give a friend cash and they would PhonePe or Paytm me back; most apps count that as "Income," which is just wrong. I built Expensico to understand these digital swaps so your charts always stay accurate.
           </p>
           <p>
-            Today, our platform represents the gold standard in privacy-first financial tracking, built on the bedrock of user sovereignty and data integrity.
+            No more guesswork, no more clutter—just a straightforward path to your goals, tracking every rupee from your pocket to your digital wallet.
           </p>
         </ContentSection>
 
