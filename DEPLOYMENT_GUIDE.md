@@ -14,7 +14,7 @@ This repository is configured for a "Split Deployment" architecture.
 2. **Environment Variables**:
    - `DB_URL`: Your Neon connection string.
    - `JWT_SECRET`: A secret string for authentication.
-   - `FRONTEND_URL`: Your Vercel domain (e.g., `https://your-app.vercel.app`).
+   - `FRONTEND_URL`: Your custom domain (e.g., `https://www.expensico.com/`).
 
 ---
 

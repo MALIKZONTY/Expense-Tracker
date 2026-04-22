@@ -1,7 +1,7 @@
 # 1. Privacy Policy Expansion (1200+ words)
 
 ## Introduction
-Expensico Finance ("we," "our," or "us") is dedicated to the robust protection of user privacy and the transparent management of personal data. In an age of digital transformation, we recognize that financial data is among the most sensitive information an individual can share. This Privacy Policy is designed to provide you with a comprehensive understanding of how we collect, store, process, and protect your data across our platform, including our primary website (expense-tracker-theta-weld.vercel.app) and any associated subdomains or mobile interfaces.
+Expensico Finance ("we," "our," or "us") is dedicated to the robust protection of user privacy and the transparent management of personal data. In an age of digital transformation, we recognize that financial data is among the most sensitive information an individual can share. This Privacy Policy is designed to provide you with a comprehensive understanding of how we collect, store, process, and protect your data across our platform, including our primary website (https://www.expensico.com/) and any associated subdomains or mobile interfaces.
 
 Our commitment to privacy is not merely a legal requirement; it is a core pillar of our financial intelligence philosophy. We believe that you cannot have financial clarity without data security. This policy has been drafted to meet and exceed global regulatory standards, including the General Data Protection Regulation (GDPR) in the European Union, the California Consumer Privacy Act (CCPA) as amended by the California Privacy Rights Act (CPRA), and the UK Data Protection Act 2018.
 
@@ -79,7 +79,7 @@ If you have any questions about this Privacy Policy or our data practices, pleas
 # 2. Terms and Conditions Expansion (1100+ words)
 
 ## Introduction and Acceptance
-Welcome to Expensico Finance. By accessing our website (expense-tracker-theta-weld.vercel.app) or using our financial tracking services, you agree to be bound by these Terms and Conditions ("Terms"). These Terms constitute a legally binding agreement between you and Expensico Finance regarding your use of the platform. If you do not agree to these Terms, you must immediately cease all use of our services.
+Welcome to Expensico Finance. By accessing our website (https://www.expensico.com/) or using our financial tracking services, you agree to be bound by these Terms and Conditions ("Terms"). These Terms constitute a legally binding agreement between you and Expensico Finance regarding your use of the platform. If you do not agree to these Terms, you must immediately cease all use of our services.
 
 ## 1. Description of Service
 Expensico provides an interactive platform for the logging, categorization, and visualization of personal financial transactions. Our goal is to provide users with "Financial Intelligence" through data-driven insights. The service is provided "as is" and is designed for personal, non-commercial use.
@@ -122,7 +122,7 @@ For legal inquiries regarding these Terms, please contact us at malikantuparthi@
 # 3. Disclaimer (1000+ words)
 
 ## Financial Education Purpose Only
-The information provided on Expensico (expense-tracker-theta-weld.vercel.app), including but not limited to our dashboard analytics, budgeting tools, and blog content, is intended for general educational and informational purposes only. It is not intended to be a substitute for professional financial advice, diagnosis, or treatment.
+The information provided on Expensico (https://www.expensico.com/), including but not limited to our dashboard analytics, budgeting tools, and blog content, is intended for general educational and informational purposes only. It is not intended to be a substitute for professional financial advice, diagnosis, or treatment.
 
 ## No Professional-Client Relationship
 Your use of this website and its tools does not establish a professional-client relationship between you and Expensico Finance. Any reliance you place on the information found within our platform is strictly at your own risk.

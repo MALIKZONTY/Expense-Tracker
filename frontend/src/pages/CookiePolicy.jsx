@@ -125,7 +125,7 @@ const CookiePolicy = () => {
                 Cookies set by Expensico have varying lifespans. Authentication cookies are generally set to expire within 24-48 hours for your protection. Preference cookies may persist for up to 365 days to ensure a consistent user experience. 
               </p>
               <p style={{ color: 'var(--text-secondary)' }}>
-                You can manually purge all cookies associated with the expense-tracker-theta-weld.vercel.app domain at any time through your browser's "Clear Browsing Data" menu. This ensures that you maintain absolute sovereignty over your digital track records.
+                You can manually purge all cookies associated with the www.expensico.com domain at any time through your browser's "Clear Browsing Data" menu. This ensures that you maintain absolute sovereignty over your digital track records.
               </p>
             </section>
 

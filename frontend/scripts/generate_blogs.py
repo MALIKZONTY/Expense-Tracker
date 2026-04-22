@@ -75,7 +75,7 @@ def generate_blog_html(post, related_posts):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title} | Expensico Finance Blog</title>
     <meta name="description" content="{description}">
-    <link rel="canonical" href="https://expense-tracker-theta-weld.vercel.app/blog/{slug}" />
+    <link rel="canonical" href="https://www.expensico.com/blog/{slug}" />
     
     <!-- JSON-LD for SEO -->
     <script type="application/ld+json">
@@ -94,7 +94,7 @@ def generate_blog_html(post, related_posts):
         "name": "Expensico",
         "logo": {{
           "@type": "ImageObject",
-          "url": "https://expense-tracker-theta-weld.vercel.app/logo.png"
+          "url": "https://www.expensico.com/logo.png"
         }}
       }}
     }}

@@ -8,7 +8,7 @@ def generate_legal_page(filename, title, content_html, badge="Legal Documentatio
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title} | Expensico Finance</title>
     <meta name="description" content="Official {title} for Expensico Finance. Professional financial intelligence and data protection standards.">
-    <link rel="canonical" href="https://expense-tracker-theta-weld.vercel.app/{filename.replace('.html', '')}" />
+    <link rel="canonical" href="https://www.expensico.com/{filename.replace('.html', '')}" />
     <style>
         :root {{ --primary-color: #3b82f6; --text-primary: #1e293b; --text-secondary: #64748b; --border-color: #e2e8f0; }}
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.8; color: var(--text-primary); margin: 0; background-color: #f8fafc; }}
@@ -155,7 +155,7 @@ This data is stored securely and is never shared with third-party advertisers in
 terms_content = """
 <h1>Terms and Conditions</h1>
 <p><strong>Effective Date: April 20, 2026</strong></p>
-<p>Welcome to Expensico Finance. By accessing our website (expense-tracker-theta-weld.vercel.app) or using our financial tracking services, you agree to be bound by these Terms and Conditions. These Terms constitute a legally binding agreement between you and Expensico Finance. If you do not agree to these Terms, you must immediately cease all use of our platform. These terms govern your use of our web-based platform, mobile interface, and educational content library.</p>
+<p>Welcome to Expensico Finance. By accessing our website (https://www.expensico.com/) or using our financial tracking services, you agree to be bound by these Terms and Conditions. These Terms constitute a legally binding agreement between you and Expensico Finance. If you do not agree to these Terms, you must immediately cease all use of our platform. These terms govern your use of our web-based platform, mobile interface, and educational content library.</p>
 
 <h2>1. Scope and Description of Service</h2>
 <p>Expensico provides an interactive platform for the logging, categorization, and visualization of personal financial transactions. Our goal is to provide users with visual intelligence to better manage their money and build long-term wealth. The service is provided "as is" and is designed for personal, non-commercial use. We reserve the right to modify, suspend, or discontinue any part of the service at any time without prior notice. This includes the right to add new features or remove existing ones as we evolve the platform's technological capabilities.</p>
@@ -205,7 +205,7 @@ disclaimer_content = """
 <h1>Professional & High-Accuracy Disclaimer</h1>
 <p><strong>Last Updated: April 20, 2026</strong></p>
 <h2>1. Financial Education and Information Only</h2>
-<p>The information provided on Expensico (expense-tracker-theta-weld.vercel.app), including but not limited to our dashboard analytics, budgeting tools, and blog content, is intended for general educational and informational purposes only. It is not intended to be as a substitute for professional financial advice, diagnosis, or treatment. Always seek the advice of your financial advisor, accountant, or other qualified professional with any questions you may have regarding a financial plan or investment strategy. The financial markers and metrics provided by our platform are tools for your own analysis and should not be used as the sole basis for any financial decision.</p>
+<p>The information provided on Expensico (https://www.expensico.com/), including but not limited to our dashboard analytics, budgeting tools, and blog content, is intended for general educational and informational purposes only. It is not intended to be as a substitute for professional financial advice, diagnosis, or treatment. Always seek the advice of your financial advisor, accountant, or other qualified professional with any questions you may have regarding a financial plan or investment strategy. The financial markers and metrics provided by our platform are tools for your own analysis and should not be used as the sole basis for any financial decision.</p>
 
 <h2>2. No Professional-Client Relationship</h2>
 <p>Your use of this website and its tools does not establish a professional-client relationship between you and Expensico Finance. Any reliance you place on the information found within our platform is strictly at your own risk. We are not acting as your broker, advisor, or fiduciary in any capacity. The act of registering for an account or reading our blog articles does not create any obligation on our part to provide you with personalized financial guidance.</p>
@@ -275,7 +275,7 @@ Please be advised that opting out of advertising cookies does not mean you will 
 <p>The digital industry is currently transitioning away from third-party cookies toward more privacy-centric tracking paradigms. Expensico is at the forefront of this shift. We are actively investigating and implementing "First-Party Data" strategies and Privacy Sandbox technologies to ensure that we can continue to provide personalized financial intelligence and support our platform without compromising the high security standards our users expect.</p>
 
 <h2>7. Data Retention and Lifecycle Management</h2>
-<p>Cookies set by Expensico have varying lifespans. Authentication cookies are generally set to expire within 24-48 hours for your protection. Preference cookies may persist for up to 365 days to ensure a consistent user experience. You can manually purge all cookies associated with the expense-tracker-theta-weld.vercel.app domain at any time through your browser's "Clear Browsing Data" menu.</p>
+<p>Cookies set by Expensico have varying lifespans. Authentication cookies are generally set to expire within 24-48 hours for your protection. Preference cookies may persist for up to 365 days to ensure a consistent user experience. You can manually purge all cookies associated with the https://www.expensico.com/ domain at any time through your browser's "Clear Browsing Data" menu.</p>
 
 <h2>8. Technical Audit and Policy Iteration</h2>
 <p>Our Data Protection Officer performs bi-annual audits of our tracking inventory to ensure every cookie serves a legitimate business or security purpose. As new technologies emerge and global regulations evolve (such as updates to the ePrivacy Directive), this policy will be updated accordingly. Continued use of the platform following the posting of changes to this policy will be deemed as your acceptance of those changes.</p>

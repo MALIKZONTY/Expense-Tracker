@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://expense-tracker-theta-weld.vercel.app/sitemap.xml
+Sitemap: https://www.expensico.com/sitemap.xml
