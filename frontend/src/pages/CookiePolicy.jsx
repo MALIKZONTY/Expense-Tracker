@@ -7,14 +7,17 @@ const CookiePolicy = () => {
       <div className="container" style={{ maxWidth: '900px', margin: '0 auto' }}>
         
         <div className="page-card p-16" style={{ background: 'white', borderRadius: '32px 32px 0 0', border: '1px solid #e2e8f0', borderBottom: 'none', textAlign: 'center' }}>
-          <div style={{ background: 'rgba(59, 130, 246, 0.1)', color: 'var(--primary-color)', padding: '0.6rem 1.2rem', borderRadius: '20px', display: 'inline-block', fontWeight: 700, fontSize: '0.85rem', marginBottom: '1.5rem' }}>
-            Data Transparency
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.8rem', marginBottom: '1.5rem' }}>
+            <div style={{ background: 'rgba(59, 130, 246, 0.1)', color: 'var(--primary-color)', padding: '0.6rem 1.2rem', borderRadius: '20px', fontWeight: 700, fontSize: '0.85rem' }}>
+              Data Transparency
+            </div>
+            <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: 600 }}>• Track your money</span>
           </div>
           <h1 style={{ fontSize: '3rem', fontWeight: 900, marginBottom: '1.5rem', letterSpacing: '-0.03em', color: '#0f172a' }}>
             Cookie <span style={{ color: '#3b82f6' }}>Policy</span>
           </h1>
           <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto', lineHeight: '1.6' }}>
-            Understanding how we use cookies to improve your experience and serve relevant content.
+            Understanding how we use technology to improve your experience and keep Expensico free.
           </p>
         </div>
 
@@ -27,10 +30,10 @@ const CookiePolicy = () => {
                 1. Introduction to Digital Tracking at Expensico
               </h2>
               <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
-                Expensico Finance ("we," "our," or "us") utilizes cookies, web beacons, pixels, and similar tracking technologies to ensure our platform remains secure, high-performing, and free for all users. In the modern digital landscape, transparency regarding data collection is not just a legal requirement but a fundamental part of the trust relationship we share with our global user base.
+                At Expensico ("we," "our," or "us"), we use cookies and similar technologies to keep our platform secure, fast, and free for everyone. We believe that being clear about how we use your data is a fundamental part of the trust you place in us.
               </p>
               <p style={{ color: 'var(--text-secondary)' }}>
-                This Cookie Policy provides an exhaustive technical and operational breakdown of how we leverage these technologies, how they impact your browsing experience, and the granular controls you have over your digital footprint. We are committed to maintaining a high-authority environment where your financial data is protected by the same technological rigor used by major banks.
+                This policy explains what these technologies are, why we use them, and the simple controls you have over your digital footprint. We are committed to a high standard of data protection while ensuring the platform remains easy to use.
               </p>
             </section>
 
@@ -135,6 +138,9 @@ const CookiePolicy = () => {
             </div>
 
           </div>
+        </div>
+        <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+          <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', opacity: 0.6 }}>Last Updated: April 20, 2026 • Version 3.1</p>
         </div>
       </div>
     </div>

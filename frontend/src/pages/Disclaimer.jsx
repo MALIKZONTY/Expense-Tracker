@@ -4,11 +4,14 @@ export default function Disclaimer() {
   return (
     <div className="container page-container">
       <div className="card shadow-soft page-card" style={{ maxWidth: '1000px', margin: '0 auto', background: 'white', borderRadius: '32px' }}>
-        <div style={{ background: 'rgba(59, 130, 246, 0.1)', color: 'var(--primary-color)', padding: '0.6rem 1.2rem', borderRadius: '20px', display: 'inline-block', fontWeight: 700, fontSize: '0.85rem', marginBottom: '1.5rem' }}>
-          Professional Disclosure
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', marginBottom: '1.5rem' }}>
+          <div style={{ background: 'rgba(59, 130, 246, 0.1)', color: 'var(--primary-color)', padding: '0.6rem 1.2rem', borderRadius: '20px', fontWeight: 700, fontSize: '0.85rem' }}>
+            Professional Disclosure
+          </div>
+          <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: 600 }}>• Track your money</span>
         </div>
-        <h1 style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '2rem', letterSpacing: '-0.04em' }}>Legal Disclaimer</h1>
-        <p style={{ fontWeight: 600, color: 'var(--text-primary)', marginBottom: '2rem' }}>Last Updated: April 20, 2026</p>
+        <h1 style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '1rem', letterSpacing: '-0.04em' }}>Legal Disclaimer</h1>
+        <p style={{ fontWeight: 600, color: 'var(--text-primary)', marginBottom: '2.5rem', fontSize: '1rem' }}>Last Updated: April 20, 2026</p>
 
         <section style={{ marginBottom: '3rem' }}>
           <h2 style={{ fontSize: '1.75rem', fontWeight: 800, marginBottom: '1.5rem', borderLeft: '4px solid var(--primary-color)', paddingLeft: '1.5rem' }}>1. Financial Education and Information Only</h2>
@@ -20,7 +23,7 @@ export default function Disclaimer() {
         <section style={{ marginBottom: '3rem' }}>
           <h2 style={{ fontSize: '1.75rem', fontWeight: 800, marginBottom: '1.5rem', borderLeft: '4px solid var(--primary-color)', paddingLeft: '1.5rem' }}>2. No Professional-Client Relationship</h2>
           <p style={{ color: 'var(--text-secondary)', lineHeight: '1.8' }}>
-            Your use of this website and its tools does not establish a professional-client relationship between you and Expensico Finance. Any reliance you place on the information found within our platform is strictly at your own risk. We are not acting as your broker, advisor, or fiduciary in any capacity.
+            Your use of this website and its tools does not establish a professional-client relationship between you and Expensico. Any reliance you place on the information found within our platform is strictly at your own risk. We are not acting as your broker, advisor, or fiduciary in any capacity.
           </p>
         </section>
 
@@ -58,6 +61,9 @@ export default function Disclaimer() {
             Questions regarding this disclosure? Contact me at <a href="mailto:malikantuparthi@gmail.com" style={{ color: 'var(--primary-color)', fontWeight: 700 }}>malikantuparthi@gmail.com</a>.
           </p>
         </div>
+      </div>
+      <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+        <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', opacity: 0.6 }}>Version 3.1</p>
       </div>
     </div>
   );

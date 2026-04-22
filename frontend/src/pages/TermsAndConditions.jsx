@@ -4,14 +4,17 @@ export default function TermsAndConditions() {
   return (
     <div className="container page-container">
       <div className="card shadow-soft page-card" style={{ maxWidth: '1000px', margin: '0 auto', background: 'white', borderRadius: '32px' }}>
-        <div style={{ background: 'rgba(59, 130, 246, 0.1)', color: 'var(--primary-color)', padding: '0.6rem 1.2rem', borderRadius: '20px', display: 'inline-block', fontWeight: 700, fontSize: '0.85rem', marginBottom: '1.5rem' }}>
-          Usage Agreement
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', marginBottom: '1.5rem' }}>
+          <div style={{ background: 'rgba(59, 130, 246, 0.1)', color: 'var(--primary-color)', padding: '0.6rem 1.2rem', borderRadius: '20px', fontWeight: 700, fontSize: '0.85rem' }}>
+            Usage Agreement
+          </div>
+          <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: 600 }}>• Track your money</span>
         </div>
-        <h1 style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '2rem', letterSpacing: '-0.04em' }}>Terms of Service / Terms of Use</h1>
-        <p style={{ fontWeight: 600, color: 'var(--text-primary)', marginBottom: '2rem' }}>Effective Date: April 20, 2026</p>
+        <h1 style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '1rem', letterSpacing: '-0.04em' }}>Terms of Service</h1>
+        <p style={{ fontWeight: 600, color: 'var(--text-primary)', marginBottom: '2.5rem', fontSize: '1rem' }}>Effective Date: April 20, 2026</p>
 
         <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', marginBottom: '3rem', lineHeight: '1.8' }}>
-          Welcome to Expensico Finance. By accessing our website (expense-tracker-theta-weld.vercel.app) or using our financial tracking services, you agree to be bound by these Terms and Conditions. These Terms constitute a legally binding agreement between you and Expensico Finance. If you do not agree to these Terms, you must immediately cease all use of our platform.
+          Welcome to Expensico. By using our website or our financial tracking services, you agree to these Terms. They represent a straightforward agreement between you and Expensico about how our platform works. If you don't agree with them, please do not use the service.
         </p>
 
         <section style={{ marginBottom: '3rem' }}>
@@ -45,14 +48,14 @@ export default function TermsAndConditions() {
         <section style={{ marginBottom: '3rem' }}>
           <h2 style={{ fontSize: '1.75rem', fontWeight: 800, marginBottom: '1.5rem', borderLeft: '4px solid var(--primary-color)', paddingLeft: '1.5rem' }}>5. Intellectual Property Rights</h2>
           <p style={{ color: 'var(--text-secondary)', lineHeight: '1.8' }}>
-            All content on this platform, including the "Expensico" brand name, logos, designs, blog articles, and proprietary algorithms, is the intellectual property of Expensico Finance and is protected by international laws. You are granted a limited, personal, non-transferable license to use the platform for its intended tracking purposes only.
+            All content on this platform, including the "Expensico" brand name, logos, designs, blog articles, and proprietary algorithms, is the intellectual property of Expensico and is protected by international laws. You are granted a limited, personal, non-transferable license to use the platform for its intended tracking purposes only.
           </p>
         </section>
 
         <section style={{ marginBottom: '3rem' }}>
           <h2 style={{ fontSize: '1.75rem', fontWeight: 800, marginBottom: '1.5rem', borderLeft: '4px solid var(--primary-color)', paddingLeft: '1.5rem' }}>6. Secondary Disclaimers and Liability Limitations</h2>
           <p style={{ color: 'var(--text-secondary)', lineHeight: '1.8' }}>
-            To the maximum extent permitted by law, Expensico Finance shall not be liable for any indirect, incidental, or consequential damages resulting from your use of the platform. We make no warranties that the service will be uninterrupted, error-free, or entirely secure from unauthorized interference.
+            To the maximum extent permitted by law, Expensico shall not be liable for any indirect, incidental, or consequential damages resulting from your use of the platform. We make no warranties that the service will be uninterrupted, error-free, or entirely secure from unauthorized interference.
           </p>
         </section>
 
@@ -69,6 +72,9 @@ export default function TermsAndConditions() {
             Questions about our terms? Contact our legal desk at <a href="mailto:malikantuparthi@gmail.com" style={{ color: 'var(--primary-color)', fontWeight: 700 }}>malikantuparthi@gmail.com</a>.
           </p>
         </div>
+      </div>
+      <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+        <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', opacity: 0.6 }}>Version 3.1</p>
       </div>
     </div>
   );

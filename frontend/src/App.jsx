@@ -22,6 +22,7 @@ import FAQ from './pages/FAQ';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
 import TitleManager from './components/TitleManager';
+import ScrollToTop from './components/ScrollToTop';
 
 const ProtectedRoute = ({ children, adminOnly = false }) => {
   const { user } = useContext(AuthContext);
@@ -35,6 +36,7 @@ function App() {
     <UIProvider>
       <Router>
         <AuthProvider>
+          <ScrollToTop />
           <TitleManager />
           <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
             <NavBar />

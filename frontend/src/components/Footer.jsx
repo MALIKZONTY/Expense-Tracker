@@ -28,9 +28,13 @@ const Footer = () => {
               <img src="/logo.png" className="custom-logo" alt="Expensico Logo" style={{ width: '90px', height: '90px', objectFit: 'contain' }} />
               <span style={{ fontSize: '1.25rem', fontWeight: 900, color: 'var(--primary-color)', fontStyle: 'italic' }}>Expensico</span>
             </Link>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '1.5rem' }}>
               Empowering individuals through intelligent financial tracking and absolute data transparency.
             </p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(16, 185, 129, 0.08)', padding: '0.5rem 0.75rem', borderRadius: '8px', width: 'fit-content' }}>
+              <ShieldCheck size={16} style={{ color: 'var(--income-color)' }} />
+              <span style={{ fontSize: '0.7rem', fontWeight: 700, color: '#065f46', textTransform: 'uppercase', letterSpacing: '0.04em' }}>Bank-Level Security</span>
+            </div>
           </div>
 
           {/* Resources Column */}
@@ -66,10 +70,7 @@ const Footer = () => {
           gap: '1rem'
         }}>
           <div style={{ fontSize: '0.95rem', color: 'var(--text-secondary)', fontWeight: 500, textAlign: 'center' }}>
-            &copy; {currentYear} Expensico Finance. All rights reserved.
-          </div>
-          <div style={{ display: 'flex', gap: '1.5rem' }}>
-            <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--primary-color)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Industry-Leading Security</span>
+            &copy; {currentYear} Expensico. All rights reserved.
           </div>
         </div>
       </div>

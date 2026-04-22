@@ -2,14 +2,17 @@ export default function PrivacyPolicy() {
   return (
     <div className="container page-container">
       <div className="card shadow-soft page-card" style={{ maxWidth: '1000px', margin: '0 auto', background: 'white', borderRadius: '32px' }}>
-        <div style={{ background: 'rgba(59, 130, 246, 0.1)', color: 'var(--primary-color)', padding: '0.6rem 1.2rem', borderRadius: '20px', display: 'inline-block', fontWeight: 700, fontSize: '0.85rem', marginBottom: '1.5rem' }}>
-          Privacy Commitment
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', marginBottom: '1.5rem' }}>
+          <div style={{ background: 'rgba(59, 130, 246, 0.1)', color: 'var(--primary-color)', padding: '0.6rem 1.2rem', borderRadius: '20px', fontWeight: 700, fontSize: '0.85rem' }}>
+            Privacy Commitment
+          </div>
+          <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: 600 }}>• Track your money</span>
         </div>
-        <h1 style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '2rem', letterSpacing: '-0.04em' }}>Privacy Policy</h1>
-        <p style={{ fontWeight: 600, color: 'var(--text-primary)', marginBottom: '2rem' }}>Version 3.1 | Last Modified: April 20, 2026</p>
+        <h1 style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '1rem', letterSpacing: '-0.04em' }}>Privacy Policy</h1>
+        <p style={{ fontWeight: 600, color: 'var(--text-primary)', marginBottom: '2.5rem', fontSize: '1rem' }}>Last Updated: April 20, 2026</p>
         
-        <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', marginBottom: '3rem', lineHeight: '1.8' }}>
-          Expensico Finance ("we," "our," or "us") is dedicated to the robust protection of user privacy and the transparent management of personal data. In an age of digital transformation, we recognize that financial data is among the most sensitive information an individual can share. This Privacy Policy is designed to provide you with a comprehensive understanding of how we collect, store, process, and protect your data across our platform. Our commitment to privacy is not merely a legal requirement; it is a core pillar of our financial intelligence philosophy. We believe that you cannot have financial clarity without data security. This policy has been drafted to meet and exceed global regulatory standards, including the GDPR, CCPA, and UK DPA.
+        <p style={{ fontSize: '1.15rem', color: 'var(--text-secondary)', marginBottom: '3rem', lineHeight: '1.8' }}>
+          At Expensico ("we," "our," or "us"), we believe your financial data is personal and deserves the highest level of protection. We know that managing your money is a matter of trust, and we are committed to being transparent about how we handle your information. This policy explains, in plain language, what data we collect, how we use it, and the steps we take to keep it safe while you use our tracking tools. Our goal is to provide you with financial clarity without ever compromising your privacy.
         </p>
 
         <section style={{ marginBottom: '3rem' }}>
@@ -76,13 +79,15 @@ export default function PrivacyPolicy() {
             In the highly unlikely event of a data breach that compromises your personal information, Expensico is committed to full transparency. We will notify affected users via their registered email address within 72 hours of discovering the incident, including details on the nature of the breach and mitigation steps.
           </p>
         </section>
-
         <div style={{ marginTop: '5rem', padding: '2.5rem', background: '#f8fafc', borderRadius: '24px', border: '1px solid #e2e8f0' }}>
           <h4 style={{ fontWeight: 800, marginBottom: '1rem' }}>Contact Our Data Protection Officer</h4>
           <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)', marginBottom: 0 }}>
             Questions about your privacy? Contact us at <a href="mailto:malikantuparthi@gmail.com" style={{ color: 'var(--primary-color)', fontWeight: 700 }}>malikantuparthi@gmail.com</a>.
           </p>
         </div>
+      </div>
+      <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+        <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', opacity: 0.6 }}>Version 3.1</p>
       </div>
     </div>
   );

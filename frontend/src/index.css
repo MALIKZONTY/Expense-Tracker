@@ -13,6 +13,19 @@
   --nav-bg: #ffffff;
 }
 
+/* Global Fixes for Mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.recharts-wrapper, 
+.recharts-surface,
+.recharts-legend-item,
+.recharts-tooltip-wrapper {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
