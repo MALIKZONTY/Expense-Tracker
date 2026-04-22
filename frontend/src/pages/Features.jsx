@@ -91,7 +91,7 @@ const FEATURE_CONFIG = [
     description: 'We live in a world where cash and digital money are constantly swapped. Whether you gave cash to a friend for a PhonePe transfer or moved money from your Bank to Paytm, Expensico handles these internal transfers with zero impact on your expense reports.',
     icon: RefreshCw,
     badge: 'Transfers',
-    images: ['/mobile-3.png', '/web-1.png'],
+    images: ['/mobile-7.png'],
     layout: 'mixed',
     bulletPoints: [
       'Track "Cash to Online" transfers seamlessly',
@@ -127,7 +127,7 @@ const ImageCarousel = ({ images, renderFrame }) => {
           <button className="carousel-nav prev" onClick={prev} aria-label="Previous slide">
             <ChevronLeft size={20} />
           </button>
-          
+
           <div className="carousel-indicators">
             {images.map((_, i) => (
               <div
@@ -272,7 +272,7 @@ const Features = () => {
       <section className="container" style={{ marginTop: '6rem', textAlign: 'center' }}>
         <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '1.5rem' }}>Getting Started is Simple</h2>
         <p style={{ color: 'var(--text-secondary)', marginBottom: '5rem', fontSize: '1.1rem' }}>Transformation doesn't have to be complicated.</p>
-        
+
         <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap', alignItems: 'flex-start' }}>
           <div style={{ maxWidth: '250px' }}>
             <div style={{ width: '60px', height: '60px', background: 'var(--primary-color)', color: 'white', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem auto', fontWeight: 900, fontSize: '1.5rem' }}>1</div>
