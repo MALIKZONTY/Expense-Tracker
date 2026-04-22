@@ -4,19 +4,19 @@ import { useNavigate } from 'react-router-dom';
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
   const [token, setToken] = useState(localStorage.getItem('token') || null);
-  const [loading, setLoading] = useState(true);
+  const [user, setUser] = useState(() => {
+    const savedUser = localStorage.getItem('user');
+    return savedUser ? JSON.parse(savedUser) : null;
+  });
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+  // Keep state in sync with localStorage if token changes (e.g. from logout/login)
   useEffect(() => {
-    const savedUser = localStorage.getItem('user');
-    if (token && savedUser) {
-      setUser(JSON.parse(savedUser));
-    } else {
+    if (!token) {
       setUser(null);
     }
-    setLoading(false);
   }, [token]);
 
   const login = async (email, password) => {
