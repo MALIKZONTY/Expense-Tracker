@@ -2,7 +2,7 @@ import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AuthContext from '../context/AuthContext';
 
-const EXPENSE_CATEGORIES = ['Food', 'Groceries', 'Travel', 'Rent', 'Shopping', 'Clothes', 'Domain', 'Bills', 'Entertainment', 'Unknown', 'Other'];
+const EXPENSE_CATEGORIES = ['Food', 'Groceries', 'Travel', 'Rent', 'Shopping', 'Clothes', 'Domain', 'Books', 'Bills', 'Entertainment', 'Unknown', 'Other'];
 const INCOME_CATEGORIES = ['Salary', 'Freelance', 'Business', 'Offerings', 'Gift', 'Unknown', 'Other'];
 const PAYMENT_METHODS = ['PhonePe', 'Paytm', 'Google Pay', 'Amazon Pay', 'Cash', 'Bank Transfer', 'Credit Card', 'Debit Card'];
 

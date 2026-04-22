@@ -13,7 +13,7 @@ When you register for an account, we collect your email address and, optionally,
 
 ### B. Financial Transactional Data
 The core of our service involves the processing of financial records that you manually input or synchronize with the platform. This includes:
-- Expense amounts and categories (e.g., Groceries, Rent, Entertainment).
+- Expense amounts and categories (e.g., Groceries, Rent, Entertainment, Books).
 - Income records and sources.
 - Dates and timestamps associated with financial activities.
 - Wallet or account labels (e.g., "Cash," "Main Bank").

@@ -99,7 +99,7 @@ privacy_content = """
 <h3>B. Financial Transactional Data</h3>
 <p>The core of our service involves the processing of financial records that you manually input or synchronize with the platform. This includes:
 <ul>
-    <li>Detailed expense amounts, categories (e.g., Groceries, Rent, Entertainment, Healthcare, Education, Insurance), and merchant descriptions.</li>
+    <li>Detailed expense amounts, categories (e.g., Groceries, Rent, Entertainment, Clothes, Domain, Books, Healthcare, Education, Insurance), and merchant descriptions.</li>
     <li>Income records, salary structures, freelance earnings, and investment dividends.</li>
     <li>System-generated timestamps associated with every logistical financial activity to provide accurate historical visual intelligence.</li>
     <li>Wallet or account labels designed by the user to represent specific physical or digital assets (e.g., "Main Savings Account", "Physical Cash Vault", "Retirement Portfolio").</li>
