@@ -3,8 +3,8 @@ import { Pencil, Trash2, X, ChevronLeft, ChevronRight, Calendar } from 'lucide-r
 import AuthContext from '../context/AuthContext';
 import { useUI } from '../context/UIContext';
 
-const EXPENSE_CATEGORIES = ['Food', 'Groceries', 'Travel', 'Rent', 'Shopping', 'Bills', 'Entertainment', 'Unknown', 'Other'];
-const INCOME_CATEGORIES = ['Salary', 'Freelance', 'Business', 'Gift', 'Unknown', 'Other'];
+const EXPENSE_CATEGORIES = ['Food', 'Groceries', 'Travel', 'Rent', 'Shopping', 'Clothes', 'Domain', 'Bills', 'Entertainment', 'Unknown', 'Other'];
+const INCOME_CATEGORIES = ['Salary', 'Freelance', 'Business', 'Offerings', 'Gift', 'Unknown', 'Other'];
 const PAYMENT_METHODS = ['PhonePe', 'Paytm', 'Google Pay', 'Amazon Pay', 'Cash', 'Bank Transfer', 'Credit Card', 'Debit Card'];
 
 const getDateRange = (filter, customStart, customEnd) => {
