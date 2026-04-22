@@ -14,6 +14,7 @@ const setupDB = async () => {
         id SERIAL PRIMARY KEY,
         email VARCHAR(255) UNIQUE NOT NULL,
         password VARCHAR(255) NOT NULL,
+        role VARCHAR(50) DEFAULT 'user',
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
       );
     `);
@@ -26,8 +27,25 @@ const setupDB = async () => {
         type VARCHAR(50) NOT NULL,
         category VARCHAR(100) NOT NULL,
         note TEXT,
+        payment_method VARCHAR(50) DEFAULT 'Cash',
+        to_payment_method VARCHAR(50),
         date DATE NOT NULL,
+        is_deleted BOOLEAN DEFAULT false,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      );
+    `);
+
+    await pool.query(`
+      CREATE TABLE IF NOT EXISTS inquiries (
+        id SERIAL PRIMARY KEY,
+        user_id INTEGER REFERENCES users(id),
+        guest_name VARCHAR(255),
+        guest_email VARCHAR(255),
+        message TEXT NOT NULL,
+        reply TEXT,
+        status VARCHAR(50) DEFAULT 'pending',
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
       );
     `);
 

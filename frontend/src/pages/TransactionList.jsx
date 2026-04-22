@@ -7,6 +7,24 @@ const EXPENSE_CATEGORIES = ['Food', 'Groceries', 'Travel', 'Rent', 'Shopping', '
 const INCOME_CATEGORIES = ['Salary', 'Freelance', 'Business', 'Offerings', 'Gift', 'Unknown', 'Other'];
 const PAYMENT_METHODS = ['PhonePe', 'Paytm', 'Google Pay', 'Amazon Pay', 'Cash', 'Bank Transfer', 'Credit Card', 'Debit Card'];
 
+// Helper to format date without timezone shifting issues
+const formatDisplayDate = (dateVal, options = { day: 'numeric', month: 'short', year: 'numeric' }) => {
+  if (!dateVal) return '-';
+  
+  // Now that the backend sends raw strings like "2026-04-22", we just split it
+  const dateStr = typeof dateVal === 'string' ? dateVal : dateVal.toISOString();
+  const [year, month, day] = dateStr.split('T')[0].split('-').map(Number);
+  
+  // Use a map for month names to be 100% safe from browser Date behavior
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  
+  if (options.month === 'short' && !options.year) {
+    return `${day} ${months[month - 1]}`;
+  }
+  
+  return `${day} ${months[month - 1]} ${year}`;
+};
+
 const getDateRange = (filter, customStart, customEnd) => {
   const now = new Date();
   let start, end;
@@ -141,7 +159,8 @@ export default function TransactionList() {
         body: JSON.stringify(editingTransaction)
       });
       if (res.ok) {
-        setTransactions(prev => prev.map(t => t.id === editingTransaction.id ? { ...t, ...editingTransaction } : t));
+        const updatedData = await res.json();
+        setTransactions(prev => prev.map(t => t.id === editingTransaction.id ? updatedData : t));
         setEditingTransaction(null);
       } else {
         alert("Failed to update transaction.");
@@ -185,6 +204,43 @@ export default function TransactionList() {
                 </div>
               </div>
 
+              {/* Type Toggle for Edit */}
+              <div style={{ display: 'flex', background: '#f1f5f9', borderRadius: '12px', padding: '0.4rem' }}>
+                {['expense', 'income', 'exchange'].map(t => (
+                  <button
+                    key={t}
+                    type="button"
+                    onClick={() => {
+                      let newCategory = editingTransaction.category;
+                      let newToPaymentMethod = editingTransaction.to_payment_method;
+                      
+                      if (t === 'exchange') {
+                        newCategory = 'Exchange';
+                      } else {
+                        // Reset category if moving away from Exchange or switching between Income/Expense
+                        newCategory = (t === 'expense' ? EXPENSE_CATEGORIES[0] : INCOME_CATEGORIES[0]);
+                        newToPaymentMethod = null; // Clear destination account if not an exchange
+                      }
+                      
+                      setEditingTransaction({ 
+                        ...editingTransaction, 
+                        type: t, 
+                        category: newCategory,
+                        to_payment_method: newToPaymentMethod 
+                      });
+                    }}
+                    style={{ 
+                      flex: 1, padding: '0.6rem', borderRadius: '8px', border: 'none', 
+                      background: editingTransaction.type === t ? (t === 'expense' ? 'var(--expense-color)' : (t === 'income' ? 'var(--income-color)' : '#64748b')) : 'transparent', 
+                      color: editingTransaction.type === t ? 'white' : 'var(--text-secondary)', 
+                      fontWeight: 'bold', cursor: 'pointer', transition: 'all 0.2s', fontSize: '0.85rem' 
+                    }}
+                  >
+                    {t.charAt(0).toUpperCase() + t.slice(1)}
+                  </button>
+                ))}
+              </div>
+
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                 <div className="form-group" style={{ flex: '1 1 200px' }}>
                   <label>Category</label>
@@ -218,7 +274,8 @@ export default function TransactionList() {
                 <label>Date</label>
                 <input
                   type="date" required className="form-control"
-                  value={new Date(editingTransaction.date).toLocaleDateString('en-CA')}
+                  /* Fix: Extract YYYY-MM-DD directly from ISO string to avoid shifting */
+                  value={editingTransaction.date ? editingTransaction.date.split('T')[0] : ''}
                   onChange={e => setEditingTransaction({ ...editingTransaction, date: e.target.value })}
                 />
               </div>
@@ -336,7 +393,9 @@ export default function TransactionList() {
                 <tbody>
                   {transactions.map(t => (
                     <tr key={t.id} style={{ borderBottom: '1px solid #f8fafc', transition: 'background-color 0.2s' }} className="table-row-hover">
-                      <td style={{ padding: '1.2rem 1.5rem', fontWeight: 500 }}>{new Date(t.date).toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' })}</td>
+                      <td style={{ padding: '1.2rem 1.5rem', fontWeight: 500 }}>
+                        {formatDisplayDate(t.date)}
+                      </td>
                       <td style={{ padding: '1.2rem 1.5rem' }}>
                         <span style={{ padding: '0.4rem 0.8rem', borderRadius: '8px', background: '#f1f5f9', fontSize: '0.85rem', fontWeight: 600, color: 'var(--primary-color)' }}>
                           {t.category}
@@ -394,7 +453,7 @@ export default function TransactionList() {
                     <div>
                       <div style={{ fontWeight: 700, fontSize: '1.1rem', marginBottom: '0.2rem' }}>{t.category}</div>
                       <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
-                        {new Date(t.date).toLocaleDateString(undefined, { day: 'numeric', month: 'short' })} • {t.type === 'exchange' ? `${t.payment_method} ➔ ${t.to_payment_method}` : (t.payment_method || 'Cash')}
+                        {formatDisplayDate(t.date, { day: 'numeric', month: 'short' })} • {t.type === 'exchange' ? `${t.payment_method} ➔ ${t.to_payment_method}` : (t.payment_method || 'Cash')}
                       </div>
                     </div>
                     <div style={{ textAlign: 'right' }}>

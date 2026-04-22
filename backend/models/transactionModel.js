@@ -69,11 +69,11 @@ class TransactionModel {
       GROUP BY type;
     `;
     const result = await db.query(query, [userId]);
-    
+
     // Add total count including exchanges
     const countQuery = `SELECT COUNT(*) FROM transactions WHERE user_id = $1 AND is_deleted = false`;
     const countResult = await db.query(countQuery, [userId]);
-    
+
     // We'll return the array but the caller expects certain types for total display
     return {
       rows: result.rows,
@@ -95,7 +95,7 @@ class TransactionModel {
   static async getDynamicTrend(userId, period) {
     let format = 'YYYY-MM';
     let limit = 6;
-    
+
     if (period === 'daily') {
       format = 'YYYY-MM-DD';
       limit = 7;
@@ -177,20 +177,44 @@ class TransactionModel {
   }
 
   static async updateTransaction(id, userId, updates) {
-    const { amount, type, category, note, paymentMethod, to_payment_method, date } = updates;
+    const fields = [];
+    const values = [];
+    let placeholderCount = 1;
+
+    // Mapping of incoming keys to DB columns
+    const mapping = {
+      amount: 'amount',
+      type: 'type',
+      category: 'category',
+      note: 'note',
+      date: 'date',
+      payment_method: 'payment_method',
+      paymentMethod: 'payment_method',
+      to_payment_method: 'to_payment_method',
+      toPaymentMethod: 'to_payment_method'
+    };
+
+    const processedColumns = new Set();
+
+    for (const [key, column] of Object.entries(mapping)) {
+      if (Object.prototype.hasOwnProperty.call(updates, key) && !processedColumns.has(column)) {
+        fields.push(`${column} = $${placeholderCount}`);
+        values.push(updates[key]);
+        placeholderCount++;
+        processedColumns.add(column);
+      }
+    }
+
+    if (fields.length === 0) return null;
+
+    values.push(id, userId);
     const query = `
       UPDATE transactions
-      SET amount = COALESCE($1, amount),
-          type = COALESCE($2, type),
-          category = COALESCE($3, category),
-          note = COALESCE($4, note),
-          payment_method = COALESCE($5, payment_method),
-          to_payment_method = COALESCE($6, to_payment_method),
-          date = COALESCE($7, date)
-      WHERE id = $8 AND user_id = $9 AND is_deleted = false
+      SET ${fields.join(', ')}
+      WHERE id = $${placeholderCount} AND user_id = $${placeholderCount + 1} AND is_deleted = false
       RETURNING *;
     `;
-    const values = [amount, type, category, note, paymentMethod, to_payment_method, date, id, userId];
+
     const result = await db.query(query, values);
     return result.rows[0];
   }
