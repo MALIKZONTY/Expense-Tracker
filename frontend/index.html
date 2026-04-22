@@ -74,12 +74,19 @@
       }
     }
   </script>
+  <script>
+    // SMART VISIBILITY: Instantly hides the marketing shell on sub-pages (Dashboard, etc.) 
+    // to prevent the flicker of the "wrong" page during a refresh.
+    if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+      document.write('<style>#static-shell { display: none !important; }</style>');
+    }
+  </script>
 </head>
 
 <body>
   <div id="root">
     <!-- STATIC SHADOW: High-Authority Marketing Discovery Shell -->
-    <div style="font-family: sans-serif; background: #f8fafc; min-height: 100vh;">
+    <div id="static-shell" style="font-family: sans-serif; background: #f8fafc; min-height: 100vh;">
       <nav
         style="background: rgba(255, 255, 255, 0.95); border-bottom: 1px solid #e2e8f0; padding: 0.75rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0;">
         <div style="display: flex; align-items: center; gap: 0.75rem;">
