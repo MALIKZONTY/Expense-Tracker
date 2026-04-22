@@ -10,7 +10,7 @@ export default function Dashboard() {
   const { token } = useContext(AuthContext);
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [trendFilter, setTrendFilter] = useState('monthly');
+  const [trendFilter, setTrendFilter] = useState('daily');
 
   useEffect(() => {
     setLoading(true);
