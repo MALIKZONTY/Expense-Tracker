@@ -150,18 +150,6 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="card" style={{ padding: '2rem', display: 'flex', alignItems: 'flex-start', gap: '1.5rem' }}>
-              <div style={{ background: 'rgba(139, 92, 246, 0.1)', padding: '1rem', borderRadius: '12px', color: '#8b5cf6' }}>
-                <MapPin size={24} />
-              </div>
-              <div>
-                <h3 style={{ marginBottom: '0.4rem', fontSize: '1.1rem', fontWeight: 700 }}>Headquarters</h3>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.4 }}>
-                  80-ft road, Sujatha Nagara,<br />
-                  Pendurthi, Visakhapatnam
-                </p>
-              </div>
-            </div>
 
             <div className="card" style={{ padding: '2rem', display: 'flex', alignItems: 'flex-start', gap: '1.5rem' }}>
               <div style={{ background: 'rgba(236, 72, 153, 0.1)', padding: '1rem', borderRadius: '12px', color: '#ec4899' }}>
