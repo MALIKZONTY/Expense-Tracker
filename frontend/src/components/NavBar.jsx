@@ -34,7 +34,7 @@ export default function NavBar() {
         alignItems: 'center',
         borderBottom: '1px solid var(--border-color)'
       }}>
-        <Link to="/" className="nav-brand" style={{ display: 'flex', alignItems: 'center', gap: '0.1rem', textDecoration: 'none', flexShrink: 0 }}>
+        <Link to={user ? "/dashboard" : "/"} className="nav-brand" style={{ display: 'flex', alignItems: 'center', gap: '0.1rem', textDecoration: 'none', flexShrink: 0 }}>
           <img src="/logo.png" className="custom-logo" alt="Expensico Logo" style={{ width: '90px', height: '90px', objectFit: 'contain' }} />
           <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.1' }}>
             <span style={{ fontSize: '1.5rem', fontStyle: 'italic', fontWeight: 900, color: 'var(--primary-color)', letterSpacing: '-0.04em' }}>Expensico</span>
@@ -70,10 +70,11 @@ export default function NavBar() {
       <div className="nav-links-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap', justifyContent: 'center', paddingBottom: '0.5rem', width: '100%' }}>
         {user ? (
           <>
-            <Link to="/" className={`nav-link ${isActive('/')}`}><Layout size={18} /> Dashboard</Link>
-            <Link to="/add" className={`nav-link ${isActive('/add')}`}><PlusCircle size={18} /> Add</Link>
-            <Link to="/transactions" className={`nav-link ${isActive('/transactions')}`}><List size={18} /> History</Link>
+            <Link to="/dashboard" className={`nav-link ${isActive('/dashboard')}`}><Layout size={18} /> Dashboard</Link>
+            <Link to="/add" className={`nav-link ${isActive('/add')}`}><PlusCircle size={18} /> Add Transaction</Link>
+            <Link to="/transactions" className={`nav-link ${isActive('/transactions')}`}><List size={18} /> Transaction History</Link>
             <Link to="/blog" className={`nav-link ${isActive('/blog')}`}><Globe size={18} /> Blog</Link>
+            <Link to="/features" className={`nav-link ${isActive('/features')}`}><Globe size={18} /> Features</Link>
             {isAdmin && <Link to="/admin/inquiries" className={`nav-link ${isActive('/admin/inquiries')}`}>Admin</Link>}
           </>
         ) : (

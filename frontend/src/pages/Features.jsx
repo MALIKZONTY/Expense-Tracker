@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Layout, Smartphone, Globe, ArrowRight, Zap, CheckCircle, Shield, ChevronLeft, ChevronRight, RefreshCw } from 'lucide-react';
+import { useContext } from 'react';
+import AuthContext from '../context/AuthContext';
 
 /**
  * 🛠️ FEATURE CONFIGURATION DICTIONARY
@@ -146,6 +148,10 @@ const ImageCarousel = ({ images, renderFrame }) => {
 };
 
 const Features = () => {
+  const { user } = useContext(AuthContext);
+  const getStartedLink = user ? '/dashboard' : '/register';
+  const getStartedText = user ? 'Go to Dashboard' : 'Get Started Now';
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -196,7 +202,7 @@ const Features = () => {
             Take an in-depth tour of Expensico—from high-level visual dashboards to granular transaction tracking on any device.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link to="/register" className="btn btn-primary btn-lg">Get Started Now</Link>
+            <Link to={getStartedLink} className="btn btn-primary btn-lg">{getStartedText}</Link>
             <a href="#why" className="btn btn-outline btn-lg">Why Expensico?</a>
           </div>
         </div>
@@ -348,8 +354,8 @@ const Features = () => {
           <p style={{ fontSize: '1.25rem', opacity: 0.8, marginBottom: '3rem', maxWidth: '600px', margin: '0 auto 3rem auto' }}>
             Join the growing community who have transformed their financial health with Expensico's beautiful automation.
           </p>
-          <Link to="/register" className="btn btn-primary btn-lg" style={{ padding: '1.2rem 3rem' }}>
-            Get Started for Free <ArrowRight size={20} style={{ marginLeft: '1rem' }} />
+          <Link to={getStartedLink} className="btn btn-primary btn-lg" style={{ padding: '1.2rem 3rem' }}>
+            {user ? 'Continue Tracking' : 'Get Started for Free'} <ArrowRight size={20} style={{ marginLeft: '1rem' }} />
           </Link>
         </div>
       </section>

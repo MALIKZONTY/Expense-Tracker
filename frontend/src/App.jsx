@@ -25,9 +25,21 @@ import TitleManager from './components/TitleManager';
 import ScrollToTop from './components/ScrollToTop';
 
 const ProtectedRoute = ({ children, adminOnly = false }) => {
-  const { user } = useContext(AuthContext);
+  const { user, loading } = useContext(AuthContext);
+  
+  if (loading) return null; // Or a loading spinner
+  
   if (!user) return <Navigate to="/login" />;
-  if (adminOnly && user.role !== 'admin') return <Navigate to="/" />;
+  if (adminOnly && user.role !== 'admin') return <Navigate to="/dashboard" />;
+  return children;
+};
+
+const GuestRoute = ({ children }) => {
+  const { user, loading } = useContext(AuthContext);
+  
+  if (loading) return null;
+  
+  if (user) return <Navigate to="/dashboard" />;
   return children;
 };
 
@@ -42,9 +54,14 @@ function App() {
             <NavBar />
             <div style={{ flex: 1 }}>
               <Routes>
-                <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Signup />} />
-                <Route path="/" element={<AuthContext.Consumer>{({ user }) => user ? <Dashboard /> : <Features />}</AuthContext.Consumer>} />
+                <Route path="/login" element={<GuestRoute><Login /></GuestRoute>} />
+                <Route path="/register" element={<GuestRoute><Signup /></GuestRoute>} />
+                <Route path="/" element={<AuthContext.Consumer>{({ user, loading }) => {
+                  if (loading) return null;
+                  return user ? <Navigate to="/dashboard" replace /> : <Features />;
+                }}</AuthContext.Consumer>} />
+                <Route path="/features" element={<Features />} />
+                <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
                 <Route path="/add" element={<ProtectedRoute><AddTransaction /></ProtectedRoute>} />
                 <Route path="/transactions" element={<ProtectedRoute><TransactionList /></ProtectedRoute>} />
                 <Route path="/about" element={<About />} />

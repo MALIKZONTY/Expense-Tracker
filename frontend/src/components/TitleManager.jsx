@@ -20,7 +20,9 @@ const TitleManager = () => {
     else if (path === '/disclaimer') title = "Disclaimer | Expensico";
     else if (path === '/add') title = "Log Transaction | Expensico";
     else if (path === '/transactions') title = "Transaction History | Expensico";
-    else if (path === '/') title = "Dashboard | Expensico — Track your money";
+    else if (path === '/dashboard') title = "Dashboard | Expensico — Track your money";
+    else if (path === '/features') title = "Product Tour | Expensico — Track your money";
+    else if (path === '/') title = "Expensico — Track your money";
 
     document.title = title;
   }, [location]);

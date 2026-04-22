@@ -32,7 +32,7 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem('user', JSON.stringify(data.user));
       setToken(data.token);
       setUser(data.user);
-      navigate('/');
+      navigate('/dashboard');
       return true;
     } else {
       const errorData = await res.json();
@@ -53,7 +53,7 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem('user', JSON.stringify(data.user));
       setToken(data.token);
       setUser(data.user);
-      navigate('/');
+      navigate('/dashboard');
       return true;
     } else {
       const errorData = await res.json();
