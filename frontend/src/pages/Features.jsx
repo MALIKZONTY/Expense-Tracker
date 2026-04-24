@@ -43,7 +43,7 @@ const FEATURE_CONFIG = [
   {
     id: 'blog',
     title: 'The Financial Literacy Hub',
-    description: 'More than just a tracker—Expensico is your partner in building wealth. Access an exclusive library of 20+ expert-written articles covering everything from tax-saving strategies to the psychology of spending. We provide the tools *and* the knowledge.',
+    description: 'More than just a tracker—Expensico is your partner in building wealth. Access an exclusive library of 15+ expert-written articles covering everything from tax-saving strategies to the psychology of spending. We provide the tools *and* the knowledge.',
     icon: Globe,
     badge: 'Education',
     images: ['/web-5.png', '/web-6.png'],
@@ -51,7 +51,7 @@ const FEATURE_CONFIG = [
     cta: { text: 'Explore the Blog', link: '/blog' },
     bulletPoints: [
       'Browse by Topic: Budgeting, Investing, and Psychology',
-      '20+ long-form professional financial guides',
+      '15+ long-form professional financial guides',
       'Actionable advice for first-time home buyers',
       'Searchable archive for instant knowledge access'
     ]
