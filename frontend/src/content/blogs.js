@@ -5,6 +5,7 @@ const blogPosts = [
     description: "We all check our bank account and wonder where the money went. I found some simple ways to stop wasting money without feeling like I’m missing out. Let me share what worked for me.",
     date: '2026-04-20',
     category: 'Budgeting',
+    image: '/blogs/blog-1.1.png',
     content: `# How I finally stopped blowing my paycheck every month
 
 We’ve all faced this—you check your bank account and suddenly a big amount is gone. You feel like it was there just a few days ago! 
@@ -140,6 +141,7 @@ Start small, make it automatic, and stay consistent. Your future self will thank
     description: "Ever feel like your money just disappears? With digital payments, it's easy to spend without noticing. Tracking your money helps you take control again.",
     date: '2026-04-20',
     category: 'Financial Wisdom',
+    image: '/blogs/blog-2.1.png',
     content: `# The Real Reason You Should Track Your Spending
 
 Let’s be honest—these days, money doesn’t feel real.
@@ -279,6 +281,7 @@ That’s the first step toward better money control—and a better future.
     description: "Budgets often fail because they are too strict and unrealistic. Let’s understand the real reasons and how to build one that actually works for your life.",
     date: '2026-04-20',
     category: 'Budgeting',
+    image: '/blogs/blog-3.1.png',
     content: `# Why your budget keeps failing (and how to fix it)
 
 We’ve all been there.
@@ -425,6 +428,7 @@ That’s how a budget actually works in real life.
     description: 'I was tired of messy spreadsheets and random notes. So I built something simple to track money easily. Here’s the story behind Expensico.',
     date: '2026-04-20',
     category: 'Financial Wisdom',
+    image: '/blogs/blog-4.1.png',
     content: `# The Story Behind Expensico (and why I built it)
 
   I didn’t start Expensico to build a big company or do something fancy.
@@ -574,6 +578,7 @@ Start today. Once you see your money clearly, everything becomes easier.
     description: "Ever wonder why you buy things you don’t really need? It’s not just you—your brain plays a big role. Let’s understand it in a simple way.",
     date: '2026-04-20',
     category: 'Finance Psychology',
+    image: '/blogs/blog-5.1.png',
     content: `# Why do I keep buying stuff I don't actually need?
 
 Have you ever gone to a store just to buy one or two things, but came back with a full bag?
@@ -734,6 +739,7 @@ Start paying attention today. Once you understand your spending, you can control
     description: "Investing may look confusing, but it’s actually simple when you understand the basics. Here’s an easy way to get started.",
     date: '2026-04-20',
     category: 'Investing',
+    image: '/blogs/blog-6.1.png',
     content: `# Don't let the charts scare you: A beginner's guide to investing
 
 When people hear the word “investing,” they imagine something complicated.
@@ -884,6 +890,7 @@ Start small—but start today.
     description: "Debt feels heavy and stressful, but there is a clear way to get out of it. Here’s a simple and practical guide to becoming debt-free.",
     date: '2026-04-20',
     category: 'Debt Management',
+    image: '/blogs/blog-7.1.png',
     content: `# How to finally shake that 'debt weight' once and for all
 
 Debt doesn’t just affect your money—it affects your mind.
@@ -1049,6 +1056,7 @@ It may feel hard now, but your future self will thank you.
     description: "An emergency fund is not just about money—it’s about peace of mind. Here’s how to build a simple safety net for your life.",
     date: '2026-04-20',
     category: 'Financial Wisdom',
+    image: '/blogs/blog-8.1.png',
     content: `# The 'sleep-better-at-night' fund: Why you need a safety net
 
 Most people call it an “Emergency Fund.”
@@ -1221,6 +1229,7 @@ And yes—you’ll sleep better at night.
     description: "Groceries can take a big part of your money, but with a few simple tricks, you can save a lot without sacrificing good food.",
     date: '2026-04-20',
     category: 'Lifestyle',
+    image: '/blogs/blog-9.1.png',
     content: `# My favorite grocery hacks for saving money
 For most people, groceries are one of the biggest monthly expenses.
 
@@ -1380,6 +1389,7 @@ And the best part—you’ll still enjoy your food.
     description: "Compounding may look simple, but it can completely change your financial future. Here’s how it works in an easy way.",
     date: '2026-04-20',
     category: 'General Finance',
+    image: '/blogs/blog-10.1.png',
     content: `# The (almost) magic math that builds wealth while you sleep
 
 You may have heard this before—compound interest is very powerful.
@@ -1539,6 +1549,7 @@ Your future self will thank you.
     description: "Owning fewer things doesn’t mean living less—it actually helps you feel more free and in control. Here’s how.",
     date: '2026-04-20',
     category: 'Finance Psychology',
+    image: '/blogs/blog-11.1.png',
     content: `# Why owning less actually made me feel richer
 
 We live in a world where everyone says one thing:
@@ -1709,6 +1720,7 @@ Start small, and you’ll slowly feel the difference.
     description: "Your first salary is exciting, but the choices you make early can shape your entire future. Here’s a simple guide to get it right.",
     date: '2026-04-20',
     category: 'Career & Finance',
+    image: '/blogs/blog-12.1.png',
     content: `# Everything I wish I knew when I got my first paycheck
 
 Getting your first paycheck feels amazing.
@@ -1878,6 +1890,7 @@ Your future self will thank you for it.
     description: "Credit scores may feel confusing, but they are actually simple once you understand the basics. Here’s how to manage it easily.",
     date: '2026-04-20',
     category: 'Credit',
+    image: '/blogs/blog-13.1.png',
     content: `# Your credit score isn't a secret grade—here's how to play the game
 
 Credit score sounds complicated.
@@ -2051,6 +2064,7 @@ Over time, your score will improve naturally—and that will make your financial
     description: "Retirement feels like a million years away, but your 'Future Self' is going to be very real one day. Let's talk about how to make sure they're taken care of.",
     date: '2026-04-20',
     category: 'Future Planning',
+    image: '/blogs/blog-14.1.png',
     content: `# It's never too late to take care of your 'Future Self'
 
 Retirement planning is something most people keep delaying.
@@ -2216,6 +2230,7 @@ Start where you are. Use the tools you have. And remember: the best time to plan
     description: "You don’t need to work all day to earn more money. Here’s a simple way to build extra income without stress or burnout.",
     date: '2026-04-20',
     category: 'Income',
+    image: '/blogs/blog-15.1.png',
     content: `# Earning extra cash without losing your mind
 
 If you want to improve your financial life, you have two options:
@@ -2412,6 +2427,7 @@ Start small, but start today.
     description: "Insurance may feel boring, but it protects everything you’ve built. Here’s what you really need and what you can skip.",
     date: '2026-04-20',
     category: 'Risk Management',
+    image: '/blogs/blog-16.1.png',
     content: `# The boring but essential stuff: Protecting what’s yours
 
 When we talk about money, we usually focus on exciting things.
@@ -2586,6 +2602,7 @@ And make sure you are protected before anything else.
     description: "Buying your first home can feel stressful, but with the right plan, it becomes much easier. Here’s a simple guide to get started.",
     date: '2026-04-20',
     category: 'Lifestyle',
+    image: '/blogs/blog-19.1.png',
     content: `# Buying your first home without the massive headache
 
 Buying your first home is a big moment.
@@ -2770,6 +2787,7 @@ Step by step, your dream home will become a reality.
     description: "Taxes can feel confusing, but with a few simple steps, you can legally save money and keep more of what you earn.",
     date: '2026-04-20',
     category: 'General Finance',
+    image: '/blogs/blog-20.1.png',
     content: `# Stop overpaying the government: A simple guide to taxes
 
 Taxes are something we all have to pay.

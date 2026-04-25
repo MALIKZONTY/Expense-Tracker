@@ -1,5 +1,6 @@
 import { useState, useEffect, useContext } from 'react';
 import { PieChart, Pie, Cell, LineChart, Line, BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend } from 'recharts';
+import { Wallet } from 'lucide-react';
 
 import AuthContext from '../context/AuthContext';
 
@@ -36,6 +37,24 @@ export default function Dashboard() {
 
   const { summary, charts, walletBalances } = data;
 
+  const getWalletIcon = (name) => {
+    const n = name.toLowerCase();
+    if (n.includes('cash')) return '/icons/wallets/cash.png';
+    if (n.includes('phonepe')) return '/icons/wallets/phonepe.png';
+    if (n.includes('paytm')) return '/icons/wallets/paytm.png';
+    if (n.includes('gpay') || n.includes('google pay')) return '/icons/wallets/gpay.png';
+    if (n.includes('sbi')) return '/icons/wallets/sbi.png';
+    if (n.includes('hdfc')) return '/icons/wallets/hdfc.png';
+    if (n.includes('icici')) return '/icons/wallets/icici.png';
+    if (n.includes('axis')) return '/icons/wallets/axis.png';
+    if (n.includes('amazon')) return '/icons/wallets/amazonpay.png';
+    if (n.includes('cred')) return '/icons/wallets/cred.png';
+    if (n.includes('gift')) return '/icons/wallets/giftcard.png';
+    if (n.includes('bank') || n.includes('transfer') || n.includes('online')) return '/icons/wallets/bank.png';
+    if (n.includes('card')) return '/icons/wallets/card.png';
+    return '/icons/wallets/wallet-default.png';
+  };
+
   return (
     <div className="container dashboard-container">
       <h1 style={{ marginBottom: '2rem' }}>Dashboard Overview</h1>
@@ -60,16 +79,78 @@ export default function Dashboard() {
       </div>
 
       {walletBalances && walletBalances.length > 0 && (
-        <div className="card" style={{ marginBottom: '2rem', padding: '1.25rem' }}>
-          <h3 style={{ marginBottom: '1rem' }}>Wallet Balances</h3>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '0.75rem' }}>
+        <div className="card" style={{ marginBottom: '2rem', padding: '1.5rem' }}>
+          <h3 style={{ marginBottom: '1.25rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <Wallet size={20} style={{ color: 'var(--primary-color)' }} /> Wallet Balances
+          </h3>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1rem' }}>
             {walletBalances.map((w, idx) => (
-              <div key={idx} style={{ background: '#f8fafc', padding: '1rem', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
-                <span style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', display: 'block', marginBottom: '0.25rem' }}>{w.name} {w.name === 'Unknown' ? '(Manual)' : ''}</span>
-                <p style={{ fontSize: '1.25rem', fontWeight: 'bold', margin: 0, color: w.balance >= 0 ? 'var(--text-color)' : 'var(--expense-color)' }}>
-                  ₹{Math.abs(Number(w.balance)).toLocaleString('en-IN')}
-                </p>
-                {w.balance < 0 && <span style={{ fontSize: '0.7rem', color: 'var(--expense-color)', fontWeight: 600 }}>Deficit</span>}
+              <div key={idx} style={{ 
+                background: 'white', 
+                padding: '1.25rem', 
+                borderRadius: '16px', 
+                border: '1px solid #eef2f6',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '1rem',
+                transition: 'all 0.3s ease',
+                boxShadow: '0 2px 4px rgba(0,0,0,0.02)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.05)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 2px 4px rgba(0,0,0,0.02)';
+              }}
+              >
+                <div style={{ 
+                  width: '44px', 
+                  height: '44px', 
+                  borderRadius: '12px', 
+                  overflow: 'hidden', 
+                  background: '#f8fafc',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                  border: '1px solid #f1f5f9'
+                }}>
+                  <img 
+                    src={getWalletIcon(w.name)} 
+                    alt={w.name} 
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    onError={(e) => { e.target.src = '/icons/wallets/wallet-default.png'; }}
+                  />
+                </div>
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <span style={{ 
+                    color: 'var(--text-secondary)', 
+                    fontSize: '0.75rem', 
+                    display: 'block', 
+                    whiteSpace: 'nowrap', 
+                    overflow: 'hidden', 
+                    textOverflow: 'ellipsis',
+                    fontWeight: 500
+                  }}>
+                    {w.name} {w.name === 'Unknown' ? '(Manual)' : ''}
+                  </span>
+                  <p style={{ 
+                    fontSize: '1.15rem', 
+                    fontWeight: 700, 
+                    margin: 0, 
+                    color: w.balance >= 0 ? 'var(--text-primary)' : 'var(--expense-color)',
+                    letterSpacing: '-0.01em'
+                  }}>
+                    ₹{Math.abs(Number(w.balance)).toLocaleString('en-IN')}
+                  </p>
+                  {w.balance < 0 && (
+                    <span style={{ fontSize: '0.65rem', color: 'var(--expense-color)', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '2px' }}>
+                      <span style={{ width: '4px', height: '4px', borderRadius: '50%', background: 'currentColor' }} /> Deficit
+                    </span>
+                  )}
+                </div>
               </div>
             ))}
           </div>

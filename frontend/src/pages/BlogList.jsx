@@ -159,36 +159,151 @@ export default function BlogList() {
         </nav>
       </div>
 
+      <style>{`
+        .blog-list-container {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          max-width: 1000px;
+          margin: 0 auto;
+        }
+        .blog-card {
+          display: flex;
+          flex-direction: row;
+          background: var(--card-bg);
+          border-radius: 20px;
+          overflow: hidden;
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          border: 1px solid var(--border-color);
+          text-decoration: none;
+          height: 320px;
+        }
+        .blog-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+          border-color: var(--primary-color);
+        }
+        .blog-card:hover img {
+          transform: scale(1.05);
+        }
+        .blog-image-wrapper {
+          flex: 0 0 450px;
+          position: relative;
+          overflow: hidden;
+        }
+        .blog-image-wrapper img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .blog-content-wrapper {
+          flex: 1;
+          padding: 2.5rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          min-width: 0;
+        }
+        .blog-title {
+          font-size: 1.5rem;
+          font-weight: 800;
+          color: var(--text-primary);
+          margin-bottom: 0.75rem;
+          line-height: 1.3;
+          display: block;
+        }
+        .blog-description {
+          color: var(--text-secondary);
+          font-size: 1rem;
+          line-height: 1.6;
+          margin-bottom: 1.5rem;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        .blog-meta {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: auto;
+          padding-top: 1rem;
+          border-top: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .blog-card.alternate {
+          flex-direction: row-reverse;
+        }
+
+        @media (max-width: 768px) {
+          .blog-card {
+            min-height: 120px;
+            height: auto;
+            border-radius: 12px;
+          }
+          .blog-card.alternate {
+            flex-direction: row-reverse;
+          }
+          .blog-image-wrapper {
+            flex: 0 0 120px;
+            min-height: 100%;
+          }
+          .blog-content-wrapper {
+            padding: 1rem;
+            align-self: center;
+          }
+          .blog-title {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            line-height: 1.4;
+            font-weight: 700;
+          }
+          .blog-description {
+            display: none; /* Hide description on mobile as requested */
+          }
+          .blog-meta {
+            padding-top: 0.4rem;
+          }
+          .blog-meta-item {
+            font-size: 0.65rem !important;
+          }
+          .read-more-text {
+            display: none;
+          }
+        }
+      `}</style>
+
       {filteredPosts.length === 0 ? (
         <div style={{ textAlign: 'center', padding: '4rem', color: 'var(--text-secondary)' }}>
           <BookOpen size={48} style={{ marginBottom: '1rem', opacity: 0.2 }} />
           <p>No articles found matching your search.</p>
         </div>
       ) : (
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2.5rem' }}>
-          {filteredPosts.map(post => (
-            <Link key={post.slug} to={`/blog/${post.slug}`} className="card shadow-glow" style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', height: '100%', transition: 'transform 0.3s ease', overflow: 'hidden', padding: 0 }}>
-              <div className="blog-card-inner" style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column', height: '100%' }}>
-                <div style={{ display: 'flex', gap: '0.75rem', marginBottom: '1rem' }}>
-                  <span className="badge badge-income" style={{ fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                    {post.category || 'Finance Guide'}
-                  </span>
-                </div>
-                
-                <h2 style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '1rem', lineHeight: '1.3' }}>
-                  {post.title}
-                </h2>
-                
-                <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', lineHeight: '1.6', marginBottom: '2rem', flex: 1 }}>
-                  {post.description.length > 150 ? post.description.substring(0, 150) + '...' : post.description}
-                </p>
+        <div className="blog-list-container">
+          {filteredPosts.map((post, index) => (
+            <Link 
+              key={post.slug} 
+              to={`/blog/${post.slug}`} 
+              className={`blog-card shadow-glow ${index % 2 !== 0 ? 'alternate' : ''}`}
+            >
+              <div className="blog-image-wrapper">
+                <img src={post.image} alt={post.title} loading="lazy" />
+              </div>
+              
+              <div className="blog-content-wrapper">
+                <h2 className="blog-title">{post.title}</h2>
+                <p className="blog-description">{post.description}</p>
 
-                <div className="blog-card-footer" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderTop: '1px solid var(--border-color)', paddingTop: '1.5rem', marginTop: 'auto' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', fontSize: '0.85rem' }}>
+                <div className="blog-meta">
+                  <div className="blog-meta-item" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', fontSize: '0.85rem' }}>
                     <Calendar size={14} /> {post.date}
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', color: 'var(--primary-color)', fontWeight: 700, fontSize: '0.9rem' }}>
+                  <div className="blog-meta-item read-more-text" style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', color: 'var(--primary-color)', fontWeight: 700, fontSize: '0.9rem' }}>
                     Read Post <ArrowRight size={16} />
+                  </div>
+                  <div className="only-mobile" style={{ color: 'var(--primary-color)' }}>
+                    <ArrowRight size={18} />
                   </div>
                 </div>
               </div>

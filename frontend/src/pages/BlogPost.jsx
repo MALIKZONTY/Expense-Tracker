@@ -63,6 +63,16 @@ export default function BlogPost() {
             </div>
           </div>
         </div>
+
+        {post.image && (
+          <div style={{ marginTop: '3rem', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 20px 50px rgba(0,0,0,0.1)' }}>
+            <img 
+              src={post.image} 
+              alt={post.title} 
+              style={{ width: '100%', height: 'auto', display: 'block', maxHeight: '500px', objectFit: 'cover' }} 
+            />
+          </div>
+        )}
       </header>
 
       <div className="blog-content" style={{ fontSize: '1.2rem', lineHeight: '1.8', color: '#334155' }}>
