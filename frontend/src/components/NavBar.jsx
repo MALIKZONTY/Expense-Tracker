@@ -2,12 +2,12 @@ import { useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import AuthContext from '../context/AuthContext';
 import { useUI } from '../context/UIContext';
-import { Layout, PlusCircle, List, Globe, User, LogOut, ShieldCheck } from 'lucide-react';
+import { Layout, PlusCircle, List, Globe, User, LogOut, ShieldCheck, Sun, Moon } from 'lucide-react';
 
 export default function NavBar() {
   const location = useLocation();
   const { user, logout } = useContext(AuthContext);
-  const { confirm } = useUI();
+  const { confirm, isDarkMode, toggleDarkMode } = useUI();
   const isActive = (path) => location.pathname === path ? 'active' : '';
 
   const handleLogout = async () => {
@@ -44,7 +44,27 @@ export default function NavBar() {
           </div>
         </Link>
         {/* Auth Actions (Top Tier) */}
-        <div className="nav-actions" style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexShrink: 0 }}>
+        <div className="nav-actions" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexShrink: 0 }}>
+          <button 
+            onClick={toggleDarkMode} 
+            className="btn btn-outline" 
+            style={{ 
+              padding: '0.4rem', 
+              borderRadius: '50%', 
+              width: '36px', 
+              height: '36px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              border: '1px solid var(--border-color)',
+              background: 'transparent',
+              color: 'var(--text-secondary)'
+            }}
+            title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+          >
+            {isDarkMode ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
+
           {user ? (
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(59, 130, 246, 0.05)', padding: '0.4rem 0.8rem', borderRadius: '20px', border: '1px solid rgba(59, 130, 246, 0.1)' }} className="hide-mobile">

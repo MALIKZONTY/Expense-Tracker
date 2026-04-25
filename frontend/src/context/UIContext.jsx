@@ -1,9 +1,14 @@
-import { createContext, useState, useContext, useCallback } from 'react';
+import { createContext, useState, useContext, useCallback, useEffect } from 'react';
 import ConfirmModal from '../components/ConfirmModal';
 
 const UIContext = createContext();
 
 export const UIProvider = ({ children }) => {
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const saved = localStorage.getItem('darkMode');
+    return saved ? JSON.parse(saved) : false;
+  });
+
   const [modal, setModal] = useState({
     isOpen: false,
     title: '',
@@ -13,6 +18,19 @@ export const UIProvider = ({ children }) => {
     type: 'primary', // 'primary' or 'danger'
     resolve: null
   });
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark-mode');
+      document.body.classList.add('dark-mode');
+    } else {
+      document.documentElement.classList.remove('dark-mode');
+      document.body.classList.remove('dark-mode');
+    }
+    localStorage.setItem('darkMode', JSON.stringify(isDarkMode));
+  }, [isDarkMode]);
+
+  const toggleDarkMode = () => setIsDarkMode(prev => !prev);
 
   const confirm = useCallback((options) => {
     return new Promise((resolve) => {
@@ -34,7 +52,7 @@ export const UIProvider = ({ children }) => {
   };
 
   return (
-    <UIContext.Provider value={{ confirm }}>
+    <UIContext.Provider value={{ confirm, isDarkMode, toggleDarkMode }}>
       {children}
       {modal.isOpen && (
         <ConfirmModal 
