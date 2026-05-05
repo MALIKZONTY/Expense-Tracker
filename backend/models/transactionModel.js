@@ -95,25 +95,32 @@ class TransactionModel {
   static async getDynamicTrend(userId, period) {
     let format = 'YYYY-MM';
     let limit = 6;
+    let isWeekly = false;
 
     if (period === 'daily') {
       format = 'YYYY-MM-DD';
       limit = 7;
     } else if (period === 'weekly') {
-      format = 'IYYY-"W"IW';
+      isWeekly = true;
+      format = 'YYYY-MM-DD';
       limit = 8;
     } else if (period === 'yearly') {
       format = 'YYYY';
       limit = 5;
     }
 
+    const dateExpr = isWeekly ? "date_trunc('week', date)" : "date";
+
     const query = `
-      SELECT TO_CHAR(date, '${format}') as period_name, COALESCE(SUM(amount), 0) as amount
-      FROM transactions
-      WHERE user_id = $1 AND type = 'expense' AND is_deleted = false
-      GROUP BY period_name
-      ORDER BY period_name ASC
-      LIMIT ${limit};
+      SELECT * FROM (
+        SELECT TO_CHAR(${dateExpr}, '${format}') as period_name, COALESCE(SUM(amount), 0) as amount
+        FROM transactions
+        WHERE user_id = $1 AND type = 'expense' AND is_deleted = false
+        GROUP BY period_name
+        ORDER BY period_name DESC
+        LIMIT ${limit}
+      ) subquery
+      ORDER BY period_name ASC;
     `;
     const result = await db.query(query, [userId]);
     return result.rows;

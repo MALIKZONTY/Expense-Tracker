@@ -242,19 +242,32 @@ export default function Dashboard() {
                   dataKey="period" 
                   tickFormatter={(val) => {
                     if (!val) return '';
-                    if (val.includes('-W')) {
-                      // YYYY-Www -> Week ww
-                      return 'Week ' + val.split('-W')[1];
+                    if (trendFilter === 'weekly') {
+                      // Backend returns YYYY-MM-DD which is the start of the week
+                      const startDate = new Date(val + 'T00:00:00');
+                      const endDate = new Date(startDate);
+                      endDate.setDate(endDate.getDate() + 6);
+
+                      const startMonth = startDate.toLocaleDateString('en-US', { month: 'short' });
+                      const startDay = startDate.toLocaleDateString('en-US', { day: 'numeric' });
+                      const endMonth = endDate.toLocaleDateString('en-US', { month: 'short' });
+                      const endDay = endDate.toLocaleDateString('en-US', { day: 'numeric' });
+
+                      if (startMonth === endMonth) {
+                        return `${startMonth} ${startDay}-${endDay}`;
+                      } else {
+                        return `${startMonth} ${startDay}-${endMonth} ${endDay}`;
+                      }
                     }
                     const parts = val.split('-');
                     if (parts.length === 3) {
                       // YYYY-MM-DD -> DD MMM
-                      const d = new Date(val);
+                      const d = new Date(val + 'T00:00:00');
                       return d.toLocaleDateString('en-US', { day: 'numeric', month: 'short' });
                     }
                     if (parts.length === 2) {
                       // YYYY-MM -> MMM YY
-                      const d = new Date(val + '-01');
+                      const d = new Date(val + '-01T00:00:00');
                       return d.toLocaleDateString('en-US', { month: 'short', year: '2-digit' });
                     }
                     return val;
