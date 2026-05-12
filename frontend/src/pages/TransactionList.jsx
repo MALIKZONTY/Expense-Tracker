@@ -3,9 +3,9 @@ import { Pencil, Trash2, X, ChevronLeft, ChevronRight, Calendar } from 'lucide-r
 import AuthContext from '../context/AuthContext';
 import { useUI } from '../context/UIContext';
 
-const EXPENSE_CATEGORIES = ['Food', 'Groceries', 'Travel', 'Rent', 'Shopping', 'Clothes', 'Domain', 'Books', 'Bills', 'Entertainment', 'Gave to Friends', 'Gave to Family', 'Mobile Recharge', 'offering', 'Saloon', 'Studies', 'Unknown', 'Other'];
+const EXPENSE_CATEGORIES = ['Food', 'Groceries', 'Travel', 'Rent', 'Shopping', 'Clothes', 'Domain', 'Books', 'Bills', 'Entertainment', 'Gave to Friends', 'Gave to Family', 'Mobile Recharge', 'offering', 'Saloon', 'Studies', 'Unknown', 'Gift Card', 'Other'];
 const INCOME_CATEGORIES = ['Salary', 'Freelance', 'Business', 'Offerings', 'Gift', 'From Friends', 'From Family', 'Unknown', 'Other'];
-const PAYMENT_METHODS = ['PhonePe', 'Paytm', 'Google Pay', 'Amazon Pay', 'Cash', 'Bank Transfer', 'Credit Card', 'Debit Card'];
+const PAYMENT_METHODS = ['PhonePe', 'Paytm', 'Google Pay', 'Amazon Pay', 'Cash', 'Bank Transfer', 'Credit Card', 'Debit Card', 'Gift Card'];
 
 // Helper to format date without timezone shifting issues
 const formatDisplayDate = (dateVal, options = { day: 'numeric', month: 'short', year: 'numeric' }) => {
