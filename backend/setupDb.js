@@ -12,7 +12,8 @@ const setupDB = async () => {
     await pool.query(`
       CREATE TABLE IF NOT EXISTS users (
         id SERIAL PRIMARY KEY,
-        email VARCHAR(255) UNIQUE NOT NULL,
+        username VARCHAR(255) UNIQUE NOT NULL,
+        email VARCHAR(255),
         password VARCHAR(255) NOT NULL,
         role VARCHAR(50) DEFAULT 'user',
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -52,7 +53,7 @@ const setupDB = async () => {
     // Insert dummy user if doesn't exist
     const { rows } = await pool.query('SELECT * FROM users WHERE id = 1');
     if (rows.length === 0) {
-      await pool.query(`INSERT INTO users (id, email, password) VALUES (1, 'demo@expensico.com', 'password')`);
+      await pool.query(`INSERT INTO users (id, username, password) VALUES (1, 'demo', 'password')`);
     }
 
     console.log('Database setup complete.');

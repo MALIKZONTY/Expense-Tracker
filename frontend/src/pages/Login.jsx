@@ -4,7 +4,7 @@ import AuthContext from '../context/AuthContext';
 
 export default function Login() {
   const { login } = useContext(AuthContext);
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
@@ -15,7 +15,7 @@ export default function Login() {
     setError('');
     setLoading(true);
     try {
-      await login(email, password);
+      await login(username, password);
     } catch (err) {
       setError(err.message);
     }
@@ -29,8 +29,8 @@ export default function Login() {
         {error && <div className="badge badge-expense" style={{ display: 'block', marginBottom: '1rem', textAlign: 'center' }}>{error}</div>}
         <form onSubmit={handleSubmit} className="flex-col gap-1">
           <div className="form-group">
-            <label>Email</label>
-            <input type="email" required className="form-control" value={email} onChange={e => setEmail(e.target.value)} />
+            <label>Username</label>
+            <input type="text" autoComplete="username" required className="form-control" value={username} onChange={e => setUsername(e.target.value)} />
           </div>
           <div className="form-group">
             <label>Password</label>

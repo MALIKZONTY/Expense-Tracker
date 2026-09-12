@@ -21,8 +21,8 @@ class InquiryModel {
     const result = await db.query(`
       SELECT 
         i.*, 
-        u.email as user_email,
-        COALESCE(i.guest_name, u.email) as display_name,
+        u.username as user_username,
+        COALESCE(i.guest_name, u.username) as display_name,
         COALESCE(i.guest_email, u.email) as display_email
       FROM inquiries i
       LEFT JOIN users u ON i.user_id = u.id
