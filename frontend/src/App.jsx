@@ -1,7 +1,8 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation, Navigate } from 'react-router-dom';
 import AuthContext, { AuthProvider } from './context/AuthContext';
 import { UIProvider, useUI } from './context/UIContext';
+import { setupDailyReminder } from './native/notifications';
 import Dashboard from './pages/Dashboard';
 import AddTransaction from './pages/AddTransaction';
 import TransactionList from './pages/TransactionList';
@@ -44,6 +45,10 @@ const GuestRoute = ({ children }) => {
 };
 
 function App() {
+  useEffect(() => {
+    setupDailyReminder();
+  }, []);
+
   return (
     <UIProvider>
       <Router>

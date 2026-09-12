@@ -4,7 +4,7 @@ const { Pool, types } = require('pg');
 types.setTypeParser(1082, (val) => val);
 
 if (!process.env.DB_URL) {
-  console.error("❌ ERROR: DB_URL environment variable is missing! Check Railway Settings.");
+  console.error("❌ ERROR: DB_URL environment variable is missing! Check your deployment environment variables.");
 }
 
 const pool = new Pool({

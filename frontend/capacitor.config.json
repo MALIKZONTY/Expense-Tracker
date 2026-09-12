@@ -1,0 +1,13 @@
+{
+  "appId": "com.expensico.app",
+  "appName": "Expensico",
+  "webDir": "dist-mobile",
+  "android": {
+    "allowMixedContent": false
+  },
+  "plugins": {
+    "LocalNotifications": {
+      "iconColor": "#3b82f6"
+    }
+  }
+}

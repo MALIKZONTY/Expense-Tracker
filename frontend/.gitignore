@@ -9,8 +9,19 @@ lerna-debug.log*
 
 node_modules
 dist
+dist-mobile
 dist-ssr
 *.local
+.env.mobile
+
+# Capacitor / Android native project build output
+android/app/build
+android/build
+android/.gradle
+android/local.properties
+android/captures
+android/.cxx
+android/app/release
 
 # Editor directories and files
 .vscode/*
